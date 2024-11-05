@@ -3,11 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
 
+import Home from "./assets/components/Home";
+
 function App() {
   return (
-    <div>
-      <h1> Vibra App!</h1>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
