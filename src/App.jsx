@@ -1,7 +1,13 @@
-import "./App.css";
 import NavbarComp from "./components/NavbarComp";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import React from "react";
+
+import Home from "./components/Home";
 
 function App() {
   return (
