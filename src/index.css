@@ -1,13 +1,13 @@
 body {
   background-color: #e5e8e8 !important;
 }
-.container {
+/* .container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e5e8e8;
-}
+} */
 
 .mainContainer {
   background-color: #7c7c7c;
