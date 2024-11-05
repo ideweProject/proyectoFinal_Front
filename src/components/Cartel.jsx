@@ -3,11 +3,10 @@ import React from "react";
 function Cartel(){
     return(
         
-  <div class="container mt-5 mx-5 bg-primary ">
-  <div class="row d-flex align-items-center">
-    <div class="col-4  ">
-      <div class="w-100 mx-0 border divisor ">
-        <div><img src="https://static.wixstatic.com/media/a9b61d_04587018d69b4fc399ce7690945bc9ff~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/leaf.png" alt="" /></div>
+  <div class="container mt-5 bg-danger mx-5">
+  <div class="row">
+    <div class="col-4 divisor bg-warning">
+      <div class="p-3 border divisor bg-primary">
         <div className="fs-3 d-flex flex-nowrap">Jugos 100% naturales</div>
       <div>Hacemos envíos dentro de Montevideo, Ciudad de la Costa y Maldonado.
       Además, también podes pasar a buscar el pedido por el local.</div>
@@ -16,8 +15,7 @@ function Cartel(){
 </div>
     </div>
     <div class="col-4">
-      <div class="mx-0 border divisor">
-        <div><img src="https://static.wixstatic.com/media/a9b61d_8e4ae34404584dedad0b47c885ba0bba~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/freezing.png" alt="" /></div>
+      <div class="p-3 border divisor">
         <div className="fs-3">Freeze</div>
       <div>
 Se entregan los jugos congelados para que duren más tiempo en el freezer y conserven todos sus nutrientes por más tiempo.
