@@ -34,7 +34,7 @@ body {
 
 a.text-decoration-none {
   text-decoration: none;
-  color: #06021f;
+  color: #06021f;}
 .img-carousel {
   width: 300px;
 }
@@ -52,8 +52,6 @@ a.text-decoration-none {
 .images-row {
   height: 30px;
 }
-<<<<<<< Updated upstream
-=======
 .producto-lista {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -104,5 +102,4 @@ a.text-decoration-none {
 .divisor{
   height: 200px;
   text-align: center;
->>>>>>> Stashed changes
 }
