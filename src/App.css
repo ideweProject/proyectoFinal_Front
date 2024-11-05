@@ -1,0 +1,17 @@
+.img-carousel {
+  width: 300px;
+}
+
+.grid-container {
+  padding: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.worker-section {
+  background-color: #e5e8e8;
+}
+
+.images-row {
+  height: 30px;
+}
