@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
 
-import Home from "./assets/components/Home";
+import Home from "./components/Home";
 
 function App() {
   return (
