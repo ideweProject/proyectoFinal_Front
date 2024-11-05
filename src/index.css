@@ -1,0 +1,130 @@
+body {
+  background-color: #e5e8e8 !important;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e8e8;
+}
+
+.mainContainer {
+  background-color: #7c7c7c;
+  border: solid 1px rgb(126, 126, 126);
+  color: rgb(255, 255, 255);
+  height: 50vh;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.form-check-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+a.text-decoration-none {
+  text-decoration: none;
+  color: #06021f;
+}
+.img-carousel {
+  width: 300px;
+}
+
+.grid-container {
+  padding: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.worker-section {
+  background-color: #e5e8e8;
+}
+
+.images-row {
+  height: 30px;
+}
+.pickup-text {
+  text-align: justify;
+  width: 400px;
+}
+
+#video-vibraco {
+  filter: brightness(0.6);
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.text-video {
+  position: relative;
+  top: -350px;
+  color: white;
+}
+
+#gif-vibraco {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  object-position: center center;
+}
+.producto-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.producto {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.producto button {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: #000000;
+}
+.divisor {
+  height: 200px;
+  text-align: center;
+}

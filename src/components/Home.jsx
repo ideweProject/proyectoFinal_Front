@@ -14,10 +14,6 @@ function Home() {
             Envios gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
           </i>
         </div>
-
-        <div className="nav-container">
-          <NavbarComp />
-        </div>
       </header>
 
       <section className="video-section">
