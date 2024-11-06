@@ -7,17 +7,8 @@ import CarouselBrands from "./CarouselBrands";
 function Home() {
   return (
     <div className="flex flex-col h-full">
-      <header>
-        <div className="msg-container text-center py-3 bg-black text-white">
-          <i className="bi bi-truck">
-            {" "}
-            Envios gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
-          </i>
-        </div>
-      </header>
-
       <section className="video-section">
-        <div className="video-container text-center">
+        <div className="video-container text-center p-0 m-0">
           <video autoPlay loop muted id="video-vibraco">
             <source src="./videos/file.mp4" type="video/mp4" />
           </video>
