@@ -1,13 +1,13 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 function AboutThisProject() {
   return (
-    <div className="container">
-      <div className="container aboutImg ">
-        <h2 className="text-center mt-5 ">Sobre este proyecto</h2>
+    <div className="container mt-5">
+      <div className="container aboutImg mt-5">
+        <h2 className="text-center mt-5">Sobre este proyecto</h2>
 
-        <p className="text-center w-75 mt-4 mx-auto  fw-light">
+        <p className="text-center w-75 mx-auto fw-light">
           El presente sitio de e-commerce es un proyecto desarrollado por
           estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
           programa educativo extremadamente práctico de 3 meses y full-time,
@@ -15,7 +15,7 @@ function AboutThisProject() {
           Node.js, Express, React.js, SQL, MongoDB y Git.
         </p>
       </div>
-      <div className="container mt-5 infoAbout">
+      <div className="container mt-5 infoAbout mb-5">
         <div className="row">
           <div className="col-4">
             <h3>Duración</h3>
@@ -45,69 +45,89 @@ function AboutThisProject() {
           </div>
         </div>
       </div>
-      <div className="teamAbout">
-        <h3>Equipo</h3>
-        <p>
+      <div className="teamAbout mb-5">
+        <h3 className="text-center">Equipo</h3>
+        <p className="text-center">
           Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue
           ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu
           faucibus vivamus eget bibendum cras.
         </p>
       </div>
       <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
-              <Card.Body>
+        <div className="row g-5 d-flex justify-content-center rowUs">
+          <div className="col-6 col-md-3 mb-4">
+            <Card
+              className="cardUs"
+              style={{ width: "20rem", height: "30rem" }}
+            >
+              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
+              <Card.Body  className="cardBodyUs">
                 <Card.Title>Agustin</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
+                <i className="bi bi-twitter-x me-3"></i>
+                <i className="bi bi-linkedin"></i>
               </Card.Body>
             </Card>
           </div>
 
-          <div className="col-6">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
-              <Card.Body>
+          <div className="col-6 col-md-3 mb-4">
+            <Card
+              className="cardUs"
+              style={{ width: "20rem", height: "30rem" }}
+            >
+              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
+              <Card.Body className="cardBodyUs">
                 <Card.Title>Bruno</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-              
+                <i className="bi bi-twitter-x me-3"></i>
+                <i className="bi bi-linkedin"></i>
               </Card.Body>
             </Card>
           </div>
 
-          <div className="col-6">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
-              <Card.Body>
+          {/* Fila 2 (Segundas 2 tarjetas) */}
+          <div className="col-6 col-md-3 mb-4">
+            <Card
+              className="cardUs"
+              style={{ width: "20rem", height: "30rem" }}
+            >
+              <Card.Img className="imgTest" variant="top" src="/images/img_pages/bars.jpg" />
+              <Card.Body className="cardBodyUs">
                 <Card.Title>Pablo</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
+                <i className="bi bi-twitter-x me-3"></i>
+                <i className="bi bi-linkedin"></i>
               </Card.Body>
             </Card>
           </div>
 
-          <div className="col-6">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
-              <Card.Body>
+          <div className="col-6 col-md-3 mb-4">
+            <Card
+              className="cardUs"
+              style={{ width: "20rem", height: "30rem" }}
+            >
+              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
+              <Card.Body  className="cardBodyUs">
                 <Card.Title>Nicolas</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
+                <i className="bi bi-twitter-x me-3"></i>
+                <i className="bi bi-linkedin"></i>
               </Card.Body>
             </Card>
           </div>
