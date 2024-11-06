@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Cartel from "./Cartel";
 const productosData = [
   { id: 1, nombre: 'Celery juice', precio: "280,00", imagen: "https://static.wixstatic.com/media/a9b61d_c49afa33446142178af6161206a9ee4c~mv2.jpg/v1/fill/w_226,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a9b61d_c49afa33446142178af6161206a9ee4c~mv2.jpg" },
   { id: 2, nombre: 'Yellow juice', precio: "260,00", imagen: 'https://static.wixstatic.com/media/f0020d_fcbd347e69a442e0bc05aa0784ceb4d0~mv2.jpg/v1/fill/w_226,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f0020d_fcbd347e69a442e0bc05aa0784ceb4d0~mv2.jpg' },
@@ -15,19 +15,22 @@ const productosData = [
 
 const Products = () => {
   return (
+    <div className="bg-white">
+      <div><Cartel /></div>
     <section className="productos">
 
-      <div className="producto-lista">
-        {productosData.map((producto) => (
-          <div key={producto.id} className="producto">
-            <img src={producto.imagen} alt={producto.nombre} />
-            <p>{producto.nombre}</p>
-            <p>$U{producto.precio}</p>
-            <button className='btn btn-pill'>Agregar al carrito</button>
-          </div>
-        ))}
-      </div>
-    </section>
+<div className="producto-lista">
+  {productosData.map((producto) => (
+    <div key={producto.id} className="producto">
+      <img src={producto.imagen} alt={producto.nombre} />
+      <p>{producto.nombre}</p>
+      <p>$U{producto.precio}</p>
+      <button className='btn btn-pill'>Agregar al carrito</button>
+    </div>
+  ))}
+</div>
+</section></div>
+    
   );
 };
 
