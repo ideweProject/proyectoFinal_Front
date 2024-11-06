@@ -5,15 +5,33 @@ import "slick-carousel/slick/slick-theme.css";
 
 function CarouselComp() {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1800,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="container">
+    <div className="container ">
       <Slider {...settings}>
         <div className="">
           <img

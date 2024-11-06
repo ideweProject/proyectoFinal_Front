@@ -7,18 +7,42 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function NavbarComp() {
   return (
     <>
+      <header>
+        <div className="msg-container text-center py-3 bg-black text-white ">
+          <i className="bi bi-truck">
+            Envios gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
+          </i>
+        </div>
+      </header>
+
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home"> Vibraco</Navbar.Brand>
+          <Navbar.Brand href="#home" className="p-0">
+            <img
+              src="./images/img_pages/logovibraco.webp"
+              className="home-logo p-0"
+              alt=""
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="home">Jugos</Nav.Link>
-              <Nav.Link href="link">Barras</Nav.Link>
-              <Nav.Link href="link">Acerca de este proyecto</Nav.Link>
-              <Nav.Link href="link">Login</Nav.Link>
-              <Nav.Link href="link">Crear cuenta</Nav.Link>
-              <button>
+            <Nav className="ms-auto  links-navbar-container ">
+              <Nav.Link href="home" className="text-black">
+                Jugos
+              </Nav.Link>
+              <Nav.Link href="link" className="text-black">
+                Barras
+              </Nav.Link>
+              <Nav.Link href="link" className="text-black">
+                Acerca de este proyecto
+              </Nav.Link>
+              <Nav.Link href="link" className="text-black">
+                Login
+              </Nav.Link>
+              <Nav.Link href="link" className="text-black">
+                Crear cuenta
+              </Nav.Link>
+              <button className="cart-btn">
                 <i className="bi bi-bag"></i>
               </button>
             </Nav>
