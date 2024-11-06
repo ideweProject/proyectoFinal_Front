@@ -1,7 +1,8 @@
 .producto-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+   
+    column-gap: 0;
     justify-items: center;
     margin-top: 20px;
   }
@@ -118,7 +119,7 @@
   }
   
   .footer-links a:hover {
-    color: #ff6a00; /* Color al pasar el ratón */
+    color: #ff6a00; 
   }
   
   .footer-right {
@@ -131,7 +132,7 @@
     margin: 0;
   }
   
-  /* Responsividad */
+ 
   @media (max-width: 768px) {
     .footer-container {
       flex-direction: column;
