@@ -143,3 +143,12 @@ a.text-decoration-none {
 .home-logo {
   width: 80px;
 }
+
+.buyList {
+  list-style: none;
+}
+
+.cartTitle {
+  width: 100%;
+}
+

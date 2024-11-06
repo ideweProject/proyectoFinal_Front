@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Cart from "./Cart";
 
 function NavbarComp() {
   return (
@@ -42,9 +43,13 @@ function NavbarComp() {
               <Nav.Link href="link" className="text-black">
                 Crear cuenta
               </Nav.Link>
-              <button className="cart-btn">
+              {/* <button className="cart-btn">
                 <i className="bi bi-bag"></i>
-              </button>
+              </button> */}
+              <Nav.Link href="#" className="text-black">
+             
+                <Cart name="" />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
