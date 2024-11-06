@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #e5e8e8 !important;
-}
+} */
 /* .container {
   height: 100vh;
   display: flex;
@@ -127,4 +127,19 @@ a.text-decoration-none {
 .divisor {
   height: 200px;
   text-align: center;
+}
+
+.cart-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+.links-navbar-container {
+  font-weight: bolder;
+  /* cambiar a posteriori */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.home-logo {
+  width: 80px;
 }

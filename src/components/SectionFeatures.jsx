@@ -7,16 +7,6 @@ function SectionFeatures() {
         <video autoPlay loop muted id="gif-vibraco">
           <source src="../videos/GIF.mp4" />
         </video>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-4">
-              <i class="fa-solid fa-cubes-stacked "> </i>Sin azucares agregados
-            </div>
-            <div className="col-4">Sin conservantes</div>
-            <div className="col-4">Sin pasteurizar</div>
-          </div>
-        </div>
       </div>
 
       <div className="bars-banner ">
@@ -26,11 +16,18 @@ function SectionFeatures() {
       <div className="worker-section ">
         <div className="grid-container ">
           <div className="grid-item bg-black text-white">
-            <span></span>
-            <p>Somos un equipo apasionado y capacitado en lo que hacemos.</p>
+            <div className="text-center mt-5">
+              <img
+                src="./images/img_pages/vibracologowhite.webp"
+                className="mt-5"
+                alt=""
+              />
+              <p>Somos un equipo apasionado y capacitado en lo que hacemos.</p>
+            </div>
           </div>
+
           <div className="grid-item bg-danger">
-            <img src="../../images/Img_pages/worker.webp" alt="" />
+            <img src="../../images/img_pages/worker.webp" alt="" />
           </div>
         </div>
       </div>
