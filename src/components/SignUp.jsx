@@ -1,5 +1,5 @@
 import React from "react";
-import "./signup.css";
+
 function SignUp() {
   return (
     <div className="container">
@@ -47,11 +47,9 @@ function SignUp() {
             />
           </div>
 
-
           <button type="submit" className="btn text-light bg-dark mb-3  w-100">
             Sign up
           </button>
-          
         </form>
       </div>
     </div>

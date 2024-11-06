@@ -7,6 +7,8 @@ import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import Signin from "./components/SignUp.jsx";
 import Products from "./components/Products.jsx";
+import Jugos from "./components/Jugos.jsx";
+import Bars from "./components/Bars.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +20,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "products",
-        element: <Products />,
+        path: "jugos",
+        element: <Jugos />,
+      },
+      {
+        path: "bars",
+        element: <Bars />,
       },
     ],
   },
