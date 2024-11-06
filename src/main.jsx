@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import Signin from "./components/SignUp.jsx";
 import Products from "./components/Products.jsx";
+import AboutThisProject from "./components/AboutThisProject.jsx";
 import Jugos from "./components/Jugos.jsx";
 import Bars from "./components/Bars.jsx";
 
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <Signin /> },
   { path: "/products", element: <Products /> },
+  { path: "/about", element: <AboutThisProject /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
