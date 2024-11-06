@@ -1,3 +1,10 @@
+.anchura{
+ 
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .producto-lista {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5,6 +12,13 @@
     column-gap: 0;
     justify-items: center;
     margin-top: 20px;
+    width: 800px;
+    margin: 0 auto;
+   
+  }
+  .productos{
+   
+    width: 100vw;
   }
   
   .producto {

@@ -14,9 +14,10 @@ const productosData = [
 
 const Products = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white productosPadre">
       <div><Cartel /></div>
-    <section className="productos">
+   <div className='anchura'>
+   <section className="productos">
 
 <div className="producto-lista">
   {productosData.map((producto) => (
@@ -29,6 +30,7 @@ const Products = () => {
   ))}
 </div>
 </section></div>
+   </div>
     
   );
 };
