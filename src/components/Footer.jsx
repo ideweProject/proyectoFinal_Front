@@ -11,7 +11,7 @@ const Footer = () => {
           <img src="https://static.wixstatic.com/media/a9b61d_04587018d69b4fc399ce7690945bc9ff~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/leaf.png" alt="" />
           <h4>VIBRACO</h4>
           <div className="social-media">
-          <i class="bi bi-facebook mx-1 iconFacebook"></i>
+          <i class="bi bi-facebook mx-1 iconFacebook "></i>
           <i class="bi bi-whatsapp mx-1 iconWpp"></i>
           <i class="bi bi-twitter-x mx-1 iconTwitter"></i>
           </div>

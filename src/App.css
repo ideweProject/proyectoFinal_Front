@@ -58,7 +58,7 @@
   }
   
   .producto button:hover {
-    background-color: #000000;
+    background-color: #787474;
   }
   .divisor {
     height: 327px;
@@ -74,8 +74,8 @@
     background-color: rgb(250, 250, 250);
   }
   footer {
-    background-color: #fdfbfb; /* Color de fondo oscuro */
-    color: rgb(17, 17, 17);
+    background-color: #000000; /* Color de fondo oscuro */
+    color: rgb(255, 255, 255);
     padding: 20px 0;
     font-family: Arial, sans-serif;
   }
@@ -108,8 +108,8 @@
   }
   
   .social-media img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
   }
   
   .footer-links {
@@ -163,7 +163,14 @@
   }
   .iconFacebook{
     color: #316FF6  ;
+    font-size: 25px;
+    
+    
   }
   .iconWpp{
     color: #25D366  ;
+    font-size: 25px;
+  }
+  .iconTwitter{
+    font-size: 25px;
   }
