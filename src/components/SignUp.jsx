@@ -1,5 +1,5 @@
 import React from "react";
-import "./signup.css";
+
 function SignUp() {
   return (
     <div className="container  d-flex justify-content-center align-items-center vh-100 ">
@@ -24,6 +24,22 @@ function SignUp() {
           </div>
           <div className="form-group mb-4">
             <label>LastName:</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password..."
+            />
+          </div>
+          <div className="form-group mb-4">
+            <label>Password:</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Password..."
+            />
+          </div>
+          <div className="form-group mb-4">
+            <label>Password:</label>
             <input
               type="password"
               className="form-control"
