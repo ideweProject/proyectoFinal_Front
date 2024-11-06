@@ -17,7 +17,7 @@ function AboutThisProject() {
       </div>
       <div className="container mt-5 infoAbout mb-5">
         <div className="row">
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <h3>Duración</h3>
             <p>
               El proyecto fue desarrollado en tan sólo 3 semanas, durante
@@ -25,7 +25,7 @@ function AboutThisProject() {
               semana de duración.
             </p>
           </div>
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <h3>Tecnologías</h3>
             <p>
               Para el Front-End del sitio se desarrolló una aplicación en React
@@ -34,7 +34,7 @@ function AboutThisProject() {
               Git/GitHub.
             </p>
           </div>
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <h3>División de tareas</h3>
             <p>
               Para la organización de tareas durante el proyecto se utilizó
@@ -55,13 +55,16 @@ function AboutThisProject() {
       </div>
       <div className="container">
         <div className="row g-5 d-flex justify-content-center rowUs">
-          <div className="col-6 col-md-3 mb-4">
-            <Card
-              className="cardUs"
-              style={{ width: "20rem", height: "30rem" }}
-            >
-              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
-              <Card.Body  className="cardBodyUs">
+         
+          <div className="col-12 col-sm-6 col-md-3 mb-4">
+            <Card className="cardUs" style={{ height: "30rem" }}>
+              <Card.Img
+                className="img-fluid  imgTest"
+                variant="top"
+                src="/images/img_pages/bars.jpg"
+                style={{ objectFit: "cover", height: "50%" }} 
+              />
+              <Card.Body className="cardBodyUs">
                 <Card.Title>Agustin</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>
@@ -74,12 +77,14 @@ function AboutThisProject() {
             </Card>
           </div>
 
-          <div className="col-6 col-md-3 mb-4">
-            <Card
-              className="cardUs"
-              style={{ width: "20rem", height: "30rem" }}
-            >
-              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
+          <div className="col-12 col-sm-6 col-md-3 mb-4">
+            <Card className="cardUs" style={{ height: "30rem" }}>
+              <Card.Img
+                className="img-fluid imgTest"
+                variant="top"
+                src="/images/img_pages/bars.jpg"
+                style={{ objectFit: "cover", height: "50%" }}
+              />
               <Card.Body className="cardBodyUs">
                 <Card.Title>Bruno</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
@@ -93,13 +98,14 @@ function AboutThisProject() {
             </Card>
           </div>
 
-          {/* Fila 2 (Segundas 2 tarjetas) */}
-          <div className="col-6 col-md-3 mb-4">
-            <Card
-              className="cardUs"
-              style={{ width: "20rem", height: "30rem" }}
-            >
-              <Card.Img className="imgTest" variant="top" src="/images/img_pages/bars.jpg" />
+          <div className="col-12 col-sm-6 col-md-3 mb-4">
+            <Card className="cardUs" style={{ height: "30rem" }}>
+              <Card.Img
+                className="img-fluid imgTest"
+                variant="top"
+                src="/images/img_pages/bars.jpg"
+                style={{ objectFit: "cover", height: "50%" }}
+              />
               <Card.Body className="cardBodyUs">
                 <Card.Title>Pablo</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
@@ -113,13 +119,15 @@ function AboutThisProject() {
             </Card>
           </div>
 
-          <div className="col-6 col-md-3 mb-4">
-            <Card
-              className="cardUs"
-              style={{ width: "20rem", height: "30rem" }}
-            >
-              <Card.Img className="imgTest"  variant="top" src="/images/img_pages/bars.jpg" />
-              <Card.Body  className="cardBodyUs">
+          <div className="col-12 col-sm-6 col-md-3 mb-4">
+            <Card className="cardUs" style={{ height: "30rem" }}>
+              <Card.Img
+                className="img-fluid imgTest"
+                variant="top"
+                src="/images/img_pages/bars.jpg"
+                style={{ objectFit: "cover", height: "50%" }}
+              />
+              <Card.Body className="cardBodyUs">
                 <Card.Title>Nicolas</Card.Title>
                 <h6>Junior Full Stack Developer</h6>
                 <Card.Text>

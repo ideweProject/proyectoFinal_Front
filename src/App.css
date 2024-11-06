@@ -258,6 +258,7 @@ footer p {
 .cardUs {
   display: flex;
   flex-direction: column;
+  height: 30rem;
 }
 
 .card-img-top {
