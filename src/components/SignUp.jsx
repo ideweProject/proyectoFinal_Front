@@ -34,7 +34,7 @@ function SignUp() {
                     <input type="password" className="form-control" />
                   </div>
                   <div className="form-group mb-4">
-                    <label className="text">Password</label>
+                    <label className="text">Contraseña</label>
                     <input type="password" className="form-control" />
                   </div>
                   <button
