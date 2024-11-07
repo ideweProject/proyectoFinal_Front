@@ -250,10 +250,9 @@ footer p {
   color: #25d366;
   font-size: 25px;
 }
-.iconTwitter{
+.iconTwitter {
   font-size: 25px;
 }
-
 
 .cardUs {
   display: flex;
@@ -270,22 +269,82 @@ footer p {
 .card-body {
   flex: 1;
 }
-.cardBodyUs{
+.cardBodyUs {
   background-color: #e6cebe;
   cursor: pointer;
 }
-.cardBodyUs:hover{
+.cardBodyUs:hover {
   background-color: #d8975e;
 }
-.imgTest{
+.imgTest {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .imgTest:hover {
   transform: scale(1.1);
-  filter: brightness(70%);  
-} 
-.vibracologowhite{
+  filter: brightness(70%);
+}
+.vibracologowhite {
   width: 100px;
   height: 100px;
+}
+.imagenSummary {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 5px;
+}
+button.confirmOrder {
+  background-color: #8726b4;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+button.confirmOrder:hover {
+  background-color: #5f1a7a;
+  color: whitesmoke;
+}
+
+.unInput {
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 5px 0px #554f4f;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.input-large {
+  width: 100%;
+  max-width: 600px;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.checkMain {
+  position: relative; 
+  background-color: #a9afae; 
+  box-shadow: 0px 3px 5px 0px #000000;
+  border-radius: 5px;
+  background-image: url("/images/img_pages/vibraco-card02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(50%); 
+  padding: 20px; 
+  color: #fff; 
+}
+
+.checkMain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9); 
+  z-index: -1; 
 }

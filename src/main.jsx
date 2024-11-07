@@ -10,7 +10,7 @@ import Products from "./components/Products.jsx";
 import AboutThisProject from "./components/AboutThisProject.jsx";
 import Jugos from "./components/Jugos.jsx";
 import Bars from "./components/Bars.jsx";
-
+import Checkout from "./components/Checkout.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +35,7 @@ const router = createBrowserRouter([
   { path: "/signin", element: <Signin /> },
   { path: "/products", element: <Products /> },
   { path: "/about", element: <AboutThisProject /> },
+  { path: "/checkout", element: <Checkout /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
