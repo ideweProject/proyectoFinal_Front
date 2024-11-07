@@ -8,22 +8,51 @@
   align-items: center;
   background-color: #e5e8e8;
 } */
+.login-container {
+  max-width: 600px;
+  height: 100vh;
+}
 
-.mainContainer {
+.login-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./images/img_pages/vibraco-card02.jpg");
+  object-fit: contain;
+  background-position: center;
+  border-radius: 7px 0 0 7px;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+.image-title {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-style: italic;
+  position: relative;
+  top: 70px;
+}
+
+/* .mainContainer {
   background-color: #7c7c7c;
   border: solid 1px rgb(126, 126, 126);
   color: rgb(255, 255, 255);
-  height: 50vh;
-  max-width: 600px;
+  height: 65vh;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
-}
+} */
 
 .form-check-container {
   display: flex;
@@ -152,6 +181,6 @@ a.text-decoration-none {
   width: 100%;
 }
 
-.btnBuy{
+.btnBuy {
   height: 50vh;
 }
