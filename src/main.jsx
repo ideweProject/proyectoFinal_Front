@@ -8,7 +8,7 @@ import Login from "./components/Login.jsx";
 import Signin from "./components/SignUp.jsx";
 
 import AboutThisProject from "./components/AboutThisProject.jsx";
-import Jugos from "./components/Juices.jsx";
+import Juices from "./components/Juices.jsx";
 import Bars from "./components/Bars.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/storeConfig.js";

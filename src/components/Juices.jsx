@@ -3,7 +3,6 @@ import ProductCard from "./ProductCard";
 import Cartel from "./Cartel";
 import axios from "axios";
 
-
 const productosData = [
   {
     id: 1,
@@ -14,7 +13,7 @@ const productosData = [
   },
 ];
 
-function Jugos() {
+function Juices() {
   useEffect(() => {
     const getProducts = async () => {
       const response = await axios({
@@ -55,4 +54,4 @@ function Jugos() {
   );
 }
 
-export default Jugos;
+export default Juices;
