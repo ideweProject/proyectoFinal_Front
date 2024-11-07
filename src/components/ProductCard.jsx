@@ -14,7 +14,7 @@ function ProductCard() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/jugos`,
+        url: `${import.meta.env.VITE_API_URL}/products/jugos`, //products?category=juices  -back-- req.query  nombre "category"
       });
 
       dispatch(saveJuices({ juices: response.data }));
