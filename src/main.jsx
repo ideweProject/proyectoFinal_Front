@@ -6,10 +6,12 @@ import "./index.css";
 import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import Signin from "./components/SignUp.jsx";
-import Products from "./components/Products.jsx";
+
 import AboutThisProject from "./components/AboutThisProject.jsx";
-import Jugos from "./components/Jugos.jsx";
+import Jugos from "./components/Juices.jsx";
 import Bars from "./components/Bars.jsx";
+import { Provider } from "react-redux";
+import store from "./redux/storeConfig.js";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "jugos",
-        element: <Jugos />,
+        element: <Juices />,
       },
       {
         path: "bars",
@@ -34,12 +36,12 @@ const router = createBrowserRouter([
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <Signin /> },
-  { path: "/products", element: <Products /> },
-  { path: "/about", element: <AboutThisProject /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 );
