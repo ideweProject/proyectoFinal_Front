@@ -5,7 +5,7 @@ const juicesSlice = createSlice({
   initialState: [],
   reducers: {
     saveJuices(state, action) {
-      // state = action.payload.Juices;
+      state = action.payload.juices;
 
       return state;
     },

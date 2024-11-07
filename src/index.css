@@ -96,8 +96,12 @@ a.text-decoration-none {
   transition: transform 0.3s ease;
 }
 
-.producto:hover {
-  transform: scale(1.05);
+.cardComp:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+.cardBtn:hover {
+  background: green;
 }
 
 .producto img {
@@ -152,6 +156,6 @@ a.text-decoration-none {
   width: 100%;
 }
 
-.btnBuy{
+.btnBuy {
   height: 50vh;
 }
