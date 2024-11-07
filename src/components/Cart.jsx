@@ -63,6 +63,24 @@ function Cart({ name, ...props }) {
               </div>
             </li>
           </ul>
+          <hr />
+        
+            <div className="btnBuy d-flex flex-column w-100">
+              <div className="mt-auto">
+                <div className="row">
+                  <div className="col-9">
+                    <h4>Subtotal</h4>
+                    <p>Envío incluído al finalizar compra.</p>
+                  </div>
+                  <div className="col-3">
+                    <p className="fw-bold">$U 560</p>
+                  </div>
+                </div>
+                <div className="container d-flex justify-content-center w-100">
+                  <button className="rounded-pill w-100 btn btn-success">Finalizar compra</button>
+                </div>
+              </div>
+            </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>
