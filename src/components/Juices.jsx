@@ -16,31 +16,6 @@ function Juices() {
       </div>
     </div>
 
-    // <div className="bg-white productosPadre">
-    //   <div>
-    //     <Banner />
-    //   </div>
-    //   <div className="anchura">
-    //     <section className="productos">
-    //       <div className="producto-lista">
-    //         {productosData.map((producto) => (
-    //           <div key={producto.id} className="producto">
-    //             <img
-    //               className="h-50"
-    //               src={producto.imagen}
-    //               alt={producto.nombre}
-    //             />
-    //             <p>{producto.nombre}</p>
-    //             <p className="text-success">$U{producto.precio}</p>
-    //             <button className="rounded-pill px-3 bg-dark text-white">
-    //               Agregar al carrito
-    //             </button>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </section>
-    //   </div>
-    // </div>
   );
 }
 

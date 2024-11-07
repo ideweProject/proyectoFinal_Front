@@ -25,35 +25,23 @@ function Bars() {
   }, []);
 
   return (
-    <div className="bg-white productosPadre">
-      <div className="container d-flex flex-column justify-content-center align-items-center">
-        {" "}
-        <h1>RAW BAR</h1>
-        <p>Snack Saludable</p>
-        <p>
-          Descubrí las barras energéticas hechas con ingredientes de origen
-          vegetal.
-        </p>
+    <div>
+      <div className="bg-white productosPadre">
+        <div className="container d-flex flex-column justify-content-center align-items-center">
+          {" "}
+          <h1>RAW BAR</h1>
+          <p>Snack Saludable</p>
+          <p>
+            Descubrí las barras energéticas hechas con ingredientes de origen
+            vegetal.
+          </p>
+        </div>
       </div>
-      <div className="anchura">
-        <section className="productos">
-          <div className="producto-lista">
-            {productosData.map((producto) => (
-              <div key={producto.id} className="producto">
-                <img
-                  className="h-50"
-                  src={producto.imagen}
-                  alt={producto.nombre}
-                />
-                <p>{producto.nombre}</p>
-                <p className="text-success">$U{producto.precio}</p>
-                <button className="rounded-pill px-3 bg-dark text-white">
-                  Agregar al carrito
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
+
+      <div className="d-flex justify-content-center g-2">
+        <div className="w-50">
+          <ProductCard />
+        </div>
       </div>
     </div>
   );
