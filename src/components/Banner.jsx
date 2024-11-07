@@ -3,7 +3,7 @@ import React from "react";
 function Cartel(){
     return(
         
-  <div class="container mt-5 mx-5 ">
+  <div class="container mt-5 mx-5">
 
   <div class="row d-flex   align-items-center">
 

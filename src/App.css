@@ -153,7 +153,8 @@
   background-color: rgb(250, 250, 250);
 }
 footer {
-  background-color: #000000; /* Color de fondo oscuro */
+  background-color: #000000; 
+  background-color: #000000; 
   color: rgb(255, 255, 255);
   padding: 20px 0;
   font-family: Arial, sans-serif;
@@ -250,10 +251,9 @@ footer p {
   color: #25d366;
   font-size: 25px;
 }
-.iconTwitter{
+.iconTwitter {
   font-size: 25px;
 }
-
 
 .cardUs {
   display: flex;
@@ -270,22 +270,257 @@ footer p {
 .card-body {
   flex: 1;
 }
-.cardBodyUs{
+.cardBodyUs {
   background-color: #e6cebe;
   cursor: pointer;
 }
-.cardBodyUs:hover{
+.cardBodyUs:hover {
   background-color: #d8975e;
 }
-.imgTest{
+.imgTest {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .imgTest:hover {
   transform: scale(1.1);
-  filter: brightness(70%);  
-} 
-.vibracologowhite{
+  filter: brightness(70%);
+}
+.vibracologowhite {
   width: 100px;
   height: 100px;
+}
+.imagenSummary {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 5px;
+}
+button.confirmOrder {
+  background-color: #8726b4;
+  margin-top: 10px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
+button.confirmOrder:hover {
+  background-color: #5f1a7a;
+  color: whitesmoke;
+}
+
+.unInput {
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 5px 0px #554f4f;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.input-large {
+  width: 100%;
+  max-width: 600px;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.checkMain {
+  position: relative; 
+  background-color: #a9afae; 
+  box-shadow: 0px 3px 5px 0px #000000;
+  border-radius: 5px;
+  background-image: url("/images/img_pages/vibraco-card02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(50%); 
+  padding: 20px; 
+  color: #fff; 
+}
+
+.checkMain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9); 
+  z-index: -1; 
+}
+.product-page {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; 
+}
+
+.product-image {
+  width: 100%;
+  max-width: 450px;
+  margin-right: 30px;
+}
+
+.product-image img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  max-width: 500px;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.product-info h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-info .price {
+  font-size: 28px;
+  color: #009688;
+  margin-bottom: 20px;
+}
+
+.product-info .price-subtittle {
+  font-size: 16px;
+  color: #777;
+}
+
+.product-info .add-to-cart {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.product-info .add-to-cart:hover {
+  background-color: #444;
+}
+
+.product-info .cantidad {
+  width: 60px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.product-info h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-info hr {
+  margin: 20px 0;
+}
+
+.product-info .social-icons i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.products-container {
+  margin-top: 50px;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .product-info {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .product-image {
+    margin-right: 0; 
+    margin-bottom: 20px; 
+  }
+
+  .product-info h1 {
+    font-size: 28px;
+  }
+
+  .product-info .price {
+    font-size: 24px;
+  }
+
+  .product-info .add-to-cart {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .product-info .cantidad {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .products-container {
+    margin-top: 30px;
+  }
+
+  .product-info .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .product-info .social-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-info h1 {
+    font-size: 24px;
+  }
+
+  .product-info .price {
+    font-size: 20px;
+  }
+
+  .product-info .add-to-cart {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .product-info .cantidad {
+    width: 60px;
+  }
+}
+
+
+.cantidad{
+  width: 70px;
+  height: 40px;
+}
+.price-subtittle{
+  font-size: 8px;
+  margin-top: 1px;
+ 
 }
