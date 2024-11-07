@@ -3,31 +3,30 @@ import React from "react";
 function SectionFeatures() {
   return (
     <>
-      <div className="gif-container mt-4 ">
-        <video autoPlay loop muted id="gif-vibraco">
-          <source src="../videos/GIF.mp4" />
-        </video>
-      </div>
-
-      <div className="bars-banner ">
-        <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
-      </div>
-
-      <div className="worker-section ">
-        <div className="grid-container ">
-          <div className="grid-item bg-black text-white">
-            <div className="text-center mt-5">
-              <img
-                src="./images/img_pages/vibracologowhite.webp"
-                className="mt-5"
-                alt=""
-              />
-              <p>Somos un equipo apasionado y capacitado en lo que hacemos.</p>
+      <div className="container">
+        <div className="gif-container mt-4 ">
+          <video autoPlay loop muted id="gif-vibraco">
+            <source src="../videos/GIF.mp4" />
+          </video>
+        </div>
+        <div className="bars-banner ">
+          <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
+        </div>
+        <div className="worker-section ">
+          <div className="grid-container ">
+            <div className="grid-item bg-black text-white">
+              <div className="text-center mt-5">
+                <img
+                  src="./images/img_pages/vibracologowhite.webp"
+                  className="mt-5"
+                  alt=""
+                />
+                <p>Somos un equipo apasionado y capacitado en lo que hacemos.</p>
+              </div>
             </div>
-          </div>
-
-          <div className="grid-item bg-danger">
-            <img src="../../images/img_pages/worker.webp" alt="" />
+            <div className="grid-item bg-danger">
+              <img src="../../images/img_pages/worker.webp" alt="" />
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import Cartel from "./Cartel";
 import axios from "axios";
 
 const productosData = [
@@ -12,7 +13,7 @@ const productosData = [
   },
 ];
 
-function Bars() {
+function Juices() {
   useEffect(() => {
     const getProducts = async () => {
       const response = await axios({
@@ -26,14 +27,8 @@ function Bars() {
 
   return (
     <div className="bg-white productosPadre">
-      <div className="container d-flex flex-column justify-content-center align-items-center">
-        {" "}
-        <h1>RAW BAR</h1>
-        <p>Snack Saludable</p>
-        <p>
-          Descubrí las barras energéticas hechas con ingredientes de origen
-          vegetal.
-        </p>
+      <div>
+        <Cartel />
       </div>
       <div className="anchura">
         <section className="productos">
@@ -59,4 +54,4 @@ function Bars() {
   );
 }
 
-export default Bars;
+export default Juices;
