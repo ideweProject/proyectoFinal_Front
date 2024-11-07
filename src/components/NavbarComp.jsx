@@ -28,26 +28,25 @@ function NavbarComp() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto  links-navbar-container ">
-              <Nav.Link href="home" className="text-black">
+              <Nav.Link href="/jugos" className="text-black">
                 Jugos
               </Nav.Link>
-              <Nav.Link href="link" className="text-black">
+              <Nav.Link href="/bars" className="text-black">
                 Barras
               </Nav.Link>
-              <Nav.Link href="link" className="text-black">
+              <Nav.Link href="/about" className="text-black">
                 Acerca de este proyecto
               </Nav.Link>
-              <Nav.Link href="link" className="text-black">
+              <Nav.Link href="/login" className="text-black">
                 Login
               </Nav.Link>
-              <Nav.Link href="link" className="text-black">
+              <Nav.Link href="/signin" className="text-black">
                 Crear cuenta
               </Nav.Link>
               {/* <button className="cart-btn">
                 <i className="bi bi-bag"></i>
               </button> */}
               <Nav.Link href="#" className="text-black">
-             
                 <Cart name="" />
               </Nav.Link>
             </Nav>
