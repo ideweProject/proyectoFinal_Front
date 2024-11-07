@@ -27,7 +27,7 @@ function NavbarComp() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto  links-navbar-container ">
+            <Nav className="ms-auto links-navbar-container ">
               <Nav.Link href="/jugos" className="text-black">
                 Jugos
               </Nav.Link>
@@ -43,9 +43,7 @@ function NavbarComp() {
               <Nav.Link href="/signin" className="text-black">
                 Crear cuenta
               </Nav.Link>
-              {/* <button className="cart-btn">
-                <i className="bi bi-bag"></i>
-              </button> */}
+
               <Nav.Link href="#" className="text-black">
                 <Cart name="" />
               </Nav.Link>
