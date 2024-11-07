@@ -94,7 +94,7 @@ function Checkout() {
                     type="text"
                     name="postalCode"
                     className="w-100 unInput"
-                    placeholder="codigo postal..."
+                    placeholder="codigo postal"
                   />
                 </div>
               </div>
@@ -105,7 +105,7 @@ function Checkout() {
                   type="number"
                   name="phone"
                   className="w-100 unInput"
-                  placeholder="numero de contacto..."
+                  placeholder="numero de contacto"
                 />
               </div>
               <hr />
