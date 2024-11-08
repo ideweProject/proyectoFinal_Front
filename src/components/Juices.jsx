@@ -1,21 +1,40 @@
 import ProductCard from "./ProductCard";
 import Banner from "./Banner";
+import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { saveJuices } from "../redux/juicesSlice";
+import React, { useEffect, useState } from "react";
 
 function Juices() {
+  const dispatch = useDispatch();
+  const product = useSelector((state) => state.juices);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_URL}/products/juices?cat=juices`,
+      });
+
+      dispatch(saveJuices({ juices: response.data }));
+    };
+    getProducts();
+  }, []);
+
+  const juices = useSelector((state) => state.juices);
+
   return (
     <div>
-      <div className="d-flex justify-content-center mb-5">
-        <div>
-          <Banner />
-        </div>
-      </div>
-      <div className="d-flex justify-content-center g-2">
-        <div className="w-50">
-          <ProductCard />
-        </div>
+      <div className="row g-3 mb-5">
+        {juices.map((juice) => (
+          <div className="col-4" key={juice.id}>
+            {/* <ProductCard  juice.name/> */}
+            {juice.name}
+            {juice.price}
+          </div>
+        ))}
       </div>
     </div>
-
   );
 }
 
