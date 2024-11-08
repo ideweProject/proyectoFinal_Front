@@ -37,11 +37,11 @@ function Bars() {
         </div>
       </div>
 
-      <div>
+      <div className="container w-50">
         <div className="row g-3 mb-5">
           {bars.map((bar) => (
             <div className="col-4" key={bar.id}>
-              <ProductCard name={bar.name} price={bar.price} />
+              <ProductCard name={bar.name} price={bar.price} img={bar.image} />
             </div>
           ))}
         </div>

@@ -3,13 +3,12 @@ import Card from "react-bootstrap/Card";
 import image1 from "../assets/naranja.jpg";
 
 function ProductCard({ name, price, image }) {
-  console.log(`../../public/images/Products/juices/${image}`);
   return (
     <Card className="cardComp" style={{ width: "15rem", border: "none" }}>
       <Card.Img
         className="juiceImage"
         variant="top"
-        src={image}
+        src={image1}
         //src={`../../public/images/Products/juices/${image}.jpg`}
       />
       <Card.Body>
