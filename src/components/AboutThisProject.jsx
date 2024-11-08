@@ -3,19 +3,22 @@ import { Card } from "react-bootstrap";
 
 function AboutThisProject() {
   return (
-    <div className="container ">
-      <div className="mainTextAbout">
-        <h2 className="text-center fs-4 fs-md-3 fs-lg-2">Sobre este proyecto</h2>
-        <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4 ">
-          El presente sitio de e-commerce es un proyecto desarrollado por
-          estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
-          programa educativo extremadamente práctico de 3 meses y full-time,
-          donde los estudiantes invierten más de 600 horas a aprender sobre
-          Node.js, Express, React.js, SQL, MongoDB y Git.
-        </p>
+    <div className="container mainAboutAll pt-2">
+      <div className="aboutImg mt-0">
+        <div className="mainTextAbout">
+          <h2 className="text-center fs-4 fs-md-3 fs-lg-2">
+            Sobre este proyecto
+          </h2>
+          <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4 ">
+            El presente sitio de e-commerce es un proyecto desarrollado por
+            estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
+            programa educativo extremadamente práctico de 3 meses y full-time,
+            donde los estudiantes invierten más de 600 horas a aprender sobre
+            Node.js, Express, React.js, SQL, MongoDB y Git.
+          </p>
+        </div>
       </div>
 
-      <div className="container aboutImg mt-3"></div>
 
       <div className="container mt-5 infoAbout mb-4">
         <div className="row d-flex">
@@ -57,7 +60,7 @@ function AboutThisProject() {
           faucibus vivamus eget bibendum cras.
         </p>
       </div>
-      <div className="container">
+      <div className="container ">
         <div className="row g-5 d-flex justify-content-center rowUs">
           <div className="col-12 col-sm-6 col-md-3 mb-4">
             <Card className="cardUs" style={{ height: "30rem" }}>
