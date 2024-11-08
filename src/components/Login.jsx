@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -26,78 +27,84 @@ function Login() {
 
   return (
     <>
-      <div className="container  login-container d-flex flex-column justify-content-center">
-        <div className="row g-0 h-75 shadow rounded">
-          <div className="col-md-6 ">
-            <div className="login-image text-center h-100 w-100 ">
-              <img src="./images/img_pages/vibracologowhite.webp" alt="" />
-              <h1 className="image-title text-white h-100 d-md-flex align-items-center justify-content-center d-none">
-                Lo hacemos saludable
-              </h1>
+      <div className=" login-background d-flex justify-content-center">
+        <div className="login-container d-flex flex-column justify-content-center ">
+          <div className="row g-0   ">
+            <div className="col-md-6 ">
+              <div className="login-box text-center h-100 w-100  ">
+                <Link to={"/"}>
+                  <img src="./images/img_pages/vibracowhite.png" alt="" />
+                </Link>
+
+                <h1 className="image-title text-white d-md-flex  d-none">
+                  Lo hacemos saludable
+                </h1>
+              </div>
             </div>
-          </div>
 
-          <div className="col-md-6 ">
-            <div className="d-flex flex-column ms-5 p-3 h-100 mt-5  ">
-              <div>
-                <h2 className="title">Bienvenido de nuevo ! </h2>
-                <form
-                  className=" mt-4"
-                  style={{ maxWidth: "400px" }}
-                  onSubmit={handleSubmit}
-                >
-                  <div className="text form-group mb-4">
-                    <label className="text">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      value={email}
-                      onChange={handleEmailChange}
-                    />
-                  </div>
-                  <div className="form-group mb-4">
-                    <label className="text">Contraseña</label>
-                    <input
-                      type="password"
-                      className="form-control text text"
-                      value={password}
-                      onChange={handlePasswordChange}
-                    />
-                  </div>
-
-                  <div className="form-check-container mb-4">
-                    <div className="form-check">
+            <div className="col-md-6 bg-white form-column ">
+              <div className="d-flex flex-column p-5   ">
+                <div>
+                  <h2 className="title ">Bienvenido de nuevo ! </h2>
+                  <form
+                    className=" mt-4"
+                    style={{ maxWidth: "400px" }}
+                    onSubmit={handleSubmit}
+                  >
+                    <div className="text form-group mb-4">
+                      <label className="text">Email</label>
                       <input
-                        type="checkbox"
-                        className="textform-check-input"
-                        id="rememberMe"
+                        type="email"
+                        className="form-control"
+                        value={email}
+                        onChange={handleEmailChange}
                       />
-                      <label
-                        className="text form-check-label"
-                        htmlFor="rememberMe"
-                      >
-                        Recuerdame
-                      </label>
+                    </div>
+                    <div className="form-group mb-4">
+                      <label className="text">Contraseña</label>
+                      <input
+                        type="password"
+                        className="form-control text text"
+                        value={password}
+                        onChange={handlePasswordChange}
+                      />
                     </div>
 
-                    <a
-                      href="/forgot-password"
-                      className="text text-decoration-none"
-                    >
-                      Olvidaste tu contraseña?
-                    </a>
-                  </div>
+                    <div className="form-check-container mb-4">
+                      <div className="form-check">
+                        <input
+                          type="checkbox"
+                          className="textform-check-input"
+                          id="rememberMe"
+                        />
+                        <label
+                          className="text form-check-label"
+                          htmlFor="rememberMe"
+                        >
+                          Recuerdame
+                        </label>
+                      </div>
 
-                  <button
-                    type="submit"
-                    className="btn text text-light bg-dark mb-3  w-100"
-                  >
-                    Iniciar sesión
-                  </button>
-                  <a href="/signin" className="text text-decoration-none">
-                    Crear una cuenta
-                  </a>
-                </form>
+                      {/* <a
+                        href="/forgot-password"
+                        className="text text-decoration-none"
+                      >
+                        Olvidaste tu contraseña?
+                      </a> */}
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="btn text text-light bg-dark mb-3  w-100"
+                    >
+                      Iniciar sesión
+                    </button>
+
+                    <Link to={"/signin"} className="text text-decoration-none">
+                      Crear cuenta
+                    </Link>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
