@@ -4,12 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 function NavbarComp() {
   return (
     <>
       <header>
-        <div className="msg-container text-center py-3 bg-black text-white ">
+        <div className="msg-container text text-center py-3 bg-black text-white  ">
           <i className="bi bi-truck">
             Envios gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
           </i>
@@ -17,37 +18,53 @@ function NavbarComp() {
       </header>
 
       <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home" className="p-0">
+        <Container className="">
+          <Link to={"/"} className="p-0">
             <img
               src="./images/img_pages/logovibraco.webp"
               className="home-logo p-0"
               alt=""
             />
-          </Navbar.Brand>
+          </Link>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto links-navbar-container ">
-              <Nav.Link href="/jugos" className="text-black">
+            <Nav className=" d-flex justify-content-center w-100 links-navbar-container ">
+              <Link
+                to={"/jugos"}
+                className="text-black text text-decoration-none p-1"
+              >
                 Jugos
-              </Nav.Link>
-              <Nav.Link href="/bars" className="text-black">
+              </Link>
+              <Link
+                to={"/bars"}
+                className="text-black text text-decoration-none p-1"
+              >
                 Barras
-              </Nav.Link>
-              <Nav.Link href="/about" className="text-black">
+              </Link>
+              <Link
+                to={"/about"}
+                className="text-black text text-decoration-none p-1"
+              >
                 Acerca de este proyecto
-              </Nav.Link>
-              <Nav.Link href="/login" className="text-black">
-                Login
-              </Nav.Link>
-              <Nav.Link href="/signin" className="text-black">
-                Crear cuenta
-              </Nav.Link>
+              </Link>
 
-              <Nav.Link href="#" className="text-black">
-                <Cart name="" />
-              </Nav.Link>
+              <Link
+                to={"/login"}
+                className="text-black text text-decoration-none p-1"
+              >
+                Login
+              </Link>
+              <Link
+                to={"/signin"}
+                className="text-black text text-decoration-none p-1"
+              >
+                Crear cuenta
+              </Link>
             </Nav>
+            <Link href="#" className="text-black text-decoration-none">
+              <Cart name="" />
+            </Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>

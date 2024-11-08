@@ -7,7 +7,11 @@ const Footer = () => {
         <div className="footer-left">
           <div className="d-flex flex-column align-items-start">
             <div className="d-flex align-items-center flex-column">
-              <img className="vibracologowhite"src="/images/img_pages/vibracologowhite.webp" alt="" />
+              <img
+                className="w-75"
+                src="/images/img_pages/vibracowhite.png"
+                alt=""
+              />
               <div className="social-media">
                 <i class="bi bi-facebook mx-1 iconFacebook"></i>
                 <i class="bi bi-whatsapp mx-1 iconWpp"></i>

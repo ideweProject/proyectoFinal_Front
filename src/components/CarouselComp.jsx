@@ -42,7 +42,7 @@ function CarouselComp() {
   };
 
   return (
-    <div className="container ">
+    <div className="container  ">
       <Slider {...settings}>
         <div className="">
           <img

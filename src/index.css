@@ -55,14 +55,14 @@
 .form-column {
   border-radius: 0 7px 7px 0;
 }
-.main-container {
+/* .main-container {
   background: rgb(215, 228, 232);
   background: linear-gradient(
     180deg,
     rgba(215, 228, 232, 1) 10%,
     rgba(255, 255, 255, 1) 100%
   );
-}
+} */
 
 .form-check-container {
   display: flex;
