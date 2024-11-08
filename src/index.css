@@ -174,7 +174,6 @@ a.text-decoration-none {
 
 .cartTitle {
   width: 100%;
-
 }
 
 .btnBuy {
@@ -223,11 +222,7 @@ a.text-decoration-none {
 }
 
 .cartBtn {
-  color: rgb(75, 202, 50);
+  color: rgb(79, 81, 79);
   font-size: 20px;
   font-weight: bold;
-}
-
-.checkOutBtn {
-  background: rgb(75, 202, 50);
 }
