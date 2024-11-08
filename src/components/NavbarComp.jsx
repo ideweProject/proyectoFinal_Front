@@ -44,14 +44,14 @@ function NavbarComp() {
               </Link>
               <Link
                 to={"/about"}
-                className="text-black text text-decoration-none p-1"
+                className="text-black text text-decoration-none  p-1"
               >
                 Acerca de este proyecto
               </Link>
 
               <Link
                 to={"/login"}
-                className="text-black text text-decoration-none p-1"
+                className="text-black text text-decoration-none  p-1"
               >
                 Login
               </Link>

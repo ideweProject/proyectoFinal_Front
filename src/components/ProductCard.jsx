@@ -1,14 +1,14 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import image1 from "../assets/naranja.jpg";
+
 
 function ProductCard({ name, price, image }) {
   return (
     <Card className="cardComp" style={{ width: "15rem", border: "none" }}>
       <Card.Img
-        className="juiceImage"
+        className="juiceImage img-fluid"
         variant="top"
-        src={image1}
+        src={`./images/Products/Juices/${image}.jpg`}
         //src={`../../public/images/Products/juices/${image}.jpg`}
       />
       <Card.Body>

@@ -34,7 +34,7 @@ function Juices() {
           {juices.map((juice) => (
             <div className="col-4" key={juice.id}>
               <ProductCard
-                name={juice.image}
+                name={juice.name}
                 price={juice.price}
                 image={juice.image}
               />
