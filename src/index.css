@@ -220,3 +220,7 @@ a.text-decoration-none {
     border-left: 2px solid white;
   }
 }
+
+.cartBtn{
+  color: aqua;
+}

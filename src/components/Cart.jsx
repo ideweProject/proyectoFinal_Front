@@ -12,9 +12,9 @@ function Cart({ name, ...props }) {
 
   return (
     <>
-      <Button variant="dark" onClick={handleShow} className="px-2">
+      <Button variant="" onClick={handleShow} className=" px-2">
         {name}
-        <i className="bi bi-bag"></i>
+        <i className="bi bi-bag cartBtn"> Haz tu pedido</i>
       </Button>
       <Offcanvas show={show} placement="end" onHide={handleClose} {...props}>
         <Offcanvas.Header closeButton className="bg-dark">
