@@ -13,7 +13,7 @@ function Juices() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/jugos`, //products?category=juices  -back-- req.query  nombre "category"
+        url: `${import.meta.env.VITE_API_URL}/products/juices?cat=juices`,
       });
 
       dispatch(saveJuices({ juices: response.data }));
@@ -28,7 +28,9 @@ function Juices() {
       <div className="row g-3 mb-5">
         {juices.map((juice) => (
           <div className="col-4" key={juice.id}>
-            <ProductCard />
+            {/* <ProductCard  juice.name/> */}
+            {juice.name}
+            {juice.price}
           </div>
         ))}
       </div>

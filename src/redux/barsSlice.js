@@ -5,7 +5,7 @@ const barsSlice = createSlice({
   initialState: [],
   reducers: {
     saveBars(state, action) {
-      // state = action.payload.Bars;
+      state = action.payload.bars;
 
       return state;
     },
