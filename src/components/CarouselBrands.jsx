@@ -3,6 +3,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 function CarouselBrands() {
+  function SampleArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          background: "grey",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
   var settings = {
     dots: false,
     infinite: true,
@@ -31,79 +46,81 @@ function CarouselBrands() {
 
   return (
     <>
-      <div>
-        <Slider {...settings}>
-          <div>
-            <img
-              src="../../images/img_brands/trafigura.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/brote.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/devoto.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/disco.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/geant.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/labici.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/lamolienda.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/madretierra.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/olopoke.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-          <div>
-            <img
-              src="../../images/img_brands/ramm.webp"
-              alt=""
-              className="img-fluid"
-            />
-          </div>
-        </Slider>
+      <div className="d-flex w-100 justify-content-center">
+        <div className="carousel-container   ">
+          <Slider {...settings}>
+            <div>
+              <img
+                src="../../images/img_brands/trafigura.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/brote.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/devoto.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/disco.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/geant.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/labici.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/lamolienda.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/madretierra.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/olopoke.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+            <div>
+              <img
+                src="../../images/img_brands/ramm.webp"
+                alt=""
+                className="w-100"
+              />
+            </div>
+          </Slider>
+        </div>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import CarouselBrands from "./CarouselBrands";
 
 function Home() {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full main-container">
       <section className="video-section">
         <div className="video-container text-center p-0 m-0">
           <video
@@ -17,14 +17,17 @@ function Home() {
             className="video-vibraco"
             src="./videos/file.mp4"
             type="video/mp4"
-          >
-            {" "}
-          </video>
+          ></video>
 
           <div className="text-video">
-            <h1>JUGO PRENSADO EN FRIO</h1>
-            <p>Hechos con ingredientes de origen vegetal</p>
-            <span>Saber mas</span>
+            <img
+              src="./images/img_pages/vibracowhite.png"
+              className="logo-video"
+              alt=""
+            />
+            <p className="title-video">JUGO PRENSADO EN FRIO</p>
+            <p className="text">Hechos con ingredientes de origen vegetal</p>
+            <span className="text">Saber mas</span>
           </div>
         </div>
       </section>

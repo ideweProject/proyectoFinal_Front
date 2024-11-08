@@ -34,14 +34,12 @@ const router = createBrowserRouter([
       },
       { path: "/about", element: <AboutThisProject /> },
       { path: "/checkout", element: <Checkout /> },
-      {path:"product", element:<ProductPage />}
+      { path: "product", element: <ProductPage /> },
     ],
   },
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <Signin /> },
-  { path: "/checkout", element: <Checkout /> },
-  {path:"/product", element:<ProductPage />}
 ]);
 
 createRoot(document.getElementById("root")).render(

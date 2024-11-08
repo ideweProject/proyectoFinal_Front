@@ -9,16 +9,29 @@
   background-color: #e5e8e8;
 } */
 .login-container {
-  max-width: 600px;
+  max-width: 900px;
   height: 100vh;
 }
+.logo {
+  width: 300px;
+}
 
-.login-image {
+.login-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./images/img_pages/vibraco-card02.jpg");
+  background-position: unset;
+}
+
+.login-box {
+  background-image: linear-gradient(
+    90deg,
+    rgba(160, 181, 235, 1) 35%,
+    rgba(201, 240, 228, 1) 100%
+  );
   object-fit: contain;
   background-position: center;
   border-radius: 7px 0 0 7px;
+  position: relative;
 }
 
 .text {
@@ -28,30 +41,27 @@
 }
 .title {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
 }
 .image-title {
+  position: absolute;
   font-family: "Roboto", serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: italic;
-  position: relative;
-  top: 70px;
+  bottom: 10%;
 }
 
-/* .mainContainer {
-  background-color: #7c7c7c;
-  border: solid 1px rgb(126, 126, 126);
-  color: rgb(255, 255, 255);
-  height: 65vh;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+.form-column {
+  border-radius: 0 7px 7px 0;
+}
+/* .main-container {
+  background: rgb(215, 228, 232);
+  background: linear-gradient(
+    180deg,
+    rgba(215, 228, 232, 1) 10%,
+    rgba(255, 255, 255, 1) 100%
+  );
 } */
 
 .form-check-container {
@@ -69,22 +79,8 @@ a.text-decoration-none {
   width: 300px;
 }
 
-.grid-container {
-  padding: 45px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.worker-section {
-  background-color: #e5e8e8;
-}
-
-.images-row {
-  height: 30px;
-}
-.pickup-text {
-  text-align: justify;
-  width: 400px;
+.send-info-container {
+  max-width: 800px;
 }
 
 #video-vibraco {
@@ -101,6 +97,7 @@ a.text-decoration-none {
   object-fit: cover;
   object-position: center center;
 }
+
 .producto-lista {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -194,5 +191,36 @@ a.text-decoration-none {
   left: 50%;
   color: white;
   width: 500px;
-  transform: translate(-50%, -2.75rem);
+  transform: translate(-50%, -11.75rem);
+}
+
+.logo-video {
+  width: 350px;
+}
+
+.title-video {
+  font-size: 2.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.carousel-container {
+  width: 95%;
+}
+
+@media screen and (max-width: 992px) {
+  .pickup-col {
+    border-top: 2px solid white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pickup-col {
+    border-left: 2px solid white;
+  }
+}
+
+.cartBtn{
+  color: aqua;
 }
