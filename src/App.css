@@ -596,3 +596,34 @@ button.confirmOrder:hover {
   font-size: 8px;
   margin-top: 1px;
 }
+
+.cardfs{
+  font-size: 10px;
+  color: #959b9a;
+}
+
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 30px;  
+  color: #000;  
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 10px;  
+}
+
+.slick-next {
+  right: 10px;  
+}
+
+
+.prev-arrow, .next-arrow {
+  font-weight: bold;
+}

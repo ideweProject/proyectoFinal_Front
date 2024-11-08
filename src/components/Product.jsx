@@ -41,7 +41,7 @@ const ProductPage = () => {
 
      
     </div>
-       <div className='products-container' >
+       <div className='container' >
        <CarouselProducts />
      </div>
    </div>
