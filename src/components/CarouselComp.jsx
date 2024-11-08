@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function CarouselComp() {
   var settings = {
@@ -41,9 +43,33 @@ function CarouselComp() {
     ],
   };
 
+  const [juices, setJuices] = useState([]);
+
+  useEffect(() => {
+    const getJuices = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_URL}/products/juices?cat=juices`,
+      });
+      setJuices(response.data);
+    };
+    getJuices();
+  }, []);
+
   return (
     <div className="container  ">
       <Slider {...settings}>
+        {juices.map((juice) => (
+          <div key={juice.id}>
+            <img
+              src={`./images/Products/Juices/${juice.image}.jpg`}
+              className="img-fluid w-100"
+              alt=""
+            />
+          </div>
+        ))}
+
+        {/*         
         <div className="">
           <img
             src="../../images/Products/Juices/brown-juice-XL.jpg"
@@ -106,7 +132,7 @@ function CarouselComp() {
             alt=""
             className="img-carousel w-100"
           />
-        </div>
+        </div> */}
       </Slider>
     </div>
   );

@@ -32,16 +32,14 @@ const router = createBrowserRouter([
         path: "bars",
         element: <Bars />,
       },
-      { path: "/about", element: <AboutThisProject /> },
-      { path: "/checkout", element: <Checkout /> },
-      {path:"product", element:<ProductPage />}
+      { path: "about", element: <AboutThisProject /> },
+      { path: "checkout", element: <Checkout /> },
+      { path: "product", element: <ProductPage /> },
     ],
   },
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <Signin /> },
-  { path: "/checkout", element: <Checkout /> },
-  {path:"/product", element:<ProductPage />}
 ]);
 
 createRoot(document.getElementById("root")).render(
