@@ -66,6 +66,7 @@
 .mainAboutAll{
   border-radius: 5px;
   background-color: #ccc9c9;
+  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.9);
 }
 .aboutImg {
   position: relative; 
