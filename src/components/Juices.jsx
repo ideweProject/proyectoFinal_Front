@@ -25,12 +25,17 @@ function Juices() {
 
   return (
     <div>
+      <div>
+        <Banner />
+      </div>
       <div className="row g-3 mb-5">
         {juices.map((juice) => (
           <div className="col-4" key={juice.id}>
-            {/* <ProductCard  juice.name/> */}
-            {juice.name}
-            {juice.price}
+            <ProductCard
+              name={juice.name}
+              price={juice.price}
+              image={juice.image}
+            />
           </div>
         ))}
       </div>
