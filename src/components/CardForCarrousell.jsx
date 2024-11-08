@@ -8,7 +8,7 @@ function CarCard({ juice }) {
     <Card
       key={juice.id}
       className="cardComp"
-      style={{ width: "15rem", border: "none" }}
+      style={{ width: "10rem", border: "none" }}
     >
       <Card.Img
         variant="top"
@@ -16,17 +16,13 @@ function CarCard({ juice }) {
         className="juiceImage"
       />
       <Card.Body>
-        <Card.Title className="text-center">{juice.name}</Card.Title>
-        <Card.Text className="text-center text-success">
+        <Card.Title className="text-center fs-6">{juice.name}</Card.Title>
+        <Card.Text className="text-center text-success text-dark">
           $U {juice.price}
+          <div className="cardfs">{juice.price}/500ml</div>
         </Card.Text>
         <div className="text-center">
-          <Button
-            className="cardBtn rounded-pill px-3 bg-dark text-white"
-            variant=""
-          >
-            Agregar al carrito
-          </Button>
+          
         </div>
       </Card.Body>
     </Card>
