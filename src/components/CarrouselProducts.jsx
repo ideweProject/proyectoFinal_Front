@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import BasicExample from "./ProductCard";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { saveJuices } from "../redux/juicesSlice";
+import CarCard from "./CardForCarrousell"; 
+
 function CarouselProducts() {
-  var settings = {
+  const dispatch = useDispatch();
+  const juices = useSelector((state) => state.juices);  
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/products/jugos`);
+      dispatch(saveJuices({ juices: response.data }));  
+    };
+
+   
+    if (juices.length === 0) {
+      getProducts();
+    }
+  }, [dispatch, juices.length]); 
+
+
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -31,14 +51,16 @@ function CarouselProducts() {
   };
 
   return (
-    <>
-      <div>
-        <Slider {...settings}>
-       <div></div>
-        
+    <div>
+      <Slider {...settings}>
+       
+        {juices.map((juice) => (
+          <div key={juice.id}>
+            <CarCard juice={juice} /> 
+          </div>
+        ))}
       </Slider>
-      </div>
-    </>
+    </div>
   );
 }
 

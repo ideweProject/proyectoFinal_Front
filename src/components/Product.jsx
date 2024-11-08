@@ -1,5 +1,6 @@
 import React from 'react';
 import CarouselComp from './CarouselComp';
+import CarouselProducts from './CarrouselProducts';
 
 
 const ProductPage = () => {
@@ -41,7 +42,7 @@ const ProductPage = () => {
      
     </div>
        <div className='products-container' >
-       <CarouselComp />
+       <CarouselProducts />
      </div>
    </div>
   );

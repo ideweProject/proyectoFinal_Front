@@ -13,6 +13,7 @@ import Bars from "./components/Bars.jsx";
 import Checkout from "./components/Checkout.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/storeConfig.js";
+import ProductPage from "./components/Product.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,12 +34,14 @@ const router = createBrowserRouter([
       },
       { path: "/about", element: <AboutThisProject /> },
       { path: "/checkout", element: <Checkout /> },
+      {path:"product", element:<ProductPage />}
     ],
   },
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <Signin /> },
   { path: "/checkout", element: <Checkout /> },
+  {path:"/product", element:<ProductPage />}
 ]);
 
 createRoot(document.getElementById("root")).render(
