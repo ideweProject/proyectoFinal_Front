@@ -24,9 +24,9 @@
 
 .login-box {
   background-image: linear-gradient(
-    90deg,
-    rgba(160, 181, 235, 1) 35%,
-    rgba(201, 240, 228, 1) 100%
+    130deg,
+    rgb(240, 161, 42) 35%,
+    rgb(240, 82, 193) 100%
   );
   object-fit: contain;
   background-position: center;
