@@ -30,8 +30,9 @@ function CarouselProducts() {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1100,
@@ -47,19 +48,32 @@ function CarouselProducts() {
           slidesToScroll: 1,
         },
       },
-    ],
+   ],
+   prevArrow: (
+     <button className="slick-prev">
+       <span className="prev-arrow">&#10094;</span> {/* Flecha izquierda */}
+     </button>
+   ),
+   nextArrow: (
+     <button className="slick-next">
+       <span className="next-arrow">&#10095;</span> {/* Flecha derecha */}
+     </button>
+   ),
+ 
   };
+
 
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settings}> 
         {juices.map((juice) => (
           <div key={juice.id}>
             <CarCard juice={juice} />
           </div>
         ))}
-      </Slider>
-    </div>
+        </Slider>
+        </div>
+    
   );
 }
 
