@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 function AboutThisProject() {
   return (
-    <div className="full-screen-background-about bodyAboutUs   ">
+    <div className="full-scree-about bodyAboutUs  ">
 
     <div className="container mainAboutAll pt-2">
       <div className="aboutImg mt-0">
@@ -22,7 +22,7 @@ function AboutThisProject() {
       </div>
 
 
-      <div className="container mt-5 infoAbout mb-4">
+      <div className="container mt-2 infoAbout mb-2">
         <div className="row d-flex">
           <div className="col-12 col-md-4 descriptionAbout mt-3 mb-3">
             <h3 className="titleDescription">Duración</h3>

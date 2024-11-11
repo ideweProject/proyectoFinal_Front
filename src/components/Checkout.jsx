@@ -31,7 +31,7 @@ function Checkout() {
   ];
 
   return (
-    <div className="full-screen-background ">
+    <div className="full-screen-background pt-2 pb-2 ">
     <div className="container mainCheck">
       <div className="checkout checkMain">
         <div className="row g-5">
