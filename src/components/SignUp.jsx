@@ -51,7 +51,7 @@ function SignUp() {
                   </form>
                 </div>
                 <Link to={"/login"} className="text text-decoration-none">
-                  Volver
+                  <i class="bi bi-arrow-left fs-2"></i>
                 </Link>
               </div>
             </div>

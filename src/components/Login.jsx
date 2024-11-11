@@ -45,14 +45,14 @@ function Login() {
             <div className="col-md-6 bg-white form-column ">
               <div className="d-flex flex-column p-5   ">
                 <div>
-                  <h2 className="title ">Bienvenido de nuevo ! </h2>
+                  <h2 className="title ">Bienvenido de nuevo! </h2>
                   <form
                     className=" mt-4"
                     style={{ maxWidth: "400px" }}
                     onSubmit={handleSubmit}
                   >
                     <div className="text form-group mb-4">
-                      <label className="text">Email</label>
+                      <label className="text">Correo</label>
                       <input
                         type="email"
                         className="form-control"
@@ -71,26 +71,19 @@ function Login() {
                     </div>
 
                     <div className="form-check-container mb-4">
-                      <div className="form-check">
+                      <div className="form-check p-0">
                         <input
                           type="checkbox"
                           className="textform-check-input"
                           id="rememberMe"
                         />
                         <label
-                          className="text form-check-label"
+                          className="text form-check-label ms-1"
                           htmlFor="rememberMe"
                         >
-                          Recuerdame
+                          Recuérdame
                         </label>
                       </div>
-
-                      {/* <a
-                        href="/forgot-password"
-                        className="text text-decoration-none"
-                      >
-                        Olvidaste tu contraseña?
-                      </a> */}
                     </div>
 
                     <button
@@ -100,9 +93,15 @@ function Login() {
                       Iniciar sesión
                     </button>
 
-                    <Link to={"/signin"} className="text text-decoration-none">
-                      Crear cuenta
-                    </Link>
+                    <div>
+                      <span>No tienes una cuenta?</span>
+                      <Link
+                        to={"/signin"}
+                        className="text ms-1 text-decoration-none text-primary"
+                      >
+                        Crea una
+                      </Link>
+                    </div>
                   </form>
                 </div>
               </div>

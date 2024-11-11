@@ -213,6 +213,10 @@ a.text-decoration-none {
   .pickup-col {
     border-top: 2px solid white;
   }
+
+  .send-info-container {
+    max-width: 400px;
+  }
 }
 
 @media screen and (min-width: 992px) {
