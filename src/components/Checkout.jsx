@@ -8,6 +8,27 @@ function Checkout() {
   const handleDelete = () => {
     setIsVisible(false);
   };
+  const ciudades = [
+    'Montevideo',
+    'Canelones',
+    'Paysandú',
+    'Artigas',
+    'Florida',
+    'Rocha',
+    'Córdoba',
+    'Bogotá',
+    'La Paz',
+    'Brasilia',
+    'Buenos Aires',
+  ];
+  const paises = [
+    'Uruguay',
+    'Brasil',
+    'Argentina',
+    'Colombia',
+    'Paraguay',
+  
+  ];
 
   return (
     <div className="full-screen-background ">
@@ -65,33 +86,25 @@ function Checkout() {
                 <div className="col-12 col-sm-6 mb-3">
                   <label className="d-block font-weight-medium">Ciudad</label>
                   <Form.Select size="sm">
-        <option>Montevídeo</option>
-        <option>Canelones</option>
-        <option>Paysandú</option>
-        <option>	Artigas</option>
-        <option>	Florida</option>
-        <option>	Rocha</option>
-        <option>Córdoba</option>
-        <option>Bogotá</option>
-        <option>La Paz</option>
-        <option>	Brasilia</option>
-        <option>	Buenos Aires</option>
+      {ciudades.map((ciudad, index) => (
+        <option key={index} value={ciudad}>
+          {ciudad}
+        </option>
+      ))}
+    </Form.Select>
+  
 
-      </Form.Select>
                 </div>
                 <div className="col-12 col-sm-6 mb-3">
                   <label className="d-block font-weight-medium">
                   País</label>
                   <Form.Select size="sm">
-        <option>Uruguay</option>
-        <option>Argentina</option>
-        <option>Brasil</option>
-        <option>Colombia</option>
-        <option>Paraguay</option>
-        <option>Bolivia</option>
-
-      </Form.Select>
-               
+      {paises.map((pais, index) => (
+        <option key={index} value={pais}>
+          {pais}
+        </option>
+      ))}
+    </Form.Select>
                 </div>
               </div>
 
