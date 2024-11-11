@@ -42,69 +42,70 @@ function SectionFeatures() {
         </div>
       </div>
 
-      <section className="cards-section ">
-        <div className="container mt-5">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="w-100 h-100  ">
-                <img
-                  src="../../images/img_pages/vibra-gingershot.jpg"
-                  alt=""
-                  className="img-fluid w-100"
-                />
+      <div className="info&cards">
+        <section className="cards-section ">
+          <div className="container mt-5">
+            <div className="row g-0">
+              <div className="col-lg-4">
+                <div className="w-100 h-100  ">
+                  <img
+                    src="../../images/img_pages/vibra-gingershot.jpg"
+                    alt=""
+                    className="img-fluid w-100"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="w-100 h-100 mt-1">
-                <img
-                  src="../../images/img_pages/vibraco-card01.jpg"
-                  alt=""
-                  className="img-fluid"
-                />
+              <div className="col-lg-4">
+                <div className="w-100 h-100 mt-1">
+                  <img
+                    src="../../images/img_pages/vibraco-card01.jpg"
+                    alt=""
+                    className="img-fluid"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="w-100 h-100 ratio ratio-1x1 mt-1">
-                <img
-                  src="../../images/img_pages/vibraco-card06.jpg"
-                  alt=""
-                  className="img-fluid card-img ratio ratio-1x1"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="send-info-section d-flex justify-content-center mt-5 ">
-        <div className="send-info-container ">
-          <div className="row p-4 bg-black text-white rounded">
-            <div className="col-lg-6  ">
-              <div className=" w-100 text-center ">
-                <h4 className="title mt-1">Envíos a domicilio</h4>
-                <p className="text">
-                  Montevideo, Ciudad de la Costa y Maldonado.
-                </p>
-                <p className="text">
-                  Antes de finalizar la compra, se puede seleccionar la opción
-                  de envío y estará siendo entregado el pedido a domicilio de 24
-                  a 48 hs.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6 pickup-col ">
-              <div className="w-100 text-center">
-                <h4 className="title mt-1">Retiro de su compra</h4>
-                <p className="text">Montevideo - Tres cruces</p>
-                <p className="text">
-                  Se puede seleccionar retirar la compra en Martín García 2381,
-                  luego de recibir un mail con la confirmación.
-                </p>
+              <div className="col-lg-4">
+                <div className="w-100 h-100 ratio ratio-1x1 mt-1">
+                  <img
+                    src="../../images/img_pages/vibraco-card06.jpg"
+                    alt=""
+                    className="img-fluid card-img ratio ratio-1x1"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section className="send-info-section container d-flex justify-content-center ">
+          <div className="send-info-container ">
+            <div className="row p-4 bg-black text-white rounded">
+              <div className="col-lg-6  ">
+                <div className=" w-100 text-center ">
+                  <h4 className="title mt-1">Envíos a domicilio</h4>
+                  <p className="text">
+                    Montevideo, Ciudad de la Costa y Maldonado.
+                  </p>
+                  <p className="text">
+                    Antes de finalizar la compra, se puede seleccionar la opción
+                    de envío y estará siendo entregado el pedido a domicilio de 24
+                    a 48 hs.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6 pickup-col ">
+                <div className="w-100 text-center">
+                  <h4 className="title mt-1">Retiro de su compra</h4>
+                  <p className="text">Montevideo - Tres cruces</p>
+                  <p className="text">
+                    Se puede seleccionar retirar la compra en Martín García 2381,
+                    luego de recibir un mail con la confirmación.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

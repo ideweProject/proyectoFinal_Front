@@ -1,10 +1,16 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-
 function ProductCard({ name, price, image }) {
   return (
-    <Card className="cardComp" style={{ width: "15rem", border: "none" }}>
+    <Card
+      className="cardComp"
+      style={{
+        width: "15rem",
+        border: "none",
+        transition: "border-color 0.3s ease",
+      }}
+    >
       <Card.Img
         className="juiceImage img-fluid"
         variant="top"
