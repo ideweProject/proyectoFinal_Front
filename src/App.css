@@ -371,7 +371,7 @@ footer p {
   margin: 5px;
 }
 button.confirmOrder {
-  background-color: #8726b4;
+  background-color: #b239eb;
   margin-top: 10px;
   color: white;
   padding: 10px;
@@ -379,6 +379,7 @@ button.confirmOrder {
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
+font-weight: bold;
 }
 button.confirmOrder:hover {
   background-color: #5f1a7a;
@@ -404,15 +405,17 @@ button.confirmOrder:hover {
   background-color: #a9afae;
   box-shadow: 0px 3px 5px 0px #000000;
   border-radius: 5px;
-  background-image: url("/images/img_pages/vibraco-card02.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(50%);
   padding: 20px;
-  color: #fff;
+  color: #c9c9c9;
+  
 }
-
+.full-screen-background{
+  background-color: #000000;
+}
 .checkMain::before {
   content: "";
   position: absolute;
@@ -420,7 +423,7 @@ button.confirmOrder:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.781);
   z-index: -1;
 }
 .product-page {
