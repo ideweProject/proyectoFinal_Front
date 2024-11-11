@@ -57,7 +57,7 @@ function Checkout() {
                   type="text"
                   name="address"
                   className="w-100 unInput"
-                  placeholder="Correo electrónico"
+                  placeholder="Número de puerta y calle"
                 />
               </div>
 
