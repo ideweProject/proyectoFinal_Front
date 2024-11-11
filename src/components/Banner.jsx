@@ -2,9 +2,9 @@ import React from "react";
 
 function Cartel() {
   return (
-    <div class="container mt-5 mx-5">
-      <div class="row d-flex   align-items-center">
-        <div class="col-4 divisor align-items-center naturales">
+    <div className="container mt-5 mx-5">
+      <div className="row d-flex   align-items-center">
+        <div className="col-4 divisor align-items-center naturales">
           <div>
             <div>
               <img
@@ -22,7 +22,7 @@ function Cartel() {
             </div>
           </div>
         </div>
-        <div class="col-4 divisor align-items-center freeze">
+        <div className="col-4 divisor align-items-center freeze">
           <div>
             <div>
               <img
@@ -37,8 +37,8 @@ function Cartel() {
             </div>
           </div>
         </div>
-        <div class="col-4 px-0">
-          <div class=" border d-inline-block  me-5">
+        <div className="col-4 px-0">
+          <div className=" border d-inline-block  me-5">
             <img
               className="img1 "
               src="https://static.wixstatic.com/media/a9b61d_44f60bafae5741f4b1d66ff756642672~mv2.jpg/v1/fill/w_418,h_325,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/a9b61d_44f60bafae5741f4b1d66ff756642672~mv2.jpg"

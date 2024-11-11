@@ -159,9 +159,15 @@ a.text-decoration-none {
   background-color: lightgrey;
 }
 .links-navbar-container {
-  font-weight: bolder;
   /* cambiar a posteriori */
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  //font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.links-navbar-container:hover {
+  color: #599de5;
 }
 
 .home-logo {
@@ -229,4 +235,12 @@ a.text-decoration-none {
   color: rgb(79, 81, 79);
   font-size: 20px;
   font-weight: bold;
+}
+
+.shippingNav {
+  font-size: 13px;
+  padding-left: 25px;
+}
+.msg-container {
+  background: rgb(25, 27, 26);
 }

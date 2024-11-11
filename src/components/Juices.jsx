@@ -4,7 +4,6 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveJuices } from "../redux/juicesSlice";
 import React, { useEffect, useState } from "react";
-import image1 from "../assets/naranja.jpg";
 
 function Juices() {
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ function Juices() {
       <div className="container w-50">
         <div className="row g-3 mb-5">
           {juices.map((juice) => (
-            <div className="col-4" key={juice.id}>
+            <div className="col-xl-4 col-lg-6 col-sm-12" key={juice.id}>
               <ProductCard
                 name={juice.name}
                 price={juice.price}

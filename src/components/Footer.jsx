@@ -13,9 +13,9 @@ const Footer = () => {
                 alt=""
               />
               <div className="social-media">
-                <i class="bi bi-facebook mx-1 iconFacebook"></i>
-                <i class="bi bi-whatsapp mx-1 iconWpp"></i>
-                <i class="bi bi-twitter-x mx-1 iconTwitter"></i>
+                <i className="bi bi-facebook mx-1 iconFacebook"></i>
+                <i className="bi bi-whatsapp mx-1 iconWpp"></i>
+                <i className="bi bi-twitter-x mx-1 iconTwitter"></i>
               </div>
             </div>
           </div>
