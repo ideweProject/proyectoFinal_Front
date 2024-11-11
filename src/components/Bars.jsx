@@ -4,7 +4,6 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveBars } from "../redux/barsSlice";
 
-
 function Bars() {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.bars);
@@ -24,7 +23,6 @@ function Bars() {
   const bars = useSelector((state) => state.bars);
   return (
     <div>
-     
       <div>
         <div className="bg-white productosPadre">
           <div className="container d-flex flex-column justify-content-center align-items-center">
@@ -42,7 +40,7 @@ function Bars() {
       <div className="container w-50">
         <div className="row g-3 mb-5">
           {bars.map((bar) => (
-            <div className="col-4" key={bar.id}>
+            <div className="col-xl-4 col-lg-6 col-sm-12" key={bar.id}>
               <ProductCard name={bar.name} price={bar.price} img={bar.image} />
             </div>
           ))}
