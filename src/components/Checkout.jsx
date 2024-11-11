@@ -57,7 +57,7 @@ function Checkout() {
                   type="text"
                   name="address"
                   className="w-100 unInput"
-                  placeholder="Número de puerta y calle"
+                  placeholder="ej: Bulevar Artigas 1234 esq Av. Italia"
                 />
               </div>
 
