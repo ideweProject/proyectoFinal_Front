@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Form from 'react-bootstrap/Form';
+
 
 function Checkout() {
   const [isVisible, setIsVisible] = useState(true);
@@ -6,106 +8,118 @@ function Checkout() {
   const handleDelete = () => {
     setIsVisible(false);
   };
+  const ciudades = [
+    'Montevideo',
+    'Canelones',
+    'Paysandú',
+    'Artigas',
+    'Florida',
+    'Rocha',
+    'Córdoba',
+    'Bogotá',
+    'La Paz',
+    'Brasilia',
+    'Buenos Aires',
+  ];
+  const paises = [
+    'Uruguay',
+    'Brasil',
+    'Argentina',
+    'Colombia',
+    'Paraguay',
+  
+  ];
 
   return (
+    <div className="full-screen-background ">
     <div className="container mainCheck">
       <div className="checkout checkMain">
         <div className="row g-5">
           <div className="col-12 col-md-6 checkCol">
-            <h4 className="mt-4">Contact information</h4>
+            <h4 className="mt-4 mb-4">Información de contacto</h4>
             <form>
-              <div className="mb-5">
-                <label className="font-weight-medium">Email </label>
+              <div className="mb-4">
                 <input
                   type="text"
                   name="address"
                   className="w-100 unInput input-large"
-                  placeholder="email"
+                  placeholder="Correo electrónico"
                 />
               </div>
               <hr />
 
-              <h4>Shipping Information</h4>
+              <h4>Información de envío</h4>
               <div className="row">
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Nombre</label>
                   <input
                     type="text"
                     name="firstName"
                     className="w-100 unInput"
-                    placeholder="nombre"
+                    placeholder="Nombre"
                   />
                 </div>
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Apellido</label>
                   <input
                     type="text"
                     name="lastName"
                     className="w-100 unInput"
-                    placeholder="apellido"
+                    placeholder="Apellido"
                   />
                 </div>
               </div>
 
               <div className="mb-3">
-                <label className="font-weight-medium">Direccion</label>
+                <label className="font-weight-medium">Dirección</label>
                 <input
                   type="text"
                   name="address"
                   className="w-100 unInput"
-                  placeholder="direccion"
+                  placeholder="ej: Bulevar Artigas 1234 esq Av. Italia"
                 />
               </div>
 
               <div className="row">
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Ciudad</label>
-                  <input
-                    type="text"
-                    name="city"
-                    className="w-100 unInput"
-                    placeholder="ciudad"
-                  />
+                  <Form.Select size="sl">
+      {ciudades.map((ciudad, index) => (
+        <option key={index} value={ciudad}>
+          {ciudad}
+        </option>
+      ))}
+    </Form.Select>
+  
+
                 </div>
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Pais</label>
-                  <input
-                    type="text"
-                    name="country"
-                    className="w-100 unInput"
-                    placeholder="pais"
-                  />
+                  
+                  <Form.Select size="sl">
+      {paises.map((pais, index) => (
+        <option key={index} value={pais}>
+          {pais}
+        </option>
+      ))}
+    </Form.Select>
                 </div>
               </div>
 
               <div className="row">
+                
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Departamento</label>
-                  <input
-                    type="text"
-                    name="state"
-                    className="w-100 unInput"
-                    placeholder="departamento"
-                  />
-                </div>
-                <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Codigo postal</label>
                   <input
                     type="text"
                     name="postalCode"
                     className="w-100 unInput"
-                    placeholder="codigo postal"
+                    placeholder="Código postal"
                   />
                 </div>
               </div>
 
-              <div className="mb-5">
-                <label className="font-weight-medium">Telefono</label>
+              <div className="mb-4">
                 <input
                   type="number"
                   name="phone"
                   className="w-100 unInput"
-                  placeholder="numero de contacto"
+                  placeholder="Teléfono"
                 />
               </div>
               <hr />
@@ -146,27 +160,25 @@ function Checkout() {
               </div>
 
               <div className="mb-3">
-                <label className="font-weight-medium">Numero de tarjeta</label>
                 <input
                   type="text"
                   name="cardNumber"
                   className="w-100 unInput"
-                  placeholder="numero de tarjeta"
+                  placeholder="Número de tarjeta"
                 />
               </div>
               <div className="mb-3">
-                <label className="font-weight-medium">Nombre de tarjeta</label>
                 <input
                   type="text"
                   name="nameOnCard"
                   className="w-100 unInput"
-                  placeholder="nombre de tarjeta"
+                  placeholder="Nombre de tarjeta"
                 />
               </div>
               <div className="row">
                 <div className="col-12 col-md-9 mb-3">
                   <label className="d-block font-weight-medium">
-                    Fecha de vencimiento (MM/YY)
+                    Fecha de expiración  (MM/YY)
                   </label>
                   <input
                     type="number"
@@ -189,7 +201,7 @@ function Checkout() {
           </div>
 
           <div className="col-12 col-md-6 checkCol">
-            <h4 className="mt-4">Pedido total</h4>
+            <h4 className="mt-4">Pedido </h4>
             <div className="container">
               <div className="row">
                 <div className="col-4 col-md-3">
@@ -209,8 +221,8 @@ function Checkout() {
                     ></i>
                   </div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <p className="mb-0 fw-bold">Precio USD</p>
-                    <p>Qty:num</p>
+                    <p className="mb-0 fw-bold">Precio </p>
+                    <p>cantidad</p>
                   </div>
                 </div>
                 <hr />
@@ -236,13 +248,13 @@ function Checkout() {
           <hr />
           <div className="container d-flex justify-content-between align-items-center ">
             <p className="mb-0 fw-bold">Total</p>
-            <p className="mb-0 fw-bold">Precio total:</p>
           </div>
           <hr />
-          <button className="w-100 btn confirmOrder">Confirmar pedido</button>
+          <button className="w-100 btn confirmOrder ">Confirmar pedido</button>
           <hr />
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
