@@ -36,11 +36,9 @@ function Checkout() {
       <div className="checkout checkMain">
         <div className="row g-5">
           <div className="col-12 col-md-6 checkCol">
-            <h4 className="mt-4">Información de contacto</h4>
+            <h4 className="mt-4 mb-4">Información de contacto</h4>
             <form>
-              <div className="mb-5">
-                <label className="font-weight-medium">
-                Correo electrónico  </label>
+              <div className="mb-4">
                 <input
                   type="text"
                   name="address"
@@ -53,7 +51,6 @@ function Checkout() {
               <h4>Información de envío</h4>
               <div className="row">
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Nombre</label>
                   <input
                     type="text"
                     name="firstName"
@@ -62,7 +59,6 @@ function Checkout() {
                   />
                 </div>
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Apellido</label>
                   <input
                     type="text"
                     name="lastName"
@@ -73,7 +69,7 @@ function Checkout() {
               </div>
 
               <div className="mb-3">
-                <label className="font-weight-medium">Direccion</label>
+                <label className="font-weight-medium">Dirección</label>
                 <input
                   type="text"
                   name="address"
@@ -84,8 +80,7 @@ function Checkout() {
 
               <div className="row">
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Ciudad</label>
-                  <Form.Select size="sm">
+                  <Form.Select size="sl">
       {ciudades.map((ciudad, index) => (
         <option key={index} value={ciudad}>
           {ciudad}
@@ -96,9 +91,8 @@ function Checkout() {
 
                 </div>
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">
-                  País</label>
-                  <Form.Select size="sm">
+                  
+                  <Form.Select size="sl">
       {paises.map((pais, index) => (
         <option key={index} value={pais}>
           {pais}
@@ -111,7 +105,6 @@ function Checkout() {
               <div className="row">
                 
                 <div className="col-12 col-sm-6 mb-3">
-                  <label className="d-block font-weight-medium">Código postal</label>
                   <input
                     type="text"
                     name="postalCode"
@@ -121,8 +114,7 @@ function Checkout() {
                 </div>
               </div>
 
-              <div className="mb-5">
-                <label className="font-weight-medium">Teléfono</label>
+              <div className="mb-4">
                 <input
                   type="number"
                   name="phone"
@@ -168,7 +160,6 @@ function Checkout() {
               </div>
 
               <div className="mb-3">
-                <label className="font-weight-medium">Número de tarjeta</label>
                 <input
                   type="text"
                   name="cardNumber"
@@ -177,7 +168,6 @@ function Checkout() {
                 />
               </div>
               <div className="mb-3">
-                <label className="font-weight-medium">Nombre de tarjeta</label>
                 <input
                   type="text"
                   name="nameOnCard"
