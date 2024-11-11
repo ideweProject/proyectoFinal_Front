@@ -4,6 +4,7 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveBars } from "../redux/barsSlice";
 
+
 function Bars() {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.bars);
@@ -23,6 +24,7 @@ function Bars() {
   const bars = useSelector((state) => state.bars);
   return (
     <div>
+     
       <div>
         <div className="bg-white productosPadre">
           <div className="container d-flex flex-column justify-content-center align-items-center">

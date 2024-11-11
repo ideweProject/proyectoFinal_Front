@@ -4,7 +4,6 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveJuices } from "../redux/juicesSlice";
 import React, { useEffect, useState } from "react";
-import image1 from "../assets/naranja.jpg";
 
 function Juices() {
   const dispatch = useDispatch();
