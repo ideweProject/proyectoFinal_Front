@@ -2,7 +2,7 @@ import React from "react";
 
 function Cartel() {
   return (
-    <div className="container mt-5 mx-5">
+    <div className="container mt-5 mb-4 mx-5">
       <div className="row d-flex   align-items-center">
         <div className="col-4 divisor align-items-center naturales">
           <div>

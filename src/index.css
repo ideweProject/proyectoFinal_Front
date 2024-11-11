@@ -80,7 +80,7 @@ a.text-decoration-none {
 }
 
 .send-info-container {
-  max-width: 800px;
+ /* max-width: 800px; */
 }
 
 #video-vibraco {
@@ -119,6 +119,7 @@ a.text-decoration-none {
 .cardComp:hover {
   transform: scale(1.1);
   transition: 200ms;
+  border-color: greenyellow;
 }
 .cardBtn:hover {
   background: green;
