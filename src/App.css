@@ -65,8 +65,11 @@
 }
 .mainAboutAll {
   border-radius: 5px;
-  background-color: #ccc9c9;
-  box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.9);
+  background: rgba(2, 2, 2, 0.527);
+  
+
+
+ 
 }
 .aboutImg {
   position: relative;
@@ -76,13 +79,13 @@
   background-repeat: no-repeat;
   min-height: 400px;
   padding: 20px;
-  color: rgb(255, 255, 255);
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
+  filter: brightness(70%);
 }
 
 .aboutImg::before {
@@ -92,7 +95,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(22, 20, 20, 0.8);
+  background-color: rgba(82, 74, 74, 0.7);
   z-index: 1;
 }
 
@@ -135,16 +138,20 @@
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
+
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: italic;
+  color: #ffffff;
 }
 .pTextUs {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
+  color: #ffffff;
+
 }
 .descriptionAbout {
   border-radius: 5px;
@@ -152,6 +159,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  color: rgb(255, 255, 255);
 }
 
 .infoAbout {
@@ -167,8 +175,8 @@
   width: 100%;
   height: 130px;
   gap: 20px;
-  background-color: #ccc9c9;
   border-radius: 5px;
+  color: #ffffff;
 }
 
 .productos {
@@ -344,16 +352,18 @@ footer p {
   flex: 1;
 }
 .cardBodyUs {
-  background-color: #e2e2e2;
+  background-image: linear-gradient(130deg, rgb(182, 109, 0) 25%, rgb(189, 6, 134) 100%);
+  filter: brightness(80%);
+  color: #ffffff;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 .cardBodyUs:hover {
-  background-color: #bbbbbb;
+  background-image: linear-gradient(130deg, rgb(240, 149, 13) 35%, rgb(240, 24, 175) 100%);
 }
 .imgTest {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
+  z-index: 2;
 }
 .imgTest:hover {
   transform: scale(1.1);
@@ -385,6 +395,12 @@ font-weight: bold;
 button.confirmOrder:hover {
   background-image: linear-gradient(45deg, #ec5c42, #ec3c9d);
   color: whitesmoke;
+}
+.bodyAboutUs{
+  background-image: linear-gradient(130deg, rgb(240, 161, 42) 35%, rgb(240, 82, 193) 100%);
+  height: 140vh; 
+  padding-top: 30px;
+
 }
 
 .unInput {
