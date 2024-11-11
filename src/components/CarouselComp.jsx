@@ -14,7 +14,7 @@ function CarouselComp() {
     autoplay: true,
     speed: 1500,
     autoplaySpeed: 3000,
-
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -68,71 +68,6 @@ function CarouselComp() {
             />
           </div>
         ))}
-
-        {/*         
-        <div className="">
-          <img
-            src="../../images/Products/Juices/brown-juice-XL.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>
-        <div className="">
-          <img
-            src="../../images/Products/Juices/brown-juice.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>{" "}
-        <div className="">
-          <img
-            src="../../images/Products/Juices/brown-shot.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>
-        <div className="">
-          <img
-            src="../../images/Products/Juices/carrot-juice.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>{" "}
-        <div className="">
-          <img
-            src="../../images/Products/Juices/carrot-shot.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>{" "}
-        <div className="">
-          <img
-            src="../../images/Products/Juices/celery-shot.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>
-        <div className="">
-          <img
-            src="../../images/Products/Juices/orange-juice.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>{" "}
-        <div className="">
-          <img
-            src="../../images/Products/Juices/pureGreen-juice-XL.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div>{" "}
-        <div className="">
-          <img
-            src="../../images/Products/Juices/red-shot.jpg"
-            alt=""
-            className="img-carousel w-100"
-          />
-        </div> */}
       </Slider>
     </div>
   );

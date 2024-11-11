@@ -48,32 +48,29 @@ function CarouselProducts() {
           slidesToScroll: 1,
         },
       },
-   ],
-   prevArrow: (
-     <button className="slick-prev">
-       <span className="prev-arrow">&#10094;</span> {/* Flecha izquierda */}
-     </button>
-   ),
-   nextArrow: (
-     <button className="slick-next">
-       <span className="next-arrow">&#10095;</span> {/* Flecha derecha */}
-     </button>
-   ),
- 
+    ],
+    prevArrow: (
+      <button className="slick-previous">
+        <span className="previus-arrow">&#10094;</span> {/* Flecha izquierda */}
+      </button>
+    ),
+    nextArrow: (
+      <button className="slick-nextt">
+        <span className="nextt-arrow">&#10095;</span> {/* Flecha derecha */}
+      </button>
+    ),
   };
-
 
   return (
     <div>
-      <Slider {...settings}> 
+      <Slider {...settings}>
         {juices.map((juice) => (
           <div key={juice.id}>
             <CarCard juice={juice} />
           </div>
         ))}
-        </Slider>
-        </div>
-    
+      </Slider>
+    </div>
   );
 }
 

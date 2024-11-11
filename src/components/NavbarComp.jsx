@@ -17,7 +17,7 @@ function NavbarComp() {
         </div>
       </header>
 
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-white">
         <Container className="">
           <Link to={"/"} className="p-0">
             <img
