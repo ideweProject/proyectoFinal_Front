@@ -258,7 +258,6 @@ function Checkout() {
           <hr />
           <div className="container d-flex justify-content-between align-items-center ">
             <p className="mb-0 fw-bold">Total</p>
-            <p className="mb-0 fw-bold">Pedido total:</p>
           </div>
           <hr />
           <button className="w-100 btn confirmOrder ">Confirmar pedido</button>
