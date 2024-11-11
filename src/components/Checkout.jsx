@@ -178,7 +178,7 @@ function Checkout() {
               <div className="row">
                 <div className="col-12 col-md-9 mb-3">
                   <label className="d-block font-weight-medium">
-                    Fecha de expiración  (MM/YY)
+                    Fecha de expiración 
                   </label>
                   <input
                     type="number"
@@ -193,7 +193,7 @@ function Checkout() {
                     type="number"
                     name="cvc"
                     className="w-100 unInput"
-                    placeholder="CVC..."
+                    placeholder="CVC"
                   />
                 </div>
               </div>
@@ -205,11 +205,7 @@ function Checkout() {
             <div className="container">
               <div className="row">
                 <div className="col-4 col-md-3">
-                  <img
-                    src="./images/img_pages/bars.jpg"
-                    alt="Producto"
-                    className="imagenSummary img-fluid"
-                  />
+                 
                 </div>
                 <div className="col-8 col-md-9">
                   <div className="d-flex justify-content-between align-items-center mb-5">
