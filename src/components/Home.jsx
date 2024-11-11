@@ -45,7 +45,6 @@ function Home() {
           <CarouselBrands />
         </section>
       </div>
-      <ShippingHeader />
     </div>
   );
 }

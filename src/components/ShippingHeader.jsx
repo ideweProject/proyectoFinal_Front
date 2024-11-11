@@ -1,17 +1,6 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 
 function ShippingHeader() {
-
-  // function shippingHeader() {
-  //   const location = useLocation();
-  //   // jugos/bars/product/about/chaeckout
-  //   if (location.pathname === "/jugos") {
-  //     return null;
-  //   }
-  // }
-  // shippingHeader();
-
   return (
     <div>
       <header>

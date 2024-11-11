@@ -1,14 +1,11 @@
 import NavbarComp from "./components/NavbarComp";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
-import ShippingHeader from "./components/ShippingHeader";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
-
-import Home from "./components/Home";
 
 function App() {
   return (
