@@ -1,19 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./pages/Home.jsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import Login from "./components/Login.jsx";
-import Signin from "./components/SignUp.jsx";
+import Login from "./pages/Login.jsx";
+import Signin from "./pages/SignUp.jsx";
 
-import AboutThisProject from "./components/AboutThisProject.jsx";
-import Juices from "./components/Juices.jsx";
-import Bars from "./components/Bars.jsx";
-import Checkout from "./components/Checkout.jsx";
+import AboutThisProject from "./pages/AboutThisProject.jsx";
+import Juices from "./pages/Juices.jsx";
+import Bars from "./pages/Bars.jsx";
+import Checkout from "./pages/Checkout.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/storeConfig.js";
-import ProductPage from "./components/Product.jsx";
+import ProductPage from "./pages/Product.jsx";
 
 const router = createBrowserRouter([
   {
