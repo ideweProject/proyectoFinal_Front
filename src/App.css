@@ -492,7 +492,7 @@ button.confirmOrder:hover {
 }
 
 .product-info .price-subtittle {
-  font-size: 16px;
+  font-size: 10px;
   color: #777;
 }
 
@@ -647,4 +647,28 @@ button.confirmOrder:hover {
 .prev-arrow,
 .next-arrow {
   font-weight: bold;
+}
+.amountbtn{
+  color: #000000;
+  border-radius: 50%;
+  background-color: #afafae;
+  margin: 5px;
+  border:none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  
+  justify-content: center;
+}
+input[type="number"] {
+  -moz-appearance: textfield; 
+  -webkit-appearance: none;   
+  appearance: none;         
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;  
+  margin: 0;                  
 }

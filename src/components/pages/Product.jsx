@@ -1,9 +1,22 @@
 import React from 'react';
-import CarouselComp from '../CarouselComp';
-import CarouselProducts from '../CarrouselProducts';
+import { useState } from 'react';
+import CarouselProducts from './CarrouselProducts';
 
 
 const ProductPage = () => {
+  const [cantidad, setCantidad] = useState(1);
+
+  const aumentarCantidad = () => {
+    setCantidad(prevCantidad => prevCantidad + 1);
+  };
+
+  const disminuirCantidad = () => {
+    if (cantidad > 1) {
+      setCantidad(prevCantidad => prevCantidad - 1);
+    }
+  };
+
+
   return (
    <div>
      <div className="product-page">
@@ -18,7 +31,13 @@ const ProductPage = () => {
           <h1>Pure Green Juice</h1>
           <p className='mb-0'>$U260.00</p>
           <p className='price-subtittle'>$U260.00/500ml</p>
-          <div className=''><p className='mb-1'>Cantidad</p><input type="number" value={1} className='cantidad  mb-4'/></div>
+          <div ><p className='mb-1'>Cantidad</p>
+          
+          <div className='d-flex '>
+          <button  className="amountbtn "onClick={disminuirCantidad}>-     </button>
+          <input type="number" value={cantidad} className='cantidad  mb-4'/>
+          <button onClick={aumentarCantidad} className='amountbtn'>+</button></div>
+          </div>
          
           <button className="add-to-cart btn-pill w-500">Añadir al carrito</button>
           <div className="mt-5">
