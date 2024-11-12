@@ -32,9 +32,7 @@
       <div className="row">
         <div className="col-12">
           <div className='d-flex justify-content-end align-items-center'>
-          <button className=' cardOrderA rounded  bg-info text-light'>Ver producto</button> 
-          <button className=' cardOrderA m-4 rounded bg-info text-light  '>volver a comprar</button>  
-          </div>
+            <a className='orderA' href="/product"> Ver compra</a></div>
          </div>
         </div>    
        </div>
