@@ -14,6 +14,7 @@ import Checkout from "./pages/Checkout.jsx";
 import { Provider } from "react-redux";
 import store from "./redux/storeConfig.js";
 import ProductPage from "./pages/Product.jsx";
+import SignUp from "./pages/SignUp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
   },
 
   { path: "/login", element: <Login /> },
-  { path: "/signin", element: <Signin /> },
+  { path: "/signin", element: <SignUp /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
