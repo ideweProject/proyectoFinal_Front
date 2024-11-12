@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { saveToken, logOut } from "../redux/loginSlice";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -17,17 +25,24 @@ function Login() {
     e.preventDefault();
     const response = await axios({
       method: "POST",
-      url: ``,
-      data: { username, password },
+      url: `${import.meta.env.VITE_API_URL}/token`,
+      data: { email, password },
     });
-    console.log(response.data);
-    dispatch(login(response.data));
+
+    if (!response.data.token) return setMsg(response.data);
+
+    dispatch(saveToken({ token: response.data.token }));
     navigate("/");
   };
+
+  async function handleLogout() {
+    dispatch(logOut());
+  }
 
   return (
     <>
       <div className=" login-background d-flex justify-content-center">
+        <button onClick={handleLogout}>logOut</button>
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">
             <div className="col-md-6 ">
@@ -85,6 +100,7 @@ function Login() {
                         </label>
                       </div>
                     </div>
+                    <p className="text-danger">{msg}</p>
 
                     <button
                       type="submit"

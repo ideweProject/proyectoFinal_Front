@@ -1,11 +1,25 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate();
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState(" ");
+  const [password, setPassword] = useState("");
+
   async function handleCreateUser(event) {
     event.preventDefault();
-    console.log("aksmdkalsmdsam");
+
+    const response = await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/users/store`,
+      data: { firstname, lastname, email, password },
+    });
+
+    return navigate("/login");
   }
 
   return (
@@ -38,20 +52,40 @@ function SignUp() {
                     <div className="form-group mb-4">
                       <label className="text">Email</label>
 
-                      <input type="email" className="form-control text" />
+                      <input
+                        type="email"
+                        className="form-control text"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                      />
                     </div>
 
                     <div className="form-group mb-4">
                       <label className="text">Nombre</label>
-                      <input type="name" className="form-control text" />
+                      <input
+                        type="name"
+                        className="form-control text"
+                        value={firstname}
+                        onChange={(event) => setFirstname(event.target.value)}
+                      />
                     </div>
                     <div className="form-group mb-4">
                       <label className="text">Apellido</label>
-                      <input type="password" className="form-control" />
+                      <input
+                        type="password"
+                        className="form-control"
+                        value={lastname}
+                        onChange={(event) => setLastname(event.target.value)}
+                      />
                     </div>
                     <div className="form-group mb-4">
                       <label className="text">Contraseña</label>
-                      <input type="password" className="form-control" />
+                      <input
+                        type="password"
+                        className="form-control"
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                      />
                     </div>
                     <button
                       type="submit"
