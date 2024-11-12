@@ -26,7 +26,7 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas non pariatur consequatur laboriosam harum distinctio iure obcaecati autem, repellat sapiente omnis maxime dignissimos ad sed illum est tenetur iusto ab!</p>
     </div>
     <div className="col-2">
-      <h5>USD</h5>
+      <h5>Precio U$$</h5>
     </div>
     <div className="container ">
       <div className="row">

@@ -8,6 +8,7 @@ function Order() {
       <p>Consulta el estado de pedidos recientes, gestiona devoluciones y descubre productos similares.</p>
       
       <CardOrder />
+
     </div>
   );
 }
