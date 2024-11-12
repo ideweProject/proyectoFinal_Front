@@ -12,9 +12,9 @@
         </div>
         <div className="col-4"><h5 className='m-4'>Total</h5>
         </div>
-        <div className="col-2"><a className='m-4  cardOrderA  d-flex align-items-center rounded '>Ver Orden</a>
+        <div className="col-2"><button className='m-4  cardOrderA  d-flex align-items-center rounded  bg-info text-light '>Ver Orden</button>
         </div>
-        <div className="col-2"><a className='m-4 cardOrderA   d-flex align-items-center rounded '>Ver Factura</a>
+        <div className="col-2"><button className='m-4 cardOrderA   d-flex align-items-center rounded bg-info text-light '>Ver Factura</button>
         </div>
       </div>
    <div className="row mt-1 mb-4  border border-dark rounded">
@@ -32,8 +32,8 @@
       <div className="row">
         <div className="col-12">
           <div className='d-flex justify-content-end align-items-center'>
-          <a className=' cardOrderA'>Ver producto</a> 
-          <a className=' cardOrderA m-4'>Seguir comprando</a>  
+          <button className=' cardOrderA rounded  bg-info text-light'>Ver producto</button> 
+          <button className=' cardOrderA m-4 rounded bg-info text-light  '>volver a comprar</button>  
           </div>
          </div>
         </div>    
