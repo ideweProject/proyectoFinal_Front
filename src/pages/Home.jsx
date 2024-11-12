@@ -4,16 +4,8 @@ import CarouselComp from "../components/CarouselComp";
 import SectionFeatures from "../components/SectionFeatures";
 import CarouselBrands from "../components/CarouselBrands";
 import ShippingHeader from "../components/ShippingHeader";
-import { useSelector } from "react-redux";
 
 function Home() {
-  const user = useSelector((state) => state.login);
-  console.log(user.token);
-  // if (!user.token) {
-  //   useEffect(() => {
-  //     navigate("/");
-  //   }, []);
-
   return (
     <div>
       <ShippingHeader />
