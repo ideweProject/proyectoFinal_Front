@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Cart from "./Cart";
 import { Link } from "react-router-dom";
+import Dropdown from "react-bootstrap/Dropdown";
 
 function NavbarProfile() {
   return (
@@ -30,30 +31,28 @@ function NavbarProfile() {
               Acerca de este proyecto
             </Link>
 
-            <div class="btn-group dropleft">
-              <button
-                type="button"
-                class="btn btn-secondary dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+            <Dropdown>
+              <Dropdown.Toggle
+                variant=""
+                className=""
+                id="dropdown-basic"
               >
-                Dropleft
-              </button>
-              <div class="dropdown-menu">
-                <Link to={"/profile"} className=" text-decoration-none  p-1">
+                <i class="bi bi-person text-center px-1"></i>
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/profile">
                   Tu cuenta
-                </Link>
-                <Link to={"/orders"} className=" text-decoration-none  p-1">
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/orders">
                   Tus pedidos
-                </Link>
-                <Link to={"/"} className=" text-decoration-none  p-1">
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/">
                   Logout
-                </Link>
-              </div>
-            </div>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
-          <Link href="#" className=" text-decoration-none">
+          <Link to="#" className=" text-decoration-none">
             <Cart name="" />
           </Link>
         </Navbar.Collapse>

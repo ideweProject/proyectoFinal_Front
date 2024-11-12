@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-
-
+import React, { useState } from "react";
 
 const Profile = () => {
   const [perfil, setPerfil] = useState({
-    nombre: 'María',
-    apellido: 'Pérez',
-    email: 'Mperez@gmail.com',
-    pais: 'Uruguay',
-    direccion: 'Bvar españa 2253',
-    ciudad: 'Montevideo',
-    codigoPostal: '11500',
+    nombre: "María",
+    apellido: "Pérez",
+    email: "Mperez@gmail.com",
+    pais: "Uruguay",
+    direccion: "Bvar españa 2253",
+    ciudad: "Montevideo",
+    codigoPostal: "11500",
   });
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPerfil({
@@ -23,17 +21,15 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Perfil actualizado:', perfil);
+    console.log("Perfil actualizado:", perfil);
   };
 
   return (
     <div className="profile-container">
-      <h1 className='d-flex justify-content-start'>Perfil</h1>
-      <hr /> 
-      
-      <form onSubmit={handleSubmit} className="profile-form">
-      
+      <h1 className="d-flex justify-content-start">Perfil</h1>
+      <hr />
 
+      <form onSubmit={handleSubmit} className="profile-form">
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
           <input
@@ -46,7 +42,7 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
         <div className="form-group">
           <label htmlFor="apellido">Apellido</label>
@@ -60,7 +56,7 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
         <div className="form-group">
           <label htmlFor="email">E-mail</label>
@@ -74,7 +70,7 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
         <div className="form-group">
           <label htmlFor="pais">País</label>
@@ -93,7 +89,7 @@ const Profile = () => {
             <option value="México">México</option>
           </select>
         </div>
-        <hr /> 
+        <hr />
         <div className="form-group">
           <label htmlFor="direccion">Dirección</label>
           <input
@@ -106,7 +102,7 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
         <div className="form-group">
           <label htmlFor="ciudad">Ciudad</label>
@@ -120,7 +116,7 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
         <div className="form-group">
           <label htmlFor="codigoPostal">Código Postal</label>
@@ -134,11 +130,13 @@ const Profile = () => {
             className="inputStyle"
           />
         </div>
-        <hr /> 
+        <hr />
 
-       <div className='d-flex justify-content-end'>
-       <button type="submit" className="btnSubmit">Guardar Cambios</button>
-       </div>
+        <div className="d-flex justify-content-end">
+          <button type="submit" className="btnSubmit">
+            Guardar Cambios
+          </button>
+        </div>
       </form>
     </div>
   );
