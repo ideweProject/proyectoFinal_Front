@@ -1,9 +1,9 @@
 import React from "react";
-import NavbarComp from "../NavbarComp";
-import CarouselComp from "../CarouselComp";
-import SectionFeatures from "../SectionFeatures";
-import CarouselBrands from "../CarouselBrands";
-import ShippingHeader from "../ShippingHeader";
+import NavbarComp from "../components/NavbarComp";
+import CarouselComp from "../components/CarouselComp";
+import SectionFeatures from "../components/SectionFeatures";
+import CarouselBrands from "../components/CarouselBrands";
+import ShippingHeader from "../components/ShippingHeader";
 
 function Home() {
   return (
