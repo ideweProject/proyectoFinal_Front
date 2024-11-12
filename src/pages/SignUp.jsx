@@ -72,7 +72,7 @@ function SignUp() {
                     <div className="form-group mb-4">
                       <label className="text">Apellido</label>
                       <input
-                        type="password"
+                        type="text"
                         className="form-control"
                         value={lastname}
                         onChange={(event) => setLastname(event.target.value)}
