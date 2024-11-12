@@ -14,7 +14,7 @@ function Cart({ name, ...props }) {
     <>
       <Button variant="" onClick={handleShow} className=" border px-2">
         <div className="buyBtn w-100">
-          <i class="bi bi-bag-fill cartBtn px-2"></i>
+          <i className="bi bi-bag-fill cartBtn px-2"></i>
         </div>
       </Button>
       <Offcanvas show={show} placement="end" onHide={handleClose} {...props}>
