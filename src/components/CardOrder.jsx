@@ -12,9 +12,9 @@
         </div>
         <div className="col-4"><h5 className='m-4'>Total</h5>
         </div>
-        <div className="col-2"><a className='m-4  cardOrderA border border-dark d-flex align-items-center rounded '>Ver Orden</a>
+        <div className="col-2"><a className='m-4  cardOrderA  d-flex align-items-center rounded '>Ver Orden</a>
         </div>
-        <div className="col-2"><a className='m-4 cardOrderA  border border-dark d-flex align-items-center rounded '>Ver Factura</a>
+        <div className="col-2"><a className='m-4 cardOrderA   d-flex align-items-center rounded '>Ver Factura</a>
         </div>
       </div>
    <div className="row mt-1 mb-4  border border-dark rounded">
