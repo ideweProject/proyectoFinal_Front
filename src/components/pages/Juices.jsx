@@ -1,8 +1,8 @@
-import ProductCard from "./ProductCard";
-import Banner from "./Banner";
+import ProductCard from "../ProductCard";
+import Banner from "../Banner";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { saveJuices } from "../redux/juicesSlice";
+import { saveJuices } from "../../redux/juicesSlice";
 import React, { useEffect, useState } from "react";
 
 function Juices() {

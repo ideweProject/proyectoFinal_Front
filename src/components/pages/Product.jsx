@@ -1,6 +1,6 @@
 import React from 'react';
-import CarouselComp from './CarouselComp';
-import CarouselProducts from './CarrouselProducts';
+import CarouselComp from '../CarouselComp';
+import CarouselProducts from '../CarrouselProducts';
 
 
 const ProductPage = () => {

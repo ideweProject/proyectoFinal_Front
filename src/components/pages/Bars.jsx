@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { saveBars } from "../redux/barsSlice";
+import { saveBars } from "../../redux/barsSlice";
 
 function Bars() {
   const dispatch = useDispatch();
