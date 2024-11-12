@@ -20,9 +20,9 @@
         <h5 className='m-4'>USD 38.00</h5>
 
         </div>
-        <div className="col-2"><button className='m-4  cardOrderA  d-flex align-items-center rounded  bg-info text-light '>Ver Orden</button>
+        <div className="col-2"><button className='m-4  cardOrderA  d-flex align-items-center rounded  bg-grey'>Ver Orden</button>
         </div>
-        <div className="col-2"><button className='m-4 cardOrderA   d-flex align-items-center rounded bg-info text-light '>Ver Factura</button>
+        <div className="col-2"><button className='m-4 cardOrderA   d-flex align-items-center rounded  bg-grey '>Ver Factura</button>
         </div>
       </div>
    <div className="row mt-1 mb-4  border border-dark rounded">
@@ -31,7 +31,7 @@
      </div>
     <div className="col-8">
       <h5>Nombre</h5>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas non pariatur consequatur laboriosam harum distinctio iure obcaecati autem, repellat sapiente omnis maxime dignissimos ad sed illum est tenetur iusto ab!sdhfudsfcndsaxjciodsahjfcxhckjdhafohjdffcxjcduiafjncmkxcnxkchxjncjxz\nckxlz;\cnxzl;\cnducnxjvcnjxz\bjbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas non pariatur consequatur laboriosam harum distinctio iure obcaecati autem, repellat sapiente omnis maxime dignissimos ad sed illum est tenetur iusto ab!sdhfudsfcndsaxjciodsahjfcxhckjdhafohjdffcxjcduiafjncmkxcnxkchxjncjxz\nckxlz;\cnxzl;\cnducnxjvcnjxz\bjbj</p>
     </div>
     <div className="col-2">
       <h5>Precio USD</h5>
