@@ -15,6 +15,8 @@ import { Provider } from "react-redux";
 import store from "./redux/storeConfig.js";
 import ProductPage from "./pages/Product.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import Profile from "./pages/Profile.jsx";
+import Order from "./pages/Order.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,9 +35,11 @@ const router = createBrowserRouter([
         path: "bars",
         element: <Bars />,
       },
-      { path: "/about", element: <AboutThisProject /> },
-      { path: "/checkout", element: <Checkout /> },
+      { path: "about", element: <AboutThisProject /> },
+      { path: "checkout", element: <Checkout /> },
       { path: "product", element: <ProductPage /> },
+      { path: "profile", element: <Profile /> },
+      { path: "orders", element: <Order /> },
     ],
   },
 
