@@ -777,7 +777,7 @@ select.inputStyle {
 
 .cardOrderA {
   width: 100%; 
-  max-width: 150px;  /* Asegura que el botón no sea demasiado grande */
+  max-width: 150px; 
   text-decoration: none;
   color: #ffffff;
   border: white;
