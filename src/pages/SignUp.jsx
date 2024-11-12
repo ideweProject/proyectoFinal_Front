@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function SignUp() {
+  async function handleCreateUser(event) {
+    event.preventDefault();
+    console.log("aksmdkalsmdsam");
+  }
+
   return (
     <>
       <div className=" login-background d-flex justify-content-center">
@@ -23,7 +29,12 @@ function SignUp() {
               <div className="d-flex flex-column p-5">
                 <div>
                   <h2 className="title">Crea tu cuenta Vibra </h2>
-                  <form className="w-100 mt-4" style={{ maxWidth: "400px" }}>
+                  <form
+                    className="w-100 mt-4"
+                    style={{ maxWidth: "400px" }}
+                    method="post"
+                    onSubmit={(event) => handleCreateUser(event)}
+                  >
                     <div className="form-group mb-4">
                       <label className="text">Email</label>
 
