@@ -15,6 +15,7 @@ function NavbarProfile() {
 
   async function handleLogout() {
     dispatch(logOut());
+    navigate("/");
   }
 
   return (

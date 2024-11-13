@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import NavbarProfile from "./components/NavbarProfile";
 
