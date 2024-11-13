@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { saveJuices } from "../redux/juicesSlice";
 import React, { useEffect, useState } from "react";
 
+
 function Juices() {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.juices);
@@ -32,11 +33,7 @@ function Juices() {
         <div className="row g-3 mb-5">
           {juices.map((juice) => (
             <div className="col-xl-4 col-lg-6 col-sm-12" key={juice.id}>
-              <ProductCard
-                name={juice.name}
-                price={juice.price}
-                image={juice.image}
-              />
+              <ProductCard productData={juice} />
             </div>
           ))}
         </div>
