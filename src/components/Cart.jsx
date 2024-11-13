@@ -5,6 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import image1 from "../../public/images/Products/Juices/yellow-juice-500.jpg";
 
 function Cart({ name, ...props }) {
+  const [cartAdd, setCartAdd] = useState();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
