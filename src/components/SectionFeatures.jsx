@@ -42,9 +42,9 @@ function SectionFeatures() {
         </div>
       </div>
 
-      <div className="info&cards">
-        <section className="cards-section ">
-          <div className="container mt-5">
+      <div className="info&cards mt-5">
+        <section className="cards-section container">
+       
             <div className="row g-0">
               <div className="col-lg-4">
                 <div className="w-100 h-100  ">
@@ -74,11 +74,11 @@ function SectionFeatures() {
                 </div>
               </div>
             </div>
-          </div>
+     
         </section>
         <section className="send-info-section container d-flex justify-content-center ">
           <div className="send-info-container ">
-            <div className="row p-4 bg-black text-white rounded">
+            <div className="row p-4 bg-black text-white ">
               <div className="col-lg-6  ">
                 <div className=" w-100 text-center ">
                   <h4 className="title mt-1">Envíos a domicilio</h4>

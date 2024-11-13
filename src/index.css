@@ -80,7 +80,8 @@ a.text-decoration-none {
 }
 
 .send-info-container {
- /* max-width: 800px; */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 #video-vibraco {
@@ -244,4 +245,7 @@ a.text-decoration-none {
 }
 .msg-container {
   background: rgb(25, 27, 26);
+}
+.cards-section {
+  overflow: hidden;
 }
