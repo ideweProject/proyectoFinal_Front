@@ -35,10 +35,6 @@ function Login() {
     navigate("/");
   };
 
-  async function handleLogout() {
-    dispatch(logOut());
-  }
-
   return (
     <>
       <div className=" login-background d-flex justify-content-center">

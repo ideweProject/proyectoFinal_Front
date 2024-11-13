@@ -5,8 +5,18 @@ import Container from "react-bootstrap/Container";
 import Cart from "./Cart";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
+import { logOut } from "../redux/loginSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function NavbarProfile() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  async function handleLogout() {
+    dispatch(logOut());
+  }
+
   return (
     <Navbar expand="lg" className="bg-body-white">
       <Container className="">
@@ -32,11 +42,7 @@ function NavbarProfile() {
             </Link>
 
             <Dropdown>
-              <Dropdown.Toggle
-                variant=""
-                className=""
-                id="dropdown-basic"
-              >
+              <Dropdown.Toggle variant="" className="" id="dropdown-basic">
                 <i class="bi bi-person text-center px-1"></i>
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -46,8 +52,13 @@ function NavbarProfile() {
                 <Dropdown.Item as={Link} to="/orders">
                   Tus pedidos
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/">
-                  Logout
+                <Dropdown.Item>
+                  <button
+                    onClick={handleLogout}
+                    className="border border-0 btn p-0 m-0"
+                  >
+                    Logout
+                  </button>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
