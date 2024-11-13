@@ -38,7 +38,6 @@ function Login() {
   return (
     <>
       <div className=" login-background d-flex justify-content-center">
-        <button onClick={handleLogout}>logOut</button>
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">
             <div className="col-md-6 ">
