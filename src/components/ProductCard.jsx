@@ -1,16 +1,16 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { addToCart } from "../redux/cartSlice";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
-import Cart from "./Cart";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleOffcanvas } from "../redux/pagesSlice";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function ProductCard({ productData }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleShowCart = () => {
-    const [show, setShow] = useState(false);
-    <Cart show={true} />;
+    dispatch(toggleOffcanvas());
   };
 
   const handleAddItem = (clickedItem) => {
@@ -50,7 +50,7 @@ function ProductCard({ productData }) {
             className="cardBtn rounded-pill px-3 bg-dark text-white"
             variant=""
             onClick={() => {
-              handleShowCart;
+              handleShowCart();
               handleAddItem({ productData });
             }}
           >
