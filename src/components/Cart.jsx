@@ -2,9 +2,22 @@ import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import image1 from "../../public/images/Products/Juices/yellow-juice-500.jpg";
+import { useSelector } from "react-redux";
+import { removeFromCart } from "../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
 function Cart({ name, ...props }) {
+  const cartList = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = (removedItem) => {
+    dispatch(
+      removeFromCart({
+        id: removedItem,
+      })
+    );
+  };
+
   const [cartAdd, setCartAdd] = useState();
   const [show, setShow] = useState(false);
 
@@ -26,44 +39,34 @@ function Cart({ name, ...props }) {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="list-group list-group-flush">
-            <li className="buyList list-group-item">
-              <div className="row">
-                <div className="col-6">
-                  <img className="w-75" src={image1} alt="" />
-                </div>
-                <div className="col-6">
-                  <div>
-                    {" "}
-                    <h5>Celery Juice</h5>
-                    <span>$U 280</span>
-                    <input
-                      className="product-quntity-input d-block w-50"
-                      type="number"
-                      placeholder="1"
+            {cartList.items.map((cartItem) => (
+              <li key={cartItem.id} className="buyList list-group-item">
+                <div className="row">
+                  <div className="col-6">
+                    <img
+                      className="w-75"
+                      src={`./images/Products/Juices/${cartItem.image}.jpg`}
+                      alt=""
                     />
                   </div>
-                </div>
-              </div>
-            </li>
-            <li className="buyList list-group-item">
-              <div className="row">
-                <div className="col-6">
-                  <img className="w-75" src={image1} alt="" />
-                </div>
-                <div className="col-6">
-                  <div>
-                    {" "}
-                    <h5>Celery Juice</h5>
-                    <span>$U 280</span>
-                    <input
-                      className="product-quntity-input d-block w-50"
-                      type="number"
-                      placeholder="1"
-                    />
+                  <div className="col-6">
+                    <div>
+                      {" "}
+                      <h5>{cartItem.name}</h5>
+                      <span className="d-block">$U{cartItem.price}</span>
+                      <input
+                        className="product-quntity-input me-5 w-50"
+                        type="number"
+                        value={cartItem.quantity}
+                      />
+                      <button onClick={() => handleRemoveItem(cartItem.id)}>
+                        <i class="bi bi-trash3 text-danger"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
           <hr />
 
@@ -75,7 +78,7 @@ function Cart({ name, ...props }) {
                   <p>Envío incluído al finalizar compra.</p>
                 </div>
                 <div className="col-3">
-                  <p className="fw-bold">$U 560</p>
+                  <p className="fw-bold">$U {cartList.totalPrice}</p>
                 </div>
               </div>
               <div className="container d-flex justify-content-center w-100">
