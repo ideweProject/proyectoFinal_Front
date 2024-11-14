@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useSelector } from "react-redux";
-import { removeFromCart } from "../redux/cartSlice";
+import { removeFromCart, plusOneItem, minusOneItem } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { Link } from "react-router-dom";
@@ -12,9 +12,25 @@ function Cart({ name, ...props }) {
   const dispatch = useDispatch();
 
   const handleRemoveItem = (removedItem) => {
+    console.log(removedItem);
     dispatch(
       removeFromCart({
         id: removedItem,
+      })
+    );
+  };
+
+  const handlePlus = (plusItem) => {
+    dispatch(
+      plusOneItem({
+        id: plusItem,
+      })
+    );
+  };
+  const handleMinus = (minusItem) => {
+    dispatch(
+      minusOneItem({
+        id: minusItem,
       })
     );
   };
@@ -62,8 +78,12 @@ function Cart({ name, ...props }) {
                         type="number"
                         value={cartItem.quantity}
                       />
-                      <i class="bi bi-plus-square me-3 d-inline"></i>
-                      <i class="bi bi-dash-square d-inline"></i>
+                      <button onClick={() => handlePlus(cartItem.id)}>
+                        <i class="bi bi-plus-square me-3 d-inline"></i>
+                      </button>
+                      <button onClick={() => handleMinus(cartItem.id)}>
+                        <i class="bi bi-dash-square d-inline"></i>
+                      </button>
                       <button
                         className="rounded border bg-white ms-auto d-block"
                         onClick={() => handleRemoveItem(cartItem.id)}
