@@ -1,11 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
+import { removeFromCart } from "../redux/cartSlice";
 
 function Checkout() {
   const [isVisible, setIsVisible] = useState(true);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  const userData = useSelector((state) => state.login);
+  const taxes = Math.floor((cart.totalPrice + 80) * 0.1);
+  const total = Math.floor(cart.totalPrice + 80 + taxes);
 
-  const handleDelete = () => {
-    setIsVisible(false);
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    adress: "",
+    state: "",
+    postalCode: "",
+    phone: "",
+    payment: "",
+    cardNum: "",
+    owner: "",
+    expireMM: "",
+    expireYY: "",
+    cvc: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  console.log(formData);
+  const handleDelete = (removedItem) => {
+    dispatch(
+      removeFromCart({
+        id: removedItem,
+      })
+    );
   };
   const cities = [
     "Artigas",
@@ -29,6 +62,22 @@ function Checkout() {
     "Treinta y Tres",
   ];
 
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const response = await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/orders/store`,
+      data: {
+        buyer: userData.userId,
+        itemsList: cart.items,
+        adress: "akmdkasd",
+        state: "processing",
+        phone: "099",
+      },
+    });
+    console.log(response);
+  }
+
   return (
     <div className="full-screen-background pt-2 pb-2 ">
       <div className="container mainCheck">
@@ -36,7 +85,7 @@ function Checkout() {
           <div className="row g-5">
             <div className="col-12 col-md-6 checkCol">
               <h4 className="mt-4 mb-4">Información de contacto</h4>
-              <form>
+              <form id="sendOrder" onSubmit={(event) => handleSubmit(event)}>
                 <div className="mb-4">
                   <label htmlFor="email"></label>
                   <input
@@ -44,6 +93,7 @@ function Checkout() {
                     name="email"
                     className="w-100 unInput input-large"
                     placeholder="ejemplo@gmail.com"
+                    onChange={(e) => handleChange(e)}
                   />
                 </div>
                 <hr />
@@ -57,6 +107,7 @@ function Checkout() {
                       name="firstName"
                       className="w-100 unInput"
                       placeholder="Jorge"
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="col-12 col-sm-6 mb-3">
@@ -66,6 +117,7 @@ function Checkout() {
                       name="lastName"
                       className="w-100 unInput"
                       placeholder="Rodríguez"
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                 </div>
@@ -77,6 +129,7 @@ function Checkout() {
                     name="address"
                     className="w-100 unInput"
                     placeholder="ej: Bulevar Artigas 1234 esq Av. Italia"
+                    onChange={(e) => handleChange(e)}
                   />
                 </div>
 
@@ -101,6 +154,7 @@ function Checkout() {
                       name="postalCode"
                       className="w-100 unInput"
                       placeholder="80500"
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                 </div>
@@ -112,11 +166,20 @@ function Checkout() {
                     name="phone"
                     className="w-100 unInput"
                     placeholder=" 095 123 456"
+                    onChange={(e) => handleChange(e)}
                   />
                 </div>
                 <hr />
 
                 <h4 className="mt-3 mb-3 fw-bold">Forma de pago</h4>
+
+                <input
+                  type="radio"
+                  name="payment"
+                  value={cc}
+                  id="cc"
+                  checked={payment === "Tarjeta de credito"}
+                />
 
                 <div className="payment-checkboxes d-flex flex-column flex-sm-row justify-content-between mb-4">
                   <div className="form-check">
@@ -124,6 +187,7 @@ function Checkout() {
                       type="checkbox"
                       className="form-check-input"
                       id="creditCard"
+                      onChange={(e) => handleChange(e)}
                     />
                     <label className="form-check-label" htmlFor="creditCard">
                       Tarjeta de credito
@@ -134,6 +198,7 @@ function Checkout() {
                       type="checkbox"
                       className="form-check-input"
                       id="payPal"
+                      onChange={(e) => handleChange(e)}
                     />
                     <label className="form-check-label" htmlFor="payPal">
                       PayPal
@@ -144,6 +209,8 @@ function Checkout() {
                       type="checkbox"
                       className="form-check-input"
                       id="eTransfer"
+                      name="payment"
+                      onChange={(e) => handleChange(e)}
                     />
                     <label className="form-check-label" htmlFor="eTransfer">
                       eTransfer
@@ -154,10 +221,15 @@ function Checkout() {
                 <div className="mb-3">
                   <label htmlFor="cardNumber">Número de tarjeta</label>
                   <input
-                    type="text"
+                    type="tel"
                     name="cardNumber"
                     className="w-100 unInput"
-                    placeholder="4123 4567 123 9819"
+                    maxLength={19}
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                    required
+                    onChange={(e) => handleChange(e)}
                   />
                 </div>
                 <div className="mb-3">
@@ -167,6 +239,7 @@ function Checkout() {
                     name="owner"
                     className="w-100 unInput"
                     placeholder="Jorge Rodríguez"
+                    onChange={(e) => handleChange(e)}
                   />
                 </div>
                 <div className="row">
@@ -177,22 +250,65 @@ function Checkout() {
                     >
                       Fecha de expiración
                     </label>
+
+                    <select
+                      name="expireMM"
+                      id="expireMM"
+                      onChange={(e) => handleChange(e)}
+                    >
+                      <option value="">Month</option>
+                      <option value="01">Enero</option>
+                      <option value="02">Febrero</option>
+                      <option value="03">Marzo</option>
+                      <option value="04">Abril</option>
+                      <option value="05">Mayo</option>
+                      <option value="06">Junio</option>
+                      <option value="07">Julio</option>
+                      <option value="08">Agosto</option>
+                      <option value="09">Setiembre</option>
+                      <option value="10">Octubre</option>
+                      <option value="11">Noviembre</option>
+                      <option value="12">Diciembre</option>
+                    </select>
+                    <select
+                      name="expireYY"
+                      id="expireYY"
+                      onChange={(e) => handleChange(e)}
+                    >
+                      <option value="">Año</option>
+                      <option value="20">2024</option>
+                      <option value="21">2025</option>
+                      <option value="22">2026</option>
+                      <option value="23">2027</option>
+                      <option value="24">2028</option>
+                    </select>
+                    <input
+                      class="inputCard"
+                      type="hidden"
+                      name="expiry"
+                      id="expiry"
+                      maxLength="4"
+                    />
+                    {/* 
+
                     <input
                       type="number"
                       name="expDate"
                       className="w-100 unInput"
                       placeholder="(MM/YY)"
-                    />
+                    /> */}
                   </div>
                   <div className="col-12 col-md-3 mb-3">
                     <label className="d-block" htmlFor="cvc">
                       CVC
                     </label>
                     <input
-                      type="number"
+                      type="tel"
+                      maxLength={3}
                       name="cvc"
                       className="w-100 unInput"
                       placeholder="CVC"
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                 </div>
@@ -202,38 +318,44 @@ function Checkout() {
             <div className="col-12 col-md-6 checkCol">
               <h4 className="mt-4">Pedido </h4>
               <div className="container">
-                <div className="row">
-                  <div className="col-4 col-md-3"></div>
-                  <div className="col-8 col-md-9">
-                    <div className="d-flex justify-content-between align-items-center mb-5">
-                      {isVisible && <p className="mb-0">Producto</p>}
-                      <i
-                        className="bi bi-trash ms-2"
-                        style={{ cursor: "pointer" }}
-                        onClick={handleDelete}
-                      ></i>
+                {cart.items.map((item) => (
+                  <div className="row" key={item.id}>
+                    <div className="col-5 col-md-3">
+                      <img
+                        src={`./images/Products/Juices/${item.image}.jpg`}
+                        className="img-fluid"
+                        alt=""
+                      />
                     </div>
-                    <div className="d-flex justify-content-between align-items-center mb-3">
-                      <p className="mb-0 fw-bold">Precio </p>
-                      <p>cantidad</p>
+                    <div className="col-4 col-md-9">
+                      <div className="d-flex justify-content-between align-items-center mb-5">
+                        {isVisible && <p className="mb-0">{item.name}</p>}
+                        <span onClick={() => handleDelete(item.id)}>
+                          <i className="bi bi-trash3-fill fs-5 "></i>
+                        </span>
+                      </div>
+                      <div className="d-flex justify-content-between align-items-center mb-3">
+                        <p className="mb-0 fw-bold">$ {item.price} </p>
+                        <span>{item.quantity}</span>
+                      </div>
                     </div>
+                    <hr />
                   </div>
-                  <hr />
-                </div>
+                ))}
               </div>
               <div>
                 <ul className="container">
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Subtotal</p>
-                    <p className="mb-0">Precio USD</p>
+                    <span>$ {cart.totalPrice}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Envio</p>
-                    <p className="mb-0">Precio USD</p>
+                    <span>$ {80}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Impuestos</p>
-                    <p className="mb-0">Precio USD</p>
+                    <span>$ {Math.floor((cart.totalPrice + 80) * 0.1)}</span>
                   </li>
                 </ul>
               </div>
@@ -241,9 +363,14 @@ function Checkout() {
               <hr />
               <div className="container d-flex justify-content-between align-items-center ">
                 <p className="mb-0 fw-bold">Total</p>
+                <span>$ {total}</span>
               </div>
               <hr />
-              <button className="w-100 btn confirmOrder ">
+              <button
+                className="w-100 btn confirmOrder"
+                type="submit"
+                form="sendOrder"
+              >
                 Confirmar pedido
               </button>
               <hr />

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { removeFromCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
+import { Link } from "react-router-dom";
 
 function Cart({ name, ...props }) {
   const cartList = useSelector((state) => state.cart);
@@ -89,9 +90,12 @@ function Cart({ name, ...props }) {
                 </div>
               </div>
               <div className="container d-flex justify-content-center w-100">
-                <button className="rounded-pill w-100 btn btn-success">
+                <Link
+                  to={"/checkout"}
+                  className="btn btn-success w-100 rounded-pill"
+                >
                   Finalizar compra
-                </button>
+                </Link>
               </div>
             </div>
           </div>
