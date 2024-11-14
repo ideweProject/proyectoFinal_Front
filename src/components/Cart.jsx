@@ -13,7 +13,22 @@ function Cart({ name, ...props }) {
   const handleRemoveItem = (removedItem) => {
     dispatch(
       removeFromCart({
-        id: removedItem,
+        //id: removedItem,
+      })
+    );
+  };
+
+  const handlePlus = (removedItem) => {
+    dispatch(
+      plusOneItem({
+        //id: removedItem,
+      })
+    );
+  };
+  const handleMinus= (removedItem) => {
+    dispatch(
+      minusOneitem({
+       // id: removedItem,
       })
     );
   };
@@ -61,8 +76,12 @@ function Cart({ name, ...props }) {
                         type="number"
                         value={cartItem.quantity}
                       />
-                      <i class="bi bi-plus-square me-3 d-inline"></i>
-                      <i class="bi bi-dash-square d-inline"></i>
+                      <button onClick={() => handlePlus(cartItem.id)}>
+                        <i class="bi bi-plus-square me-3 d-inline"></i>
+                      </button>
+                      <button onClick={() => handleMinus(cartItem.id)}>
+                        <i class="bi bi-dash-square d-inline"></i>
+                      </button>
                       <button
                         className="rounded border bg-white ms-auto d-block"
                         onClick={() => handleRemoveItem(cartItem.id)}
