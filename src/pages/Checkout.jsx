@@ -12,27 +12,13 @@ function Checkout() {
   const taxes = Math.floor((cart.totalPrice + 80) * 0.1);
   const total = Math.floor(cart.totalPrice + 80 + taxes);
 
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    adress: "",
-    state: "",
-    postalCode: "",
-    phone: "",
-    payment: "",
-    cardNum: "",
-    owner: "",
-    expireMM: "",
-    expireYY: "",
-    cvc: "",
-  });
+  const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  console.log(formData);
   const handleDelete = (removedItem) => {
     dispatch(
       removeFromCart({
@@ -62,20 +48,21 @@ function Checkout() {
     "Treinta y Tres",
   ];
 
+  // console.log(formData);
   async function handleSubmit(event) {
     event.preventDefault();
     const response = await axios({
       method: "POST",
       url: `${import.meta.env.VITE_API_URL}/orders/store`,
       data: {
-        buyer: userData.userId,
-        itemsList: cart.items,
-        adress: "akmdkasd",
-        state: "processing",
-        phone: "099",
+        orderInfo: {
+          buyer: userData.userId,
+          itemsList: cart.items,
+          formData,
+        },
       },
     });
-    console.log(response);
+    console.log(response.data);
   }
 
   return (
@@ -108,6 +95,7 @@ function Checkout() {
                       className="w-100 unInput"
                       placeholder="Jorge"
                       onChange={(e) => handleChange(e)}
+                      required
                     />
                   </div>
                   <div className="col-12 col-sm-6 mb-3">
@@ -118,6 +106,7 @@ function Checkout() {
                       className="w-100 unInput"
                       placeholder="Rodríguez"
                       onChange={(e) => handleChange(e)}
+                      required
                     />
                   </div>
                 </div>
@@ -130,13 +119,18 @@ function Checkout() {
                     className="w-100 unInput"
                     placeholder="ej: Bulevar Artigas 1234 esq Av. Italia"
                     onChange={(e) => handleChange(e)}
+                    required
                   />
                 </div>
 
                 <div className="row">
                   <div className="col-12  mb-3">
-                    <label htmlFor="city">Departamento</label>
-                    <Form.Select size="sl" name="city">
+                    <label htmlFor="state">Departamento</label>
+                    <Form.Select
+                      size="sl"
+                      name="state"
+                      onChange={(e) => handleChange(e)}
+                    >
                       {cities.map((city, index) => (
                         <option key={index} value={city}>
                           {city}
@@ -167,58 +161,59 @@ function Checkout() {
                     className="w-100 unInput"
                     placeholder=" 095 123 456"
                     onChange={(e) => handleChange(e)}
+                    required
                   />
                 </div>
                 <hr />
 
                 <h4 className="mt-3 mb-3 fw-bold">Forma de pago</h4>
-
-                <input
-                  type="radio"
-                  name="payment"
-                  value={cc}
-                  id="cc"
-                  checked={payment === "Tarjeta de credito"}
-                />
-
-                <div className="payment-checkboxes d-flex flex-column flex-sm-row justify-content-between mb-4">
+                <div className="d-flex justify-content-around">
                   <div className="form-check">
                     <input
-                      type="checkbox"
                       className="form-check-input"
-                      id="creditCard"
-                      onChange={(e) => handleChange(e)}
-                    />
-                    <label className="form-check-label" htmlFor="creditCard">
-                      Tarjeta de credito
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="payPal"
-                      onChange={(e) => handleChange(e)}
-                    />
-                    <label className="form-check-label" htmlFor="payPal">
-                      PayPal
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="eTransfer"
+                      type="radio"
                       name="payment"
+                      value="creditCard"
+                      id="creditCard"
+                      checked={formData.payment === "creditCard"}
                       onChange={(e) => handleChange(e)}
                     />
-                    <label className="form-check-label" htmlFor="eTransfer">
-                      eTransfer
+                    <label htmlFor="cc" className="form-check-label">
+                      Tarjeta de crédito
+                    </label>
+                  </div>
+
+                  <div className="form-check">
+                    <input
+                      className="form-check-input "
+                      type="radio"
+                      name="payment"
+                      value="paypal"
+                      id="paypal"
+                      checked={formData.payment === "paypal"}
+                      onChange={(e) => handleChange(e)}
+                    />
+                    <label htmlFor="cc" className="form-check-label">
+                      Paypal
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="payment"
+                      value="eTransfer"
+                      id="eTransfer"
+                      checked={formData.payment === "eTransfer"}
+                      onChange={(e) => handleChange(e)}
+                    />
+                    <label htmlFor="cc" className="form-check-label ">
+                      Transferencia bancaria
                     </label>
                   </div>
                 </div>
 
-                <div className="mb-3">
+                <div className="mt-3">
                   <label htmlFor="cardNumber">Número de tarjeta</label>
                   <input
                     type="tel"
@@ -240,6 +235,7 @@ function Checkout() {
                     className="w-100 unInput"
                     placeholder="Jorge Rodríguez"
                     onChange={(e) => handleChange(e)}
+                    required
                   />
                 </div>
                 <div className="row">
@@ -289,14 +285,6 @@ function Checkout() {
                       id="expiry"
                       maxLength="4"
                     />
-                    {/* 
-
-                    <input
-                      type="number"
-                      name="expDate"
-                      className="w-100 unInput"
-                      placeholder="(MM/YY)"
-                    /> */}
                   </div>
                   <div className="col-12 col-md-3 mb-3">
                     <label className="d-block" htmlFor="cvc">
@@ -306,9 +294,12 @@ function Checkout() {
                       type="tel"
                       maxLength={3}
                       name="cvc"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                       className="w-100 unInput"
                       placeholder="CVC"
                       onChange={(e) => handleChange(e)}
+                      required
                     />
                   </div>
                 </div>
