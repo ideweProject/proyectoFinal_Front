@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useSelector } from "react-redux";
-import { removeFromCart } from "../redux/cartSlice";
+import { removeFromCart, plusOneItem, minusOneItem } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { Link } from "react-router-dom";
@@ -12,24 +12,25 @@ function Cart({ name, ...props }) {
   const dispatch = useDispatch();
 
   const handleRemoveItem = (removedItem) => {
+    console.log(removedItem);
     dispatch(
       removeFromCart({
-        //id: removedItem,
+        id: removedItem,
       })
     );
   };
 
-  const handlePlus = (removedItem) => {
+  const handlePlus = (plusItem) => {
     dispatch(
       plusOneItem({
-        //id: removedItem,
+        id: plusItem,
       })
     );
   };
-  const handleMinus= (removedItem) => {
+  const handleMinus = (minusItem) => {
     dispatch(
-      minusOneitem({
-       // id: removedItem,
+      minusOneItem({
+        id: minusItem,
       })
     );
   };
