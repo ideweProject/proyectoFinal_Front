@@ -1,10 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useSelector } from "react-redux";
 import { removeFromCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { toggleOffcanvas } from "../redux/pagesSlice";
 
 function Cart({ name, ...props }) {
   const cartList = useSelector((state) => state.cart);
@@ -18,20 +18,22 @@ function Cart({ name, ...props }) {
     );
   };
 
-  const [cartAdd, setCartAdd] = useState();
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const showCart = useSelector((state) => state.pages.showCart);
+  const handleToggle = () => dispatch(toggleOffcanvas());
 
   return (
     <>
-      <Button variant="" onClick={handleShow} className=" border px-2">
+      <Button variant="" onClick={handleToggle} className=" border px-2">
         <div className="buyBtn w-100">
           <i className="bi bi-bag-fill cartBtn px-2"></i>
         </div>
       </Button>
-      <Offcanvas show={show} placement="end" onHide={handleClose} {...props}>
+      <Offcanvas
+        show={showCart}
+        placement="end"
+        onHide={handleToggle}
+        {...props}
+      >
         <Offcanvas.Header closeButton className="bg-dark">
           <Offcanvas.Title className="cartTitle text-white text-center">
             Tu pedido
@@ -42,24 +44,29 @@ function Cart({ name, ...props }) {
             {cartList.items.map((cartItem) => (
               <li key={cartItem.id} className="buyList list-group-item">
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-4">
                     <img
                       className="w-75"
                       src={`./images/Products/Juices/${cartItem.image}.jpg`}
                       alt=""
                     />
                   </div>
-                  <div className="col-6">
+                  <div className="col-8">
                     <div>
                       {" "}
                       <h5>{cartItem.name}</h5>
-                      <span className="d-block">$U{cartItem.price}</span>
+                      <span className="d-block mb-3">$U{cartItem.price}</span>
                       <input
-                        className="product-quntity-input me-5 w-50"
+                        className="product-quntity-input me-5"
                         type="number"
                         value={cartItem.quantity}
                       />
-                      <button onClick={() => handleRemoveItem(cartItem.id)}>
+                      <i class="bi bi-plus-square me-3 d-inline"></i>
+                      <i class="bi bi-dash-square d-inline"></i>
+                      <button
+                        className="rounded border bg-white ms-auto d-block"
+                        onClick={() => handleRemoveItem(cartItem.id)}
+                      >
                         <i class="bi bi-trash3 text-danger"></i>
                       </button>
                     </div>

@@ -249,3 +249,9 @@ a.text-decoration-none {
 .cards-section {
   overflow: hidden;
 }
+
+.product-quntity-input {
+  width: 30px;
+  text-align: center;
+  margin: 0px;
+}

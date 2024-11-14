@@ -58,9 +58,7 @@ let persistor = persistStore(store);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <RouterProvider router={router} />
-      </PersistGate>
+      <RouterProvider router={router} />
     </Provider>
   </StrictMode>
 );
