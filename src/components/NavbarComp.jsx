@@ -13,6 +13,8 @@ function NavbarComp() {
   const user = useSelector((state) => state.login);
   const navigate = useNavigate();
 
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   useEffect(() => {}, [user.token]);
   async function handleLogout() {
     dispatch(logOut());
@@ -76,9 +78,14 @@ function NavbarComp() {
                 </>
               )}
             </Nav>
-            <Link href="#" className=" text-decoration-none">
+            <div className="position-relative">
               <Cart name="" />
-            </Link>
+              {totalQuantity > 0 && (
+                <span className="w-10 position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {totalQuantity}
+                </span>
+              )}
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -66,9 +66,6 @@
 .mainAboutAll {
   border-radius: 5px;
   background: rgba(14, 13, 13, 0.747);
-
-
- 
 }
 .aboutImg {
   position: relative;
@@ -136,7 +133,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
@@ -149,7 +145,6 @@
   font-weight: 300;
   font-style: normal;
   color: #ffffff;
-
 }
 .descriptionAbout {
   border-radius: 5px;
@@ -236,7 +231,7 @@ footer {
   background-color: #000000;
   color: rgb(255, 255, 255);
   padding: 20px 0;
-  font-family: Arial, sans-serif;;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
@@ -246,9 +241,9 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   align-items: flex-start;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 
 .footer-left {
   flex: 1;
@@ -352,13 +347,21 @@ footer p {
   flex: 1;
 }
 .cardBodyUs {
-  background-image: linear-gradient(130deg, rgb(182, 109, 0) 25%, rgb(189, 6, 134) 100%);
+  background-image: linear-gradient(
+    130deg,
+    rgb(182, 109, 0) 25%,
+    rgb(189, 6, 134) 100%
+  );
   filter: brightness(80%);
   color: #ffffff;
   cursor: pointer;
 }
 .cardBodyUs:hover {
-  background-image: linear-gradient(130deg, rgb(240, 149, 13) 35%, rgb(240, 24, 175) 100%);
+  background-image: linear-gradient(
+    130deg,
+    rgb(240, 149, 13) 35%,
+    rgb(240, 24, 175) 100%
+  );
 }
 .imgTest {
   cursor: pointer;
@@ -384,22 +387,21 @@ button.confirmOrder {
   background-image: linear-gradient(45deg, #f82c08, #a10b5e);
 
   margin-top: 10px;
-  color:  #ffffff;
+  color: #ffffff;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: medium;
-font-weight: bold;
+  font-weight: bold;
 }
 button.confirmOrder:hover {
   background-image: linear-gradient(45deg, #ec5c42, #ec3c9d);
   color: whitesmoke;
 }
-.bodyAboutUs{
-  height: 100%; 
-  background-color: rgba(10, 9, 9, 0.5); 
-
+.bodyAboutUs {
+  height: 100%;
+  background-color: rgba(10, 9, 9, 0.5);
 }
 
 .unInput {
@@ -422,22 +424,20 @@ button.confirmOrder:hover {
   border-radius: 5px;
   padding: 20px;
   color: #c9c9c9;
-  background-color: rgba(10, 9, 9, 0.5); 
-
-  
+  background-color: rgba(10, 9, 9, 0.5);
 }
 
-.full-screen-background{
-  height:100%;
+.full-screen-background {
+  height: 100%;
   width: 100%;
-  
-  
+
   background-image: linear-gradient(
     130deg,
     rgb(240, 161, 42) 35%,
     rgb(240, 82, 193) 100%
-  );}
-.checkMain::before {
+  );
+}
+/* .checkMain::before {
   content: "";
   position: absolute;
   top: 0;
@@ -446,7 +446,7 @@ button.confirmOrder:hover {
   bottom: 0;
   background: rgba(0, 0, 0, 0.781);
   z-index: -1;
-}
+} */
 .product-page {
   display: flex;
   justify-content: center;
@@ -583,7 +583,7 @@ button.confirmOrder:hover {
   .product-info .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;;
+    margin-top: 20px;
   }
 
   .product-info .social-icons i {
@@ -650,36 +650,35 @@ button.confirmOrder:hover {
 .next-arrow {
   font-weight: bold;
 }
-.amountbtn{
+.amountbtn {
   color: #000000;
   border-radius: 50%;
   background-color: #afafae;
   margin: 5px;
-  border:none;
+  border: none;
   width: 25px;
   height: 25px;
   display: flex;
   margin-top: 20px;
   align-items: center;
-  
+
   justify-content: center;
 }
 input[type="number"] {
-  -moz-appearance: textfield; 
-  -webkit-appearance: none;   
-  appearance: none;         
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;  
-  margin: 0;                  
+  -webkit-appearance: none;
+  margin: 0;
 }
 .orderMain {
   margin: 20px;
   width: 50%;
-  
 }
-.imgOrderTest{
+.imgOrderTest {
   width: 100%;
   height: 100%;
 }
@@ -701,26 +700,25 @@ h1 {
   margin-bottom: 20px;
 }
 
-
 .profile-form {
   display: flex;
   flex-direction: column;
 }
 
 .form-group {
-  display: flex;        
-  align-items: center;      
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .form-group label {
-  width: 150px;             
+  width: 150px;
   font-weight: bold;
-  margin-right: 15px;     
+  margin-right: 15px;
 }
 
 .inputStyle {
-  width: 400px;             
+  width: 400px;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -731,10 +729,9 @@ h1 {
 }
 
 .inputStyle:focus {
-  border-color: #4CAF50;
+  border-color: #4caf50;
   outline: none;
 }
-
 
 .btnSubmit {
   width: 200px;
@@ -746,7 +743,6 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
 
 .btnSubmit:hover {
@@ -763,8 +759,8 @@ select.inputStyle {
     width: 90%;
   }
   .form-group {
-    flex-direction: column;   
-    align-items: flex-start;   
+    flex-direction: column;
+    align-items: flex-start;
   }
   .form-group label {
     width: auto;
@@ -778,8 +774,8 @@ select.inputStyle {
 }
 
 .cardOrderA {
-  width: 100%; 
-  max-width: 150px; 
+  width: 100%;
+  max-width: 150px;
   text-decoration: none;
   color: #ffffff;
   border: white;
@@ -787,15 +783,14 @@ select.inputStyle {
   font-size: smaller;
   height: 30px;
   margin-right: 0;
-  display: flex;  
-  justify-content: center;  
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .priceOrder {
   margin-left: 30px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .statusOrder {
@@ -808,7 +803,7 @@ select.inputStyle {
     height: auto;
   }
 }
-.orderA{
+.orderA {
   text-decoration: none;
   color: rgb(210, 30, 30);
 }

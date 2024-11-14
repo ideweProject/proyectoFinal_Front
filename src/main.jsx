@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
-import Signin from "./pages/SignUp.jsx";
+
 import { PersistGate } from "redux-persist/integration/react";
 import AboutThisProject from "./pages/AboutThisProject.jsx";
 import Juices from "./pages/Juices.jsx";
@@ -39,7 +39,11 @@ const router = createBrowserRouter([
       { path: "about", element: <AboutThisProject /> },
       { path: "checkout", element: <Checkout /> },
       { path: "product", element: <ProductPage /> },
-      { path: "profile", element: <Profile /> },
+
+      {
+        path: "profile",
+        element: <Profile />,
+      },
       { path: "orders", element: <Order /> },
     ],
   },
