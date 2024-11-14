@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { saveToken, logOut } from "../redux/loginSlice";
+import { saveUserData, logOut } from "../redux/loginSlice";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
@@ -31,7 +31,9 @@ function Login() {
 
     if (!response.data.token) return setMsg(response.data);
 
-    dispatch(saveToken({ token: response.data.token }));
+    dispatch(
+      saveUserData({ token: response.data.token, userId: response.data.userId })
+    );
     navigate("/");
   };
 

@@ -54,7 +54,6 @@ function CarouselComp() {
       setJuices(response.data);
     };
     getJuices();
-    console.log(juices);
   }, []);
 
   return (

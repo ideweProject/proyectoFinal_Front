@@ -4,15 +4,17 @@ const loginSlice = createSlice({
   name: "login",
   initialState: {},
   reducers: {
-    saveToken(state, action) {
+    saveUserData(state, action) {
       state.token = action.payload.token;
+      state.userId = action.payload.userId;
     },
     logOut(state, action) {
-      state.token = {};
+      state.token = "";
+      state.userId = "";
     },
   },
 });
 
 const { reducer, actions } = loginSlice;
-export const { saveToken, logOut } = actions;
+export const { saveUserData, logOut } = actions;
 export default reducer;
