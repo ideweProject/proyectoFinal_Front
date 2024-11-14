@@ -12,12 +12,12 @@ import Juices from "./pages/Juices.jsx";
 import Bars from "./pages/Bars.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import { Provider } from "react-redux";
-// import store from "./redux/storeConfig.js";
 import ProductPage from "./pages/Product.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import Order from "./pages/Order.jsx";
-import { persistor, store } from "./redux/storeConfig.js";
+import store from "./redux/storeConfig.js";
+import persistStore from "redux-persist/es/persistStore";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +48,8 @@ const router = createBrowserRouter([
   { path: "/signin", element: <SignUp /> },
   { path: "/profile", element: <Profile /> },
 ]);
+
+let persistor = persistStore(store);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

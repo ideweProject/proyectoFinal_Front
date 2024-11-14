@@ -2,21 +2,8 @@ import barsReducer from "./barsSlice";
 import juicesReducer from "./juicesSlice";
 import userReducer from "./userSlice";
 import loginReducer from "./loginSlice";
-<<<<<<< Updated upstream
 import cartReducer from "./cartSlice";
-import { configureStore } from "@reduxjs/toolkit";
-
-const store = configureStore({
-  reducer: {
-    juices: juicesReducer,
-    bars: barsReducer,
-    user: userReducer,
-    login: loginReducer,
-    cart: cartReducer,
-  },
-=======
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
   persistStore,
   persistReducer,
@@ -27,9 +14,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-
 import storage from "redux-persist/lib/storage";
-import { PersistGate } from "redux-persist/integration/react";
 
 const persistConfig = {
   key: "root",
@@ -42,7 +27,7 @@ const rootReducer = combineReducers({
   bars: barsReducer,
   user: userReducer,
   login: loginReducer,
->>>>>>> Stashed changes
+  cart: cartReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -66,5 +51,4 @@ const store = configureStore({
 //   },
 // });
 
-let persistor = persistStore(store);
-module.exports = { persistor, store };
+export default store;
