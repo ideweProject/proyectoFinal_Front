@@ -2,9 +2,16 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { addToCart } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
+import Cart from "./Cart";
 
 function ProductCard({ productData }) {
   const dispatch = useDispatch();
+
+  const handleShowCart = () => {
+    const [show, setShow] = useState(false);
+    <Cart show={true} />;
+  };
 
   const handleAddItem = (clickedItem) => {
     dispatch(
@@ -42,7 +49,10 @@ function ProductCard({ productData }) {
           <Button
             className="cardBtn rounded-pill px-3 bg-dark text-white"
             variant=""
-            onClick={() => handleAddItem({ productData })}
+            onClick={() => {
+              handleShowCart;
+              handleAddItem({ productData });
+            }}
           >
             Agregar al carrito
           </Button>
