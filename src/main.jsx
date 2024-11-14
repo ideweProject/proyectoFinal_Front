@@ -6,17 +6,18 @@ import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Signin from "./pages/SignUp.jsx";
-
+import { PersistGate } from "redux-persist/integration/react";
 import AboutThisProject from "./pages/AboutThisProject.jsx";
 import Juices from "./pages/Juices.jsx";
 import Bars from "./pages/Bars.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import { Provider } from "react-redux";
-import store from "./redux/storeConfig.js";
+// import store from "./redux/storeConfig.js";
 import ProductPage from "./pages/Product.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import Order from "./pages/Order.jsx";
+import { persistor, store } from "./redux/storeConfig.js";
 
 const router = createBrowserRouter([
   {
@@ -45,13 +46,15 @@ const router = createBrowserRouter([
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <SignUp /> },
-  {path:"/profile", element: <Profile />}
+  { path: "/profile", element: <Profile /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <PersistGate persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
     </Provider>
   </StrictMode>
 );

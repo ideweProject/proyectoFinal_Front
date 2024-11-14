@@ -96,7 +96,7 @@ function SignUp() {
                   </form>
                 </div>
                 <Link to={"/login"} className="text text-decoration-none">
-                  <i class="bi bi-arrow-left fs-2"></i>
+                  <i className="bi bi-arrow-left fs-2"></i>
                 </Link>
               </div>
             </div>

@@ -1,27 +1,77 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { saveUserInfo } from "../redux/userSlice";
 
 const Profile = () => {
-  const [perfil, setPerfil] = useState({
-    nombre: "María",
-    apellido: "Pérez",
-    email: "Mperez@gmail.com",
-    pais: "Uruguay",
-    direccion: "Bvar españa 2253",
-    ciudad: "Montevideo",
-    codigoPostal: "11500",
+  const dispatch = useDispatch();
+  const userData = useSelector((state) => state.login);
+  const userInfo = useSelector((state) => state.user);
+  const [profile, setProfile] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    adress: "",
+    city: "",
+    postalCode: "",
   });
+
+  useEffect(() => {
+    async function getUserData() {
+      {
+        const response = await axios({
+          method: "GET",
+          url: `${import.meta.env.VITE_API_URL}/users/show/${userData.userId}`,
+        });
+
+        setProfile({
+          ...profile,
+          firstname: response.data.firstname,
+          lastname: response.data.lastname,
+          email: response.data.email,
+          adress: userInfo.adress,
+          city: userInfo.city,
+          postalCode: userInfo.postalCode,
+        });
+      }
+    }
+    getUserData();
+  }, []);
+
+  useEffect(() => {
+    setProfile({
+      ...profile,
+      firstname: userInfo.firstname,
+      lastname: userInfo.lastname,
+      email: userInfo.email,
+    });
+  }, [userInfo]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setPerfil({
-      ...perfil,
+    setProfile({
+      ...profile,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Perfil actualizado:", perfil);
+    const { firstname, lastname, email } = profile;
+
+    await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/users/edit/${userData.userId}`,
+      data: { firstname, lastname, email },
+    });
+
+    dispatch(
+      saveUserInfo({
+        adress: profile.adress,
+        city: profile.city,
+        postalCode: profile.postalCode,
+      })
+    );
   };
 
   return (
@@ -31,12 +81,12 @@ const Profile = () => {
 
       <form onSubmit={handleSubmit} className="profile-form">
         <div className="form-group">
-          <label htmlFor="nombre">Nombre</label>
+          <label htmlFor="firstname">Nombre</label>
           <input
             type="text"
-            id="nombre"
-            name="nombre"
-            value={perfil.nombre}
+            id="firstname"
+            name="firstname"
+            value={profile.firstname}
             onChange={handleChange}
             required
             className="inputStyle"
@@ -45,12 +95,12 @@ const Profile = () => {
         <hr />
 
         <div className="form-group">
-          <label htmlFor="apellido">Apellido</label>
+          <label htmlFor="lastname">Apellido</label>
           <input
             type="text"
-            id="apellido"
-            name="apellido"
-            value={perfil.apellido}
+            id="lastname"
+            name="lastname"
+            value={profile.lastname}
             onChange={handleChange}
             required
             className="inputStyle"
@@ -64,7 +114,7 @@ const Profile = () => {
             type="email"
             id="email"
             name="email"
-            value={perfil.email}
+            value={profile.email}
             onChange={handleChange}
             required
             className="inputStyle"
@@ -73,30 +123,12 @@ const Profile = () => {
         <hr />
 
         <div className="form-group">
-          <label htmlFor="pais">País</label>
-          <select
-            id="pais"
-            name="pais"
-            value={perfil.pais}
-            onChange={handleChange}
-            required
-            className="inputStyle"
-          >
-            <option value="Uruguay">Uruguay</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Chile">Chile</option>
-            <option value="Brasil">Brasil</option>
-            <option value="México">México</option>
-          </select>
-        </div>
-        <hr />
-        <div className="form-group">
-          <label htmlFor="direccion">Dirección</label>
+          <label htmlFor="adress">Dirección</label>
           <input
             type="text"
-            id="direccion"
-            name="direccion"
-            value={perfil.direccion}
+            id="adress"
+            name="adress"
+            value={profile.adress}
             onChange={handleChange}
             required
             className="inputStyle"
@@ -105,12 +137,12 @@ const Profile = () => {
         <hr />
 
         <div className="form-group">
-          <label htmlFor="ciudad">Ciudad</label>
+          <label htmlFor="city">Ciudad</label>
           <input
             type="text"
-            id="ciudad"
-            name="ciudad"
-            value={perfil.ciudad}
+            id="city"
+            name="city"
+            value={profile.city}
             onChange={handleChange}
             required
             className="inputStyle"
@@ -119,12 +151,12 @@ const Profile = () => {
         <hr />
 
         <div className="form-group">
-          <label htmlFor="codigoPostal">Código Postal</label>
+          <label htmlFor="postalCode">Código Postal</label>
           <input
             type="text"
-            id="codigoPostal"
-            name="codigoPostal"
-            value={perfil.codigoPostal}
+            id="postalCode"
+            name="postalCode"
+            value={profile.postalCode}
             onChange={handleChange}
             required
             className="inputStyle"
