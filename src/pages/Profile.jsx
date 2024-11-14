@@ -22,6 +22,7 @@ const Profile = () => {
         const response = await axios({
           method: "GET",
           url: `${import.meta.env.VITE_API_URL}/users/show/${userData.userId}`,
+          headers: { Authorization: `Bearer ${userData.token}` },
         });
 
         setProfile({
@@ -63,6 +64,7 @@ const Profile = () => {
       method: "POST",
       url: `${import.meta.env.VITE_API_URL}/users/edit/${userData.userId}`,
       data: { firstname, lastname, email },
+      headers: { Authorization: `Bearer ${userData.token}` },
     });
 
     dispatch(
