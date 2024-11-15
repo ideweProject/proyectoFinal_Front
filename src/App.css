@@ -126,8 +126,9 @@
 }
 .titleTeamAbout {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
+  font-size: 2rem;
 }
 .pTeamAbout {
   font-family: "Roboto", sans-serif;
@@ -136,7 +137,6 @@
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
-  font-style: italic;
   color: #ffffff !important;
 }
 .pTextUs {
