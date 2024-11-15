@@ -404,8 +404,7 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
-  background-color: rgba(230, 132, 21, 0.5);  
-}
+background-color: #c27b39;}
 
 .unInput {
   border: 1px solid #ccc;
