@@ -812,5 +812,9 @@ select.inputStyle {
 }
 
 .order-main-container {
-  max-width: 900px;
+  max-width: 700px;
+}
+
+.order-container {
+  min-height: 65vh;
 }

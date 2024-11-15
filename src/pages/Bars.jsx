@@ -21,6 +21,7 @@ function Bars() {
   }, []);
 
   const bars = useSelector((state) => state.bars);
+
   return (
     <div>
       <div>
@@ -41,7 +42,7 @@ function Bars() {
         <div className="row g-3 mb-5">
           {bars.map((bar) => (
             <div className="col-xl-4 col-lg-6 col-sm-12" key={bar.id}>
-              <ProductCard barsData={bar} />
+              <ProductCard productData={bar} />
             </div>
           ))}
         </div>

@@ -1,7 +1,6 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import image1 from "../assets/naranja.jpg"
+import { Link } from "react-router-dom";
 
 function CarCard({ juice }) {
   return (
@@ -10,20 +9,21 @@ function CarCard({ juice }) {
       className="cardComp"
       style={{ width: "10rem", border: "none" }}
     >
-      <Card.Img
-        variant="top"
-        src={image1}
-        className="juiceImage"
-      />
+      <Link to={`./?slug=${juice.slug}`}>
+        <Card.Img
+          variant="top"
+          src={`../../images/Products/Juices/${juice.image}.jpg`}
+          className="juiceImage"
+        />
+      </Link>
+
       <Card.Body>
         <Card.Title className="text-center fs-6">{juice.name}</Card.Title>
         <Card.Text className="text-center text-success text-dark">
           $U {juice.price}
           <div className="cardfs">{juice.price}/500ml</div>
         </Card.Text>
-        <div className="text-center">
-          
-        </div>
+        <div className="text-center"></div>
       </Card.Body>
     </Card>
   );
