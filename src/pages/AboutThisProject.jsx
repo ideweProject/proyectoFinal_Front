@@ -8,7 +8,7 @@ function AboutThisProject() {
     <div className="container mainAboutAll pt-2">
       <div className="aboutImg mt-0">
         <div className="mainTextAbout">
-          <h2 className="text-center fs-4 fs-md-3 fs-lg-2">
+          <h2 className="text-center fs-2 fs-md-3 fs-lg-2">
             Sobre este proyecto
           </h2>
           <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4 ">
