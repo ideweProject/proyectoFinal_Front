@@ -47,7 +47,9 @@ function ProductCard({ productData }) {
         src={`./images/Products/Juices/${productData.image}.jpg`}
       />
       <Card.Body>
-        <Card.Title className="text-center">{productData.name}</Card.Title>
+        <Card.Title className=" cardProdName text-center fs-6 ">
+          {productData.name}
+        </Card.Title>
         <Card.Text className="text-center text-success">
           $U {productData.price}
         </Card.Text>

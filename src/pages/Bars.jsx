@@ -28,7 +28,7 @@ function Bars() {
         <div className="bg-white productosPadre">
           <div className="container d-flex flex-column justify-content-center align-items-center">
             {" "}
-            <h1>RAW BAR</h1>
+            <h1 className="mt-5">RAW BAR</h1>
             <p>Snack Saludable</p>
             <p>
               Descubrí las barras energéticas hechas con ingredientes de origen

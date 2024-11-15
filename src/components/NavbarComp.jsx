@@ -23,7 +23,7 @@ function NavbarComp() {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-white">
+      <Navbar expand="lg" className=" navbarGlobal sticky-top bg-white">
         <Container className="">
           <Link to={"/"} className="p-0">
             <img

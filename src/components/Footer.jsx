@@ -8,20 +8,17 @@ const Footer = () => {
           <div className="d-flex flex-column align-items-start">
             <div className="d-flex align-items-center flex-column">
               <img
-                className="w-75 ms-3"
+                className="w-75 ms-4"
                 src="/images/img_pages/vibracowhite.png"
                 alt=""
               />
-              <p> &copy; Vibraco </p>
+              <p className="ms-3"> &copy; Vibraco </p>
             </div>
           </div>
         </div>
 
-        <div>
-          <p className="address mt-5">Martín García 2381 Montevideo, Uruguay</p>
-        </div>
-
         <div className="footer-right d-flex flex-column align-items-center mt-5 me-start ">
+          <p>Martín García 2381 Montevideo, Uruguay</p>
           <p> contacto@vibraco.com.uy</p>
           <p>2402 78 73</p>
           <p> 092 989 271</p>
