@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function CarouselComp() {
   var settings = {
@@ -61,11 +62,13 @@ function CarouselComp() {
       <Slider {...settings}>
         {juices.map((juice) => (
           <div key={juice.id}>
-            <img
-              src={`./images/Products/Juices/${juice.image}.jpg`}
-              className="img-fluid w-100"
-              alt=""
-            />
+            <Link to={`/product/?slug=${juice.slug}`}>
+              <img
+                src={`./images/Products/Juices/${juice.image}.jpg`}
+                className="img-fluid w-100"
+                alt=""
+              />
+            </Link>
           </div>
         ))}
       </Slider>

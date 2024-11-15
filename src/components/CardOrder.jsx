@@ -4,25 +4,26 @@ function CardOrder(orderData) {
   console.log(orderData);
   return (
     <>
-      <div className="container d-flex justify-content-center">
+      <div className="container d-flex justify-content-center mt-1">
         <div className="order-main-container border p-4 rounded ">
           <div className="d-flex w-100 border-bottom ">
             <div className="text-center">
               <p className="text">Id de orden</p>
-              <span>{orderData.orderData.id}</span>
+              <span className="text">{orderData.orderData.id}</span>
             </div>
             <div className="ms-3">
               <p className="text ">Fecha de compra</p>
-              <span>{orderData.orderData.createdAt}</span>
+              <span className="text">{orderData.orderData.createdAt}</span>
             </div>
             <div className="ms-3">
-              <p className="text">Total a pagar</p>{" "}
-              <span>{orderData.orderData.itemsList.totalPrice}</span>
+              <p className="text ">Dirección de envío</p>
+              <span className="text">{orderData.orderData.address}</span>
             </div>
-            <div className="ms-5">
-              <button>View order</button>
-              <button>View invoice</button>
+            <div className="ms-3">
+              <p className="text ">Número de contacto</p>
+              <span className="text">{orderData.orderData.phone}</span>
             </div>
+            <div className="ms-3"></div>
           </div>
           {orderData.orderData.itemsList &&
             orderData.orderData.itemsList.map((item) => (
@@ -34,10 +35,17 @@ function CardOrder(orderData) {
                     alt=""
                   />
                 </div>
+
                 <div className="col-lg-10">
                   <div>
                     <p>{item.name}</p>
                     <p>$ {item.price}</p>
+                  </div>
+                  <div>
+                    <div className="d-flex">
+                      <p>Estado:</p>
+                      <span>{orderData.orderData.state}</span>
+                    </div>
                   </div>
                 </div>
               </div>
