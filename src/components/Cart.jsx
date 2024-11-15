@@ -51,7 +51,7 @@ function Cart({ name, ...props }) {
         onHide={handleToggle}
         {...props}
       >
-        <Offcanvas.Header closeButton className=" bgCartTitle">
+        <Offcanvas.Header className=" bgCartTitle">
           <Offcanvas.Title className="cartTitle text-white text-center">
             Tu pedido
           </Offcanvas.Title>
