@@ -12,7 +12,6 @@ function Cart({ name, ...props }) {
   const dispatch = useDispatch();
 
   const handleRemoveItem = (removedItem) => {
-    console.log(removedItem);
     dispatch(
       removeFromCart({
         id: removedItem,
@@ -21,9 +20,12 @@ function Cart({ name, ...props }) {
   };
 
   const handlePlus = (plusItem) => {
+    console.log(plusItem);
+
     dispatch(
       plusOneItem({
-        id: plusItem,
+        id: plusItem.id,
+        price: plusItem.price,
       })
     );
   };
@@ -78,7 +80,7 @@ function Cart({ name, ...props }) {
                         type="number"
                         value={cartItem.quantity}
                       />
-                      <button onClick={() => handlePlus(cartItem.id)}>
+                      <button onClick={() => handlePlus(cartItem)}>
                         <i class="bi bi-plus-square me-3 d-inline"></i>
                       </button>
                       <button onClick={() => handleMinus(cartItem.id)}>
