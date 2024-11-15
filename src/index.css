@@ -285,3 +285,18 @@ a.text-decoration-none {
     rgba(180, 19, 198, 0.8) 80%
   ) !important;
 }
+
+.juiceImage {
+  aspect-ratio: 1/1;
+}
+
+.naturales {
+  background: #a2a29851 !important;
+}
+
+.navbarGlobal {
+  position: sticky;
+  top: 0; /* Fija la barra en la parte superior */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
