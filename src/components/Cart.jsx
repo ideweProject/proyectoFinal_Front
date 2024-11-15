@@ -20,8 +20,6 @@ function Cart({ name, ...props }) {
   };
 
   const handlePlus = (plusItem) => {
-    console.log(plusItem);
-
     dispatch(
       plusOneItem({
         id: plusItem.id,
@@ -53,7 +51,7 @@ function Cart({ name, ...props }) {
         onHide={handleToggle}
         {...props}
       >
-        <Offcanvas.Header closeButton className="bg-dark">
+        <Offcanvas.Header closeButton className=" bgCartTitle">
           <Offcanvas.Title className="cartTitle text-white text-center">
             Tu pedido
           </Offcanvas.Title>
@@ -75,17 +73,26 @@ function Cart({ name, ...props }) {
                       {" "}
                       <h5>{cartItem.name}</h5>
                       <span className="d-block mb-3">$U{cartItem.price}</span>
-                      <input
-                        className="product-quntity-input me-5"
-                        type="number"
-                        value={cartItem.quantity}
-                      />
-                      <button onClick={() => handlePlus(cartItem)}>
-                        <i class="bi bi-plus-square me-3 d-inline"></i>
-                      </button>
-                      <button onClick={() => handleMinus(cartItem.id)}>
-                        <i class="bi bi-dash-square d-inline"></i>
-                      </button>
+                      <div className="d-flex">
+                        <button
+                          className="d-inline btnPlusMin"
+                          onClick={() => handleMinus(cartItem.id)}
+                        >
+                          -
+                        </button>
+                        <input
+                          className="product-quantity-input w-25 h-25"
+                          type="number"
+                          value={cartItem.quantity}
+                        />
+
+                        <button
+                          className="btnPlusMin d-inline"
+                          onClick={() => handlePlus(cartItem)}
+                        >
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
                       <button
                         className="rounded border bg-white ms-auto d-block"
                         onClick={() => handleRemoveItem(cartItem.id)}
@@ -100,11 +107,11 @@ function Cart({ name, ...props }) {
           </ul>
           <hr />
 
-          <div className="btnBuy d-flex flex-column w-100">
+          <div className="btnBuy d-flex justify-content-center">
             <div className="mt-auto">
-              <div className="row">
-                <div className="col-9">
-                  <h4>Subtotal</h4>
+              <div className="row ms-2">
+                <div className="col-8">
+                  <h5>Subtotal</h5>
                   <p>Envío incluído al finalizar compra.</p>
                 </div>
                 <div className="col-3">
@@ -114,7 +121,7 @@ function Cart({ name, ...props }) {
               <div className="container d-flex justify-content-center w-100">
                 <Link
                   to={"/checkout"}
-                  className="btn btn-success w-100 rounded-pill"
+                  className="btn text-white btnBuyCart w-100 rounded-pill shadow"
                 >
                   Finalizar compra
                 </Link>
