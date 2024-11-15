@@ -376,6 +376,10 @@ footer p {
   width: 100px;
   height: 100px;
 }
+.check-container {
+  min-height: 70vh;
+}
+
 .imagenSummary {
   width: 100px;
   height: 100px;
@@ -806,4 +810,8 @@ select.inputStyle {
 .orderA {
   text-decoration: none;
   color: rgb(210, 30, 30);
+}
+
+.order-main-container {
+  max-width: 900px;
 }

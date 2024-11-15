@@ -5,7 +5,6 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
-
 import { PersistGate } from "redux-persist/integration/react";
 import AboutThisProject from "./pages/AboutThisProject.jsx";
 import Juices from "./pages/Juices.jsx";
@@ -18,6 +17,7 @@ import Profile from "./pages/Profile.jsx";
 import Order from "./pages/Order.jsx";
 import store from "./redux/storeConfig.js";
 import persistStore from "redux-persist/es/persistStore";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -60,5 +60,6 @@ createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+    <ToastContainer />
   </StrictMode>
 );

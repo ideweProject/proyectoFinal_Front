@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
     const response = await axios({
       method: "POST",
-      url: `${import.meta.env.VITE_API_URL}/token`,
+      url: `${import.meta.env.VITE_API_URL}/tokens`,
       data: { email, password },
     });
 
