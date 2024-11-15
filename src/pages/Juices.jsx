@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { saveJuices } from "../redux/juicesSlice";
 import React, { useEffect, useState } from "react";
 
-
 function Juices() {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.juices);
@@ -14,7 +13,7 @@ function Juices() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/juices?cat-juices`,
+        url: `${import.meta.env.VITE_API_URL}/products/juices?cat=juices`,
       });
 
       dispatch(saveJuices({ juices: response.data }));
@@ -33,7 +32,7 @@ function Juices() {
         <div className="row g-3 mb-5">
           {juices.map((juice) => (
             <div className="col-xl-4 col-lg-6 col-sm-12" key={juice.id}>
-              <ProductCard productData={juice} />
+              <ProductCard juicesData={juice} />
             </div>
           ))}
         </div>
