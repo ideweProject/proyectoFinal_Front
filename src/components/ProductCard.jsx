@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 import Cart from "./Cart";
 
-function ProductCard({ juicesData, barsData }) {
+function ProductCard({ productData }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,10 +22,10 @@ function ProductCard({ juicesData, barsData }) {
   const handleAddItem = (clickedItem) => {
     dispatch(
       addToCart({
-        id: juicesData.id,
-        name: juicesData.name,
-        price: juicesData.price,
-        image: juicesData.image,
+        id: productData.id,
+        name: productData.name,
+        price: productData.price,
+        image: productData.image,
       })
     );
   };
@@ -42,14 +42,16 @@ function ProductCard({ juicesData, barsData }) {
     >
       <Card.Img
         onClick={handleCardClick}
-        className="juiceImage img-fluid"
+        className="juiceImage img-fluid object-fit-contain"
         variant="top"
-        src={`./images/Products/Juices/${juicesData.image}.jpg`}
+        src={`./images/Products/Juices/${productData.image}.jpg`}
       />
       <Card.Body>
-        <Card.Title className="text-center">{juicesData.name}</Card.Title>
+        <Card.Title className=" cardProdName text-center fs-6 ">
+          {productData.name}
+        </Card.Title>
         <Card.Text className="text-center text-success">
-          $U {juicesData.price}
+          $U {productData.price}
         </Card.Text>
 
         <div className="text-center">
@@ -58,7 +60,7 @@ function ProductCard({ juicesData, barsData }) {
             variant=""
             onClick={() => {
               handleShowCart();
-              handleAddItem({ juicesData });
+              handleAddItem({ productData });
             }}
           >
             Agregar al carrito

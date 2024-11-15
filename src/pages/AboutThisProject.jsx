@@ -8,7 +8,7 @@ function AboutThisProject() {
     <div className="container mainAboutAll pt-2">
       <div className="aboutImg mt-0">
         <div className="mainTextAbout">
-          <h2 className="text-center fs-4 fs-md-3 fs-lg-2">
+          <h2 className="text-center fs-2 fs-md-3 fs-lg-2">
             Sobre este proyecto
           </h2>
           <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4 ">
@@ -79,8 +79,8 @@ function AboutThisProject() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <i className="bi bi-twitter-x me-3"></i>
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-twitter-x me-3 text-white"></i>
+                <i className="bi bi-linkedin text-white"></i>
               </Card.Body>
             </Card>
           </div>
@@ -93,15 +93,15 @@ function AboutThisProject() {
                 src="/images/img_pages/bars.jpg"
                 style={{ objectFit: "cover", height: "50%" }}
               />
-              <Card.Body className="cardBodyUs">
-                <Card.Title className="nameUsAbout">Bruno</Card.Title>
+              <Card.Body className="cardBodyUs rounded">
+                <Card.Title className="nameUsAbout rounded">Bruno</Card.Title>
                 <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                 <Card.Text className="pTextUs">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <i className="bi bi-twitter-x me-3"></i>
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-twitter-x me-3 text-white"></i>
+                <i className="bi bi-linkedin text-white"></i>
               </Card.Body>
             </Card>
           </div>
@@ -121,8 +121,8 @@ function AboutThisProject() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <i className="bi bi-twitter-x me-3"></i>
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-twitter-x me-3 text-white"></i>
+                <i className="bi bi-linkedin text-white"></i>
               </Card.Body>
             </Card>
           </div>
@@ -142,8 +142,8 @@ function AboutThisProject() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </Card.Text>
-                <i className="bi bi-twitter-x me-3"></i>
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-twitter-x me-3 text-white"></i>
+                <i className="bi bi-linkedin text-white"></i>
               </Card.Body>
             </Card>
           </div>
