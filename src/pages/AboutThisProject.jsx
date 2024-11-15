@@ -93,7 +93,7 @@ function AboutThisProject() {
                 src="/images/img_pages/bars.jpg"
                 style={{ objectFit: "cover", height: "50%" }}
               />
-              <Card.Body className="cardBodyUs rounded">
+              <Card.Body className="cardBodyUs ">
                 <Card.Title className="nameUsAbout rounded">Bruno</Card.Title>
                 <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                 <Card.Text className="pTextUs">
