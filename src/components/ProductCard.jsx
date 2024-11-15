@@ -16,7 +16,7 @@ function ProductCard({ productData }) {
   };
 
   const handleCardClick = () => {
-    navigate(`/product/?slug=${juicesData.slug}`);
+    navigate(`/product/?slug=${productData.slug}`);
   };
 
   const handleAddItem = (clickedItem) => {

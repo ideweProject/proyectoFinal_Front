@@ -38,17 +38,21 @@ const router = createBrowserRouter([
         element: <Bars />,
       },
 
-      { path: "about", element: <AboutThisProject /> },
-      { path: "checkout", element: <Checkout /> },
-      { path: "profile", element: <Profile /> },
-      { path: "orders", element: <Order /> },
+      {
+        element: <ProtectedRoute />,
+        children: [
+          { path: "about", element: <AboutThisProject /> },
+          { path: "checkout", element: <Checkout /> },
+          { path: "profile", element: <Profile /> },
+          { path: "orders", element: <Order /> },
+        ],
+      },
       { path: "product", element: <ProductPage /> },
     ],
   },
 
   { path: "/login", element: <Login /> },
   { path: "/signin", element: <SignUp /> },
-  { path: "/profile", element: <Profile /> },
 ]);
 
 let persistor = persistStore(store);
