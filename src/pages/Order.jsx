@@ -23,7 +23,7 @@ function Order() {
   }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center mt-5 ">
+    <div className="d-flex flex-column justify-content-center align-items-center mt-5  order-container">
       <h2>Historial de compra</h2>
       <p>
         Consulta el estado de pedidos recientes, gestiona devoluciones y
