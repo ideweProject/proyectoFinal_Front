@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 import Cart from "./Cart";
 
-function ProductCard({ juicesData,barsData}) {
+function ProductCard({ juicesData, barsData }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ function ProductCard({ juicesData,barsData}) {
   };
 
   const handleCardClick = () => {
-    navigate(`/product/?slug=${productData.slug}`);
+    navigate(`/product/?slug=${juicesData.slug}`);
   };
 
   const handleAddItem = (clickedItem) => {
@@ -45,7 +45,6 @@ function ProductCard({ juicesData,barsData}) {
         className="juiceImage img-fluid"
         variant="top"
         src={`./images/Products/Juices/${juicesData.image}.jpg`}
-        //src={`../../public/images/Products/juices/${image}.jpg`}
       />
       <Card.Body>
         <Card.Title className="text-center">{juicesData.name}</Card.Title>
