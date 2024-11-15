@@ -336,6 +336,7 @@ footer p {
   height: 30rem;
   overflow: hidden;
   position: relative;
+  filter: brightness(90%);
 }
 .cardUs:hover {
   transform: scale(1.1);
@@ -344,6 +345,7 @@ footer p {
     rgb(243, 148, 7) 35%,
     rgb(245, 19, 177) 100%
   );
+  filter: brightness(100%);
 }
 
 .card-img-top {
@@ -381,10 +383,11 @@ footer p {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
   z-index: 2;
+  filter: brightness(80%);
 }
 .imgTest:hover {
-  transform: scale(1.1);
-  filter: brightness(70%);
+  transform: scale(1);
+  filter: brightness(100%);
 }
 .vibracologowhite {
   width: 100px;
@@ -419,7 +422,13 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
-background-color: #c27b39;}
+  background-image: linear-gradient(
+    130deg,
+    rgba(255, 153, 0, 0.753) 35%,
+    rgb(202, 36, 152) 100%
+  );
+
+}
 
 .unInput {
   border: 1px solid #ccc;
