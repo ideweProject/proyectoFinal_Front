@@ -3,16 +3,33 @@ import Form from "react-bootstrap/Form";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { removeFromCart } from "../redux/cartSlice";
+import Toast from "../components/Toast";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Checkout() {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const userData = useSelector((state) => state.login);
   const taxes = Math.floor((cart.totalPrice + 80) * 0.1);
   const total = Math.floor(cart.totalPrice + 80 + taxes);
-
   const [formData, setFormData] = useState({});
+
+  function notify() {
+    toast(" Compra realizada con exito!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,7 +65,6 @@ function Checkout() {
     "Treinta y Tres",
   ];
 
-  // console.log(formData);
   async function handleSubmit(event) {
     event.preventDefault();
     const response = await axios({
@@ -62,11 +78,22 @@ function Checkout() {
         },
       },
     });
-    console.log(response.data);
+
+    if (response.data.statusCode === 1) {
+      navigate("/orders");
+      toast.success(response.data.msg);
+    } else {
+      toast.error(response.data.msg);
+    }
   }
 
-  return (
+  return !cart.items[0] ? (
+    <div className="h-100 check-container">
+      <h1 className="title">Carrito vacio</h1>
+    </div>
+  ) : (
     <div className="full-screen-background pt-2 pb-2 ">
+      <Toast />
       <div className="container mainCheck">
         <div className="checkout checkMain">
           <div className="row g-5">
@@ -125,11 +152,12 @@ function Checkout() {
 
                 <div className="row">
                   <div className="col-12  mb-3">
-                    <label htmlFor="state">Departamento</label>
+                    <label htmlFor="city">Departamento</label>
                     <Form.Select
                       size="sl"
-                      name="state"
+                      name="city"
                       onChange={(e) => handleChange(e)}
+                      required
                     >
                       {cities.map((city, index) => (
                         <option key={index} value={city}>
@@ -248,6 +276,7 @@ function Checkout() {
                     </label>
 
                     <select
+                      className="border-0  p-1"
                       name="expireMM"
                       id="expireMM"
                       onChange={(e) => handleChange(e)}
@@ -267,6 +296,7 @@ function Checkout() {
                       <option value="12">Diciembre</option>
                     </select>
                     <select
+                      className="border-0 p-1 ms-1"
                       name="expireYY"
                       id="expireYY"
                       onChange={(e) => handleChange(e)}

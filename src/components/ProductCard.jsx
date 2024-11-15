@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { Navigate, useNavigate } from "react-router-dom";
 
-
 import Cart from "./Cart";
 
 function ProductCard({ productData }) {
@@ -15,8 +14,9 @@ function ProductCard({ productData }) {
   const handleShowCart = () => {
     dispatch(toggleOffcanvas());
   };
+
   const handleCardClick = () => {
-    navigate("/product");
+    navigate(`/product/?slug=${productData.slug}`);
   };
 
   const handleAddItem = (clickedItem) => {
@@ -41,8 +41,8 @@ function ProductCard({ productData }) {
       }}
     >
       <Card.Img
-       onClick={handleCardClick}
-       className="juiceImage img-fluid"
+        onClick={handleCardClick}
+        className="juiceImage img-fluid"
         variant="top"
         src={`./images/Products/Juices/${productData.image}.jpg`}
         //src={`../../public/images/Products/juices/${image}.jpg`}
