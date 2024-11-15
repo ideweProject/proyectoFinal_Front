@@ -41,7 +41,7 @@ function Bars() {
         <div className="row g-3 mb-5">
           {bars.map((bar) => (
             <div className="col-xl-4 col-lg-6 col-sm-12" key={bar.id}>
-              <ProductCard name={bar.name} price={bar.price} img={bar.image} />
+              <ProductCard barsData={bar} />
             </div>
           ))}
         </div>

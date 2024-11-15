@@ -32,7 +32,7 @@ function Juices() {
         <div className="row g-3 mb-5">
           {juices.map((juice) => (
             <div className="col-xl-4 col-lg-6 col-sm-12" key={juice.id}>
-              <ProductCard productData={juice} />
+              <ProductCard juicesData={juice} />
             </div>
           ))}
         </div>
