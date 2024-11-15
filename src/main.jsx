@@ -10,7 +10,7 @@ import AboutThisProject from "./pages/AboutThisProject.jsx";
 import Juices from "./pages/Juices.jsx";
 import Bars from "./pages/Bars.jsx";
 import Checkout from "./pages/Checkout.jsx";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import ProductPage from "./pages/Product.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
@@ -18,6 +18,7 @@ import Order from "./pages/Order.jsx";
 import store from "./redux/storeConfig.js";
 import persistStore from "redux-persist/es/persistStore";
 import { ToastContainer } from "react-toastify";
+import ProtectedRoute from "../utils/ProtectedRoute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,15 +37,12 @@ const router = createBrowserRouter([
         path: "bars",
         element: <Bars />,
       },
+
       { path: "about", element: <AboutThisProject /> },
       { path: "checkout", element: <Checkout /> },
-      { path: "product", element: <ProductPage /> },
-
-      {
-        path: "profile",
-        element: <Profile />,
-      },
+      { path: "profile", element: <Profile /> },
       { path: "orders", element: <Order /> },
+      { path: "product", element: <ProductPage /> },
     ],
   },
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 function CardOrder(orderData) {
-  console.log(orderData);
   return (
     <>
       <div className="container d-flex justify-content-center mt-1">

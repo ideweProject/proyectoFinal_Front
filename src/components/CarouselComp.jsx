@@ -62,7 +62,8 @@ function CarouselComp() {
       <Slider {...settings}>
         {juices.map((juice) => (
           <div key={juice.id}>
-            <Link to={`/product/?slug=${juice.slug}`}>
+            <Link to={"/"}>
+              {/* <Link to={`/product/?slug=${juice.slug}`}> */}
               <img
                 src={`./images/Products/Juices/${juice.image}.jpg`}
                 className="img-fluid w-100"
