@@ -65,7 +65,7 @@
 }
 .mainAboutAll {
   border-radius: 5px;
-  background: rgba(14, 13, 13, 0.747);
+  background: rgba(80, 65, 65, 0.5);
 }
 .aboutImg {
   position: relative;
@@ -75,13 +75,13 @@
   background-repeat: no-repeat;
   min-height: 300px;
   padding: 20px;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 
 .aboutImg::before {
@@ -136,9 +136,8 @@
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-style: italic;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .pTextUs {
   font-family: "Roboto", sans-serif;
@@ -405,7 +404,7 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
-  background-color: rgba(10, 9, 9, 0.5);
+  background-color: rgba(230, 132, 21, 0.5);  
 }
 
 .unInput {
