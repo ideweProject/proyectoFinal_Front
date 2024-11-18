@@ -6,6 +6,7 @@ import { removeFromCart } from "../redux/cartSlice";
 import Toast from "../components/Toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import formValidation from "../../utils/formValidation";
 import "react-toastify/dist/ReactToastify.css";
 
 function Checkout() {
@@ -16,20 +17,12 @@ function Checkout() {
   const userData = useSelector((state) => state.login);
   const taxes = Math.floor((cart.totalPrice + 80) * 0.1);
   const total = Math.floor(cart.totalPrice + 80 + taxes);
-  const [formData, setFormData] = useState({});
-
-  // function notify() {
-  //   toast(" Compra realizada con exito!", {
-  //     position: "top-right",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //     theme: "light",
-  //   });
-  // }
+  const [formData, setFormData] = useState({
+    payment: "creditCard",
+    expireMM: "01",
+    expireYY: "2024",
+  });
+  let validDate = "";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,6 +60,10 @@ function Checkout() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    const validDate = await formValidation(formData);
+
+    if (validDate.msg) return toast.error(validDate.msg);
+
     const response = await axios({
       method: "POST",
       url: `${import.meta.env.VITE_API_URL}/orders/store`,
@@ -172,11 +169,13 @@ function Checkout() {
                   <div className="col-12 col-sm-6 mb-3">
                     <label htmlFor="postalCode">Código postal</label>
                     <input
-                      type="text"
+                      type="tel"
                       name="postalCode"
                       className="w-100 unInput"
                       placeholder="80500"
                       onChange={(e) => handleChange(e)}
+                      maxLength={5}
+                      pattern="[0-9]*"
                     />
                   </div>
                 </div>
@@ -184,12 +183,15 @@ function Checkout() {
                 <div className="mb-4">
                   <label htmlFor="phone">Teléfono</label>
                   <input
-                    type="number"
+                    type="tel"
                     name="phone"
                     className="w-100 unInput"
                     placeholder=" 095 123 456"
                     onChange={(e) => handleChange(e)}
                     required
+                    minLength={9}
+                    maxLength={9}
+                    pattern="[0-9]*"
                   />
                 </div>
                 <hr />
@@ -249,7 +251,7 @@ function Checkout() {
                     className="w-100 unInput"
                     maxLength={19}
                     inputMode="numeric"
-                    pattern="[0-9]*"
+                    // pattern="[0-9]*"
                     placeholder="XXXX XXXX XXXX XXXX"
                     required
                     onChange={(e) => handleChange(e)}
@@ -275,13 +277,14 @@ function Checkout() {
                       Fecha de expiración
                     </label>
 
+                    <label htmlFor="expireMM">Mes</label>
                     <select
-                      className="border-0  p-1"
+                      className="border-0 p-1"
                       name="expireMM"
                       id="expireMM"
                       onChange={(e) => handleChange(e)}
+                      required
                     >
-                      <option value="">Month</option>
                       <option value="01">Enero</option>
                       <option value="02">Febrero</option>
                       <option value="03">Marzo</option>
@@ -295,21 +298,23 @@ function Checkout() {
                       <option value="11">Noviembre</option>
                       <option value="12">Diciembre</option>
                     </select>
+                    <label htmlFor="expireYY" className="">
+                      Año
+                    </label>
                     <select
                       className="border-0 p-1 ms-1"
                       name="expireYY"
                       id="expireYY"
                       onChange={(e) => handleChange(e)}
                     >
-                      <option value="">Año</option>
-                      <option value="20">2024</option>
-                      <option value="21">2025</option>
-                      <option value="22">2026</option>
-                      <option value="23">2027</option>
-                      <option value="24">2028</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
                     </select>
                     <input
-                      class="inputCard"
+                      className="inputCard"
                       type="hidden"
                       name="expiry"
                       id="expiry"

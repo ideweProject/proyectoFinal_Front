@@ -4,12 +4,6 @@ const userSlice = createSlice({
   name: "user",
   initialState: {},
   reducers: {
-    saveBars(state, action) {
-      // state = action.payload.User;
-
-      return state;
-    },
-
     saveUserInfo(state, action) {
       const { adress, city, postalCode } = action.payload;
       state.adress = adress;
@@ -20,5 +14,5 @@ const userSlice = createSlice({
 });
 
 const { reducer, actions } = userSlice;
-export const { saveBars, saveUserInfo } = actions;
+export const { saveUserInfo } = actions;
 export default reducer;
