@@ -3,11 +3,15 @@ import { useState } from "react";
 import CarouselProducts from "../components/CarrouselProducts";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart, addToCartFromProduct } from "../redux/cartSlice";
+import { toggleOffcanvas } from "../redux/pagesSlice";
 
 const ProductPage = () => {
   const { slug } = useParams();
-  const [cantidad, setCantidad] = useState(1);
+  const dispatch = useDispatch();
   const [product, setProduct] = useState({});
+  const [quantity, setquantity] = useState(1);
 
   useEffect(() => {
     async function getProduct() {
@@ -20,14 +24,30 @@ const ProductPage = () => {
     getProduct();
   }, [slug]);
 
-  const aumentarCantidad = () => {
-    setCantidad((prevCantidad) => prevCantidad + 1);
+  const increment = () => {
+    setquantity((prevQuantity) => prevQuantity + 1);
   };
 
-  const disminuirCantidad = () => {
-    if (cantidad > 1) {
-      setCantidad((prevCantidad) => prevCantidad - 1);
+  const decrement = () => {
+    if (quantity > 1) {
+      setquantity((prevQuantity) => prevQuantity - 1);
     }
+  };
+
+  const handleShowCart = () => {
+    dispatch(toggleOffcanvas());
+  };
+
+  const handleAddItem = (clickedItem) => {
+    dispatch(
+      addToCartFromProduct({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+        quantity: quantity,
+      })
+    );
   };
 
   return (
@@ -58,21 +78,27 @@ const ProductPage = () => {
               <p className="mb-1">Cantidad</p>
 
               <div className="d-flex ">
-                <button className="btnPlusMin  " onClick={disminuirCantidad}>
+                <button className="btnPlusMin" onClick={decrement}>
                   -{" "}
                 </button>
                 <input
                   type="number"
-                  value={cantidad}
                   className="product-quantity-input  h-25 mb-4 "
+                  value={quantity}
                 />
-                <button onClick={aumentarCantidad} className="btnPlusMin">
+                <button className="btnPlusMin" onClick={increment}>
                   +
                 </button>
               </div>
             </div>
 
-            <button className="add-to-cart btn-pill w-500 text btnBuyCart">
+            <button
+              className="add-to-cart btn-pill w-500 text btnBuyCart"
+              onClick={() => {
+                handleShowCart();
+                handleAddItem({ product });
+              }}
+            >
               Añadir al carrito
             </button>
             <div className="mt-5">

@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { useNavigate } from "react-router-dom";
 
+
 function ProductCard({ productData }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
