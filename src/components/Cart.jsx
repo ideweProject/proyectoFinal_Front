@@ -108,7 +108,7 @@ function Cart({ name, ...props }) {
           <hr />
 
           <div className="btnBuy d-flex justify-content-center">
-            <div className="mt-auto">
+            <div className="mt-3">
               <div className="row ms-2">
                 <div className="col-8">
                   <h5>Subtotal</h5>
