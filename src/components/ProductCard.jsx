@@ -1,11 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { addToCart } from "../redux/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
-import { Navigate, useNavigate } from "react-router-dom";
-
-import Cart from "./Cart";
+import { useNavigate } from "react-router-dom";
 
 function ProductCard({ productData }) {
   const dispatch = useDispatch();

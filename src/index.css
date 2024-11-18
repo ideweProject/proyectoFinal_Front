@@ -256,6 +256,7 @@ a.text-decoration-none {
   text-align: center;
   margin: 0px;
   border-radius: 5px;
+  border: 1px solid grey;
 }
 
 .footer {
@@ -272,6 +273,7 @@ a.text-decoration-none {
   margin-right: 4px;
   border-radius: 5px;
   text-align: center;
+  border: 1px solid grey;
 }
 
 .btnBuyCart {

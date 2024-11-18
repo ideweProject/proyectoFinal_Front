@@ -9,9 +9,12 @@ const pagesSlice = createSlice({
     toggleOffcanvas: (state) => {
       state.showCart = !state.showCart;
     },
+    changeSlug(state, action) {
+      state.slug = action.payload.slug;
+    },
   },
 });
 
 const { reducer, actions } = pagesSlice;
-export const { toggleOffcanvas } = actions;
+export const { toggleOffcanvas, changeSlug } = actions;
 export default reducer;

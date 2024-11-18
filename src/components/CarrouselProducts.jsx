@@ -19,9 +19,7 @@ function CarouselProducts() {
       dispatch(saveJuices({ juices: response.data }));
     };
 
-    if (juices.length === 0) {
-      getProducts();
-    }
+    getProducts();
   }, [dispatch, juices.length]);
 
   const settings = {

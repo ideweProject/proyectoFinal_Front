@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeSlug } from "../redux/pagesSlice";
 
 function CarCard({ juice }) {
+  const dispatch = useDispatch();
+
+  const handleCardClick = () => {
+    dispatch(changeSlug({ slug: juice.slug }));
+  };
+
   return (
     <Card
       key={juice.id}
       className="cardComp"
       style={{ width: "10rem", border: "none" }}
     >
-      <Link to={`./?slug=${juice.slug}`}>
-        <Card.Img
-          variant="top"
-          src={`../../images/Products/Juices/${juice.image}.jpg`}
-          className="juiceImage"
-        />
-      </Link>
+      <Card.Img
+        onClick={handleCardClick}
+        variant="top"
+        src={`../../images/Products/Juices/${juice.image}.jpg`}
+        className="juiceImage"
+      />
 
       <Card.Body>
         <Card.Title className="text-center fs-6">{juice.name}</Card.Title>

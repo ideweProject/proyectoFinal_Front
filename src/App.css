@@ -420,7 +420,6 @@ button.confirmOrder:hover {
     rgba(255, 153, 0, 0.753) 35%,
     rgb(202, 36, 152) 100%
   );
-
 }
 
 .unInput {
@@ -496,7 +495,6 @@ button.confirmOrder:hover {
 
 .product-info {
   max-width: 500px;
-  padding-left: 30px;
   width: 100%;
 }
 

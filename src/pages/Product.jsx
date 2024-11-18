@@ -3,23 +3,25 @@ import { useState } from "react";
 import CarouselProducts from "../components/CarrouselProducts";
 import queryString from "query-string";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const ProductPage = () => {
   const [cantidad, setCantidad] = useState(1);
   const [product, setProduct] = useState({});
+  const slug = useSelector((state) => state.pages);
+
   const queryParams = queryString.parse(window.location.search);
-  const slug = queryParams.slug;
 
   useEffect(() => {
     async function getProduct() {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/show/?slug=${slug}`,
+        url: `${import.meta.env.VITE_API_URL}/products/show/?slug=${slug.slug}`,
       });
       setProduct(response.data);
     }
     getProduct();
-  }, []);
+  }, [slug]);
 
   const aumentarCantidad = () => {
     setCantidad((prevCantidad) => prevCantidad + 1);
@@ -31,7 +33,6 @@ const ProductPage = () => {
     }
   };
 
-  console.log(product.ingredients);
   return (
     <div>
       <div className="product-page">
@@ -53,28 +54,28 @@ const ProductPage = () => {
           </div>
 
           <div className="product-info">
-            <h1>{product.name}</h1>
+            <h1 className="text-start">{product.name}</h1>
             <p className="mb-0 text">$U{product.price}</p>
             <p className="price-subtittle text">$U260.00/500ml</p>
             <div>
               <p className="mb-1">Cantidad</p>
 
               <div className="d-flex ">
-                <button className="amountbtn " onClick={disminuirCantidad}>
+                <button className="btnPlusMin  " onClick={disminuirCantidad}>
                   -{" "}
                 </button>
                 <input
                   type="number"
                   value={cantidad}
-                  className="cantidad  mb-4"
+                  className="product-quantity-input  h-25 mb-4 "
                 />
-                <button onClick={aumentarCantidad} className="amountbtn">
+                <button onClick={aumentarCantidad} className="btnPlusMin">
                   +
                 </button>
               </div>
             </div>
 
-            <button className="add-to-cart btn-pill w-500 text">
+            <button className="add-to-cart btn-pill w-500 text btnBuyCart">
               Añadir al carrito
             </button>
             <div className="mt-5">
@@ -91,8 +92,8 @@ const ProductPage = () => {
               </p>
             </div>
             <div>
-              <i class="bi bi-whatsapp mx-1 iconWpp"></i>
-              <i class="bi bi-facebook mx-1 iconFacebook"></i>
+              <i className="bi bi-whatsapp mx-1 iconWpp"></i>
+              <i className="bi bi-facebook mx-1 iconFacebook"></i>
             </div>
           </div>
         </div>

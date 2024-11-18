@@ -5,12 +5,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
-import { PersistGate } from "redux-persist/integration/react";
 import AboutThisProject from "./pages/AboutThisProject.jsx";
 import Juices from "./pages/Juices.jsx";
 import Bars from "./pages/Bars.jsx";
 import Checkout from "./pages/Checkout.jsx";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import ProductPage from "./pages/Product.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
@@ -37,9 +36,9 @@ const router = createBrowserRouter([
         path: "bars",
         element: <Bars />,
       },
+      { element: <ProtectedRoute /> },
 
       {
-        element: <ProtectedRoute />,
         children: [
           { path: "about", element: <AboutThisProject /> },
           { path: "checkout", element: <Checkout /> },
