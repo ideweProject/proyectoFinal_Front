@@ -1,22 +1,19 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import CarouselProducts from "../components/CarrouselProducts";
-import queryString from "query-string";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 const ProductPage = () => {
+  const { slug } = useParams();
   const [cantidad, setCantidad] = useState(1);
   const [product, setProduct] = useState({});
-  const slug = useSelector((state) => state.pages);
-
-  const queryParams = queryString.parse(window.location.search);
 
   useEffect(() => {
     async function getProduct() {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/show/?slug=${slug.slug}`,
+        url: `${import.meta.env.VITE_API_URL}/products/show/?slug=${slug}`,
       });
       setProduct(response.data);
     }

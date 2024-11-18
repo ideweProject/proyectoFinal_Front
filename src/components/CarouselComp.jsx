@@ -62,10 +62,10 @@ function CarouselComp() {
       <Slider {...settings}>
         {juices.map((juice) => (
           <div key={juice.id}>
-            <Link to={`/product/?slug=${juice.slug}`}>
+            <Link className="ratio ratio-1x1" to={`/product/${juice.slug}`}>
               <img
                 src={`./images/Products/Juices/${juice.image}.jpg`}
-                className="img-fluid w-100"
+                className="img-fluid w-100 "
                 alt=""
               />
             </Link>

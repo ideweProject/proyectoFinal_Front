@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { saveUserData, logOut } from "../redux/loginSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
+  const location = useLocation();
+  const previousPage = location.state.previousPage;
+  console.log(location);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,11 +38,13 @@ function Login() {
     dispatch(
       saveUserData({ token: response.data.token, userId: response.data.userId })
     );
-    navigate("/");
+
+    navigate(previousPage ? previousPage : "/");
   };
 
   return (
     <>
+      {previousPage && toast.error(location.state.msg)}
       <div className=" login-background d-flex justify-content-center">
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">

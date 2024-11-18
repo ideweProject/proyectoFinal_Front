@@ -36,17 +36,17 @@ const router = createBrowserRouter([
         path: "bars",
         element: <Bars />,
       },
-      { element: <ProtectedRoute /> },
-
       {
+        element: <ProtectedRoute />,
         children: [
-          { path: "about", element: <AboutThisProject /> },
           { path: "checkout", element: <Checkout /> },
           { path: "profile", element: <Profile /> },
           { path: "orders", element: <Order /> },
         ],
       },
-      { path: "product", element: <ProductPage /> },
+      { path: "about", element: <AboutThisProject /> },
+
+      { path: "product/:slug", element: <ProductPage /> },
     ],
   },
 

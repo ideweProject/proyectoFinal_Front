@@ -5,12 +5,12 @@ import axios from "axios";
 import { removeFromCart } from "../redux/cartSlice";
 import Toast from "../components/Toast";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Checkout() {
   const navigate = useNavigate();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const userData = useSelector((state) => state.login);
@@ -18,18 +18,18 @@ function Checkout() {
   const total = Math.floor(cart.totalPrice + 80 + taxes);
   const [formData, setFormData] = useState({});
 
-  function notify() {
-    toast(" Compra realizada con exito!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-  }
+  // function notify() {
+  //   toast(" Compra realizada con exito!", {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //     theme: "light",
+  //   });
+  // }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
