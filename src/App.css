@@ -71,7 +71,6 @@
     rgb(233, 5, 165) 90%
   );
   filter: brightness(90%);
-  
 }
 .aboutImg {
   position: relative;
@@ -428,8 +427,6 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
- 
-  
 }
 
 .unInput {
@@ -619,6 +616,10 @@ button.confirmOrder:hover {
   }
 }
 
+.carousel-img:hover {
+  transition-duration: 400ms;
+  transform: scale(1.3);
+}
 @media (max-width: 576px) {
   .product-info h1 {
     font-size: 24px;

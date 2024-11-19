@@ -65,7 +65,7 @@ function CarouselComp() {
             <Link className="ratio ratio-1x1" to={`/product/${juice.slug}`}>
               <img
                 src={`./images/Products/Juices/${juice.image}.jpg`}
-                className="img-fluid w-100 "
+                className="img-fluid w-100 carousel-img "
                 alt=""
               />
             </Link>
