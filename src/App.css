@@ -65,7 +65,12 @@
 }
 .mainAboutAll {
   border-radius: 5px;
-  background: rgba(80, 65, 65, 0.5);
+  background-image: linear-gradient(
+    130deg,
+    rgb(255, 159, 15) 35%,
+    rgb(233, 5, 165) 90%
+  );
+  filter: brightness(70%);
 }
 .aboutImg {
   position: relative;
@@ -415,11 +420,8 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
-  background-image: linear-gradient(
-    130deg,
-    rgba(255, 153, 0, 0.753) 35%,
-    rgb(202, 36, 152) 100%
-  );
+ 
+  
 }
 
 .unInput {
