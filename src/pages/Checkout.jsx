@@ -72,6 +72,7 @@ function Checkout() {
           buyer: userData.userId,
           itemsList: cart.items,
           formData,
+          totalPrice: cart.totalPrice,
         },
       },
     });
