@@ -108,7 +108,6 @@ a.text-decoration-none {
   margin-top: 20px;
 }
 
-
 .cardComp {
   width: 15rem;
   transition: border-color 0.3s ease;
@@ -303,4 +302,11 @@ a.text-decoration-none {
 
 .info&cards {
   margin-top: 20px !important;
+}
+
+.btnSubmit{
+  color:white;
+  background-color: rgba(254, 94, 13, 0.887) !important;
+  border:none;
+
 }
