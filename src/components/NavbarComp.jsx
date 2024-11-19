@@ -36,7 +36,7 @@ function NavbarComp() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className=" d-flex justify-content-center w-100 links-navbar-container ">
-              <Link to={"/jugos"} className=" text-decoration-none p-1">
+              <Link to={"/juices"} className=" text-decoration-none p-1">
                 Jugos
               </Link>
               <Link to={"/bars"} className=" text-decoration-none p-1">
