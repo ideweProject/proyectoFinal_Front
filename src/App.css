@@ -843,3 +843,14 @@ select.inputStyle {
 .order-container {
   min-height: 65vh;
 }
+.containerProfile{
+  background-image: linear-gradient(
+    130deg,
+    rgb(235, 156, 39) 5%,
+    rgb(189, 6, 134) 90%
+  );
+  filter: brightness(90%);
+  color: white;
+ 
+}
+
