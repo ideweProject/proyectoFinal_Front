@@ -4,12 +4,12 @@ function SectionFeatures() {
   return (
     <>
       <div className="container">
-        <div className="gif-container mt-4 ">
+        <div className="gif-container mt-4">
           <video autoPlay loop muted id="gif-vibraco">
             <source src="../videos/GIF.mp4" />
           </video>
         </div>
-        <div className="bars-banner ">
+        <div className="bars-banner">
           <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
         </div>
 
@@ -42,29 +42,27 @@ function SectionFeatures() {
         </div>
       </div>
 
-      <div className="info&cards mt-5">
+      <div className="info&cards mt-1">
         <section className="cards-section container">
           <div className="row g-0">
-            <div className="col-lg-4">
-              <div className="w-100 h-100  ">
-                <img
-                  src="../../images/img_pages/vibra-gingershot.jpg"
-                  alt=""
-                  className="img-fluid w-100"
-                />
-              </div>
+            <div className="col-lg-4 d-flex overflow-hidden">
+              <img
+                src="../../images/img_pages/vibra-gingershot.jpg"
+                alt=""
+                className="img-fluid card-img ratio ratio-1x1"
+              />
             </div>
             <div className="col-lg-4">
-              <div className="w-100 h-100 mt-1">
+              <div className="w-100 h-100 d-flex">
                 <img
                   src="../../images/img_pages/vibraco-card01.jpg"
                   alt=""
-                  className="img-fluid"
+                  className="img-fluid card-img ratio ratio-1x1"
                 />
               </div>
             </div>
             <div className="col-lg-4">
-              <div className="w-100 h-100 ratio ratio-1x1 mt-1">
+              <div className="w-100 h-100 ratio ratio-1x1 d-flex">
                 <img
                   src="../../images/img_pages/vibraco-card06.jpg"
                   alt=""
