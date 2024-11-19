@@ -77,7 +77,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="profile-container">
+    <div className="profile-container container w-50">
       <h1 className="d-flex justify-content-start">Perfil</h1>
       <hr />
 
@@ -167,7 +167,7 @@ const Profile = () => {
         <hr />
 
         <div className="d-flex justify-content-end">
-          <button type="submit" className="btnSubmit">
+          <button type="submit" className="btnSubmit shadow">
             Guardar Cambios
           </button>
         </div>
