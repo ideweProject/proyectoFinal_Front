@@ -300,3 +300,8 @@ a.text-decoration-none {
   z-index: 1000; /* Asegura que esté encima de otros elementos */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
+
+.btnBuscar {
+  background: rgb(230, 229, 227) !important;
+ 
+}
