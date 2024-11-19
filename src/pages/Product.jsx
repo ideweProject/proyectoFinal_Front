@@ -4,11 +4,11 @@ import CarouselProducts from "../components/CarrouselProducts";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart, addToCartFromProduct } from "../redux/cartSlice";
+import { addToCartFromProduct } from "../redux/cartSlice";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 
 const ProductPage = () => {
-  const { slug } = useParams();
+  const { slug } = useParams("");
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
   const [quantity, setquantity] = useState(1);
@@ -17,7 +17,7 @@ const ProductPage = () => {
     async function getProduct() {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/show/?slug=${slug}`,
+        url: `${import.meta.env.VITE_API_URL}/products/show/${slug}`,
       });
       setProduct(response.data);
     }
