@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { useNavigate } from "react-router-dom";
 
-
 function ProductCard({ productData }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,15 +29,7 @@ function ProductCard({ productData }) {
   };
 
   return (
-    <Card
-      className="cardComp"
-      onClick={useNavigate("/product")}
-      style={{
-        width: "15rem",
-        border: "none",
-        transition: "border-color 0.3s ease",
-      }}
-    >
+    <Card className="cardComp" style={{border:"transparent"}} onClick={useNavigate("/product")}>
       <Card.Img
         onClick={handleCardClick}
         className="juiceImage img-fluid object-fit-contain"
