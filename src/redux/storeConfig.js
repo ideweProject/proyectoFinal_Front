@@ -44,13 +44,4 @@ const store = configureStore({
     }),
 });
 
-// const store = configureStore({
-//   reducer: {
-//     juices: juicesReducer,
-//     bars: barsReducer,
-//     user: userReducer,
-//     login: loginReducer,
-//   },
-// });
-
 export default store;

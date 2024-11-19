@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -11,8 +11,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
   const location = useLocation();
-  const previousPage = location.state.previousPage;
-  console.log(location);
+  const previousPage = location.state;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,7 +28,7 @@ function Login() {
     e.preventDefault();
     const response = await axios({
       method: "POST",
-      url: `${import.meta.env.VITE_API_URL}/tokens`,
+      url: `${import.meta.env.VITE_API_URL}/tokens/user`,
       data: { email, password },
     });
 
@@ -42,9 +41,12 @@ function Login() {
     navigate(previousPage ? previousPage : "/");
   };
 
+  useEffect(() => {
+    previousPage ? toast.error(location.state.msg) : null;
+  }, []);
+
   return (
     <>
-      {previousPage && toast.error(location.state.msg)}
       <div className=" login-background d-flex justify-content-center">
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">
