@@ -34,12 +34,12 @@ function CarouselProducts() {
     ],
     prevArrow: (
       <button className="slick-previous">
-        <span className="previus-arrow">&#10094;</span> {/* Flecha izquierda */}
+        <span className="previus-arrow">&#10094;</span>
       </button>
     ),
     nextArrow: (
       <button className="slick-nextt">
-        <span className="nextt-arrow">&#10095;</span> {/* Flecha derecha */}
+        <span className="nextt-arrow">&#10095;</span>
       </button>
     ),
   };

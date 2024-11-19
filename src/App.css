@@ -618,7 +618,7 @@ button.confirmOrder:hover {
 
 .carousel-img:hover {
   transition-duration: 400ms;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 @media (max-width: 576px) {
   .product-info h1 {
@@ -843,3 +843,14 @@ select.inputStyle {
 .order-container {
   min-height: 65vh;
 }
+.containerProfile{
+  background-image: linear-gradient(
+    130deg,
+    rgb(235, 156, 39) 5%,
+    rgb(189, 6, 134) 90%
+  );
+  filter: brightness(90%);
+  color: white;
+ 
+}
+
