@@ -12,6 +12,7 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
   const [quantity, setquantity] = useState(1);
+  console.log(product);
 
   useEffect(() => {
     async function getProduct() {
@@ -73,7 +74,6 @@ const ProductPage = () => {
           <div className="product-info">
             <h1 className="text-start">{product.name}</h1>
             <p className="mb-0 text">$U{product.price}</p>
-            <p className="price-subtittle text">$U260.00/500ml</p>
             <div>
               <p className="mb-1">Cantidad</p>
 

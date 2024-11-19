@@ -63,7 +63,7 @@ function Cart({ name, ...props }) {
                 <div className="row">
                   <div className="col-4">
                     <img
-                      className="w-75"
+                      className="img-fluid "
                       src={`./images/Products/Juices/${cartItem.image}.jpg`}
                       alt=""
                     />

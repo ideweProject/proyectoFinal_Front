@@ -21,7 +21,6 @@ function CarCard({ juice }) {
         <Card.Title className="text-center fs-6">{juice.name}</Card.Title>
         <Card.Text className="text-center text-success text-dark">
           $U {juice.price}
-          <div className="cardfs">{juice.price}/500ml</div>
         </Card.Text>
         <div className="text-center"></div>
       </Card.Body>
