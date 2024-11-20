@@ -1,6 +1,19 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Footer = () => {
+  const handleSocialClick = () => {
+    toast.warn("Función fuera del alcance de este proyecto", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light"
+    });
+  };
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -23,9 +36,9 @@ const Footer = () => {
           <p>2402 78 73</p>
           <p> 092 989 271</p>
           <div className="social-media">
-            <i className="bi bi-facebook mx-1 iconFacebook"></i>
-            <i className="bi bi-whatsapp mx-1 iconWpp"></i>
-            <i className="bi bi-twitter-x mx-1 iconTwitter"></i>
+            <i onClick={handleSocialClick} className="bi bi-facebook mx-1 iconFacebook"></i>
+            <i onClick={handleSocialClick} className="bi bi-whatsapp mx-1 iconWpp"></i>
+            <i onClick={handleSocialClick} className="bi bi-twitter-x mx-1 iconTwitter"></i>
           </div>
         </div>
       </div>

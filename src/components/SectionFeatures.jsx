@@ -9,11 +9,11 @@ function SectionFeatures() {
             <source src="../videos/GIF.mp4" />
           </video>
         </div>
-        <div className="bars-banner">
+        <div className="bars-banner mt-2">
           <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
         </div>
 
-        <div className="worker-section mt-1">
+        <div className="worker-section ">
           <div className="container p-0 ">
             <div className="row g-0 p-0 m-0">
               <div className="col-lg-4 p-0 m-0">
@@ -42,7 +42,7 @@ function SectionFeatures() {
         </div>
       </div>
 
-      <div className="info&cards mt-1">
+      <div className="info&cards mt-3">
         <section className="cards-section container">
           <div className="row g-0">
             <div className="col-lg-4 d-flex overflow-hidden">

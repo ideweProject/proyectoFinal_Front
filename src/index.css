@@ -286,7 +286,12 @@ a.text-decoration-none {
 }
 
 .naturales {
-  background: #a2a29851 !important;
+  background: linear-gradient(
+    240deg,
+    rgba(240, 136, 10, 0.8) 20%,
+    rgba(180, 19, 198, 0.8) 80%
+  ) !important;
+  color: white;
 }
 
 .navbarGlobal {
@@ -304,9 +309,21 @@ a.text-decoration-none {
   margin-top: 20px !important;
 }
 
-.btnSubmit{
-  color:white;
+.btnSubmit {
+  color: white;
   background-color: rgba(254, 94, 13, 0.887) !important;
-  border:none;
+  border: none;
+}
+.img1 {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
 
+.freeze {
+  background: linear-gradient(
+    120deg,
+    rgba(240, 136, 10, 0.8) 20%,
+    rgba(180, 19, 198, 0.8) 80%
+  ) !important;
+  color: white;
 }
