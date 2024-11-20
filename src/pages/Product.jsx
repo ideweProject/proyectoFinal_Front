@@ -14,6 +14,7 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
   const [quantity, setquantity] = useState(1);
+  console.log(product);
 
   useEffect(() => {
     async function getProduct() {

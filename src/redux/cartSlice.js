@@ -93,6 +93,15 @@ const cartSlice = createSlice({
         state.totalPrice -= existingItem.price;
       }
     },
+
+    setCartToZero: (state, action) => {
+      state = {
+        items: [],
+        totalQuantity: 0,
+        totalPrice: 0,
+      };
+      console.log(state)
+    },
   },
 });
 
@@ -103,5 +112,6 @@ export const {
   removeFromCart,
   minusOneItem,
   plusOneItem,
+  setCartToZero,
 } = actions;
 export default reducer;

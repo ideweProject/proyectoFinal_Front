@@ -64,7 +64,7 @@ function Cart({ name, ...props }) {
                   <div className="col-4">
                     <img
                       className="w-75"
-                      src={`./images/Products/Juices/${cartItem.image}.jpg`}
+                      src={`/images/Products/Juices/${cartItem.image}.jpg`}
                       alt=""
                     />
                   </div>
@@ -122,6 +122,7 @@ function Cart({ name, ...props }) {
                 <Link
                   to={"/checkout"}
                   className="btn text-white btnBuyCart w-100 rounded-pill shadow"
+                  onClick={handleToggle}
                 >
                   Finalizar compra
                 </Link>

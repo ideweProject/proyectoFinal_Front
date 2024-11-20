@@ -31,7 +31,9 @@ function Order() {
       </p>
 
       {userOrders.map((order) => (
-        <CardOrder orderData={order} />
+        <div key={order.id}>
+          <CardOrder orderData={order} />
+        </div>
       ))}
     </div>
   );

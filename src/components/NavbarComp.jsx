@@ -14,6 +14,7 @@ function NavbarComp() {
   const navigate = useNavigate();
 
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  console.log(totalQuantity);
 
   useEffect(() => {}, [user.token]);
   async function handleLogout() {

@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import formValidation from "../../utils/formValidation";
 import "react-toastify/dist/ReactToastify.css";
+import { setCartToZero } from "../redux/cartSlice";
 
 function Checkout() {
   const navigate = useNavigate();
@@ -84,6 +85,10 @@ function Checkout() {
       toast.error(response.data.msg);
     }
   }
+
+  const handleCartState = () => {
+    dispatch(setCartToZero());
+  };
 
   return !cart.items[0] ? (
     <div className="h-100 check-container">
@@ -397,6 +402,7 @@ function Checkout() {
                 className="w-100 btn confirmOrder"
                 type="submit"
                 form="sendOrder"
+                onClick={handleCartState}
               >
                 Confirmar pedido
               </button>
