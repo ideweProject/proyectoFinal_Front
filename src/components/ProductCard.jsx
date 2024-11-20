@@ -16,6 +16,10 @@ function ProductCard({ productData }) {
   const handleCardClick = () => {
     navigate(`/product/${productData.slug}`);
   };
+  const handleScrollToTop=()=>{
+    window.scrollTo(0, 0);
+  
+  };
 
   const handleAddItem = (clickedItem) => {
     dispatch(
@@ -31,7 +35,11 @@ function ProductCard({ productData }) {
   return (
     <Card className="cardComp" style={{border:"transparent"}} onClick={useNavigate("/product")}>
       <Card.Img
-        onClick={handleCardClick}
+        onClick={() => {
+          handleCardClick();
+          handleScrollToTop();
+        }}
+        
         className="juiceImage img-fluid object-fit-contain"
         variant="top"
         src={`./images/Products/Juices/${productData.image}.jpg`}

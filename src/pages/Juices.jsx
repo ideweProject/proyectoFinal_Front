@@ -9,6 +9,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 function Juices() {
   const dispatch = useDispatch();
+  
+  
 
   useEffect(() => {
     const getProducts = async () => {
