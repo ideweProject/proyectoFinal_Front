@@ -843,6 +843,9 @@ select.inputStyle {
 .order-container {
   min-height: 65vh;
 }
+/* .product-price{
+font-size: 17px;
+} */
 .containerProfile{
   background-image: linear-gradient(
     130deg,

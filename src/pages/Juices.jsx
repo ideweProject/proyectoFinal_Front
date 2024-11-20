@@ -10,6 +10,8 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 function Juices() {
   const dispatch = useDispatch();
+  
+  
 
   useEffect(() => {
     const getProducts = async () => {

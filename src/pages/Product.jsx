@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCartFromProduct } from "../redux/cartSlice";
 import { toggleOffcanvas } from "../redux/pagesSlice";
+import { toast } from "react-toastify";
+import Toast from "../components/Toast";
 
 const ProductPage = () => {
   const { slug } = useParams("");
@@ -50,7 +52,18 @@ const ProductPage = () => {
       })
     );
   };
-
+  const handleSocialClick = () => {
+    toast.warn("Función fuera del alcance de este proyecto", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light"
+    });
+  };
   return (
     <div>
       <div className="product-page">
@@ -61,10 +74,10 @@ const ProductPage = () => {
               alt="Pure Green Juice"
             />
             <h5 className="mt-5 title">Ingredientes</h5>
-            <ul className="list-group">
+            <ul className="list-group d-flex flex-column list-unstyled">
               {product.ingredients &&
                 product.ingredients.map((ingredient, index) => (
-                  <li className="text list-group-item " key={index}>
+                  <li className="text" key={index}>
                     {ingredient}
                   </li>
                 ))}
@@ -73,7 +86,8 @@ const ProductPage = () => {
 
           <div className="product-info">
             <h1 className="text-start">{product.name}</h1>
-            <p className="mb-0 text">$U{product.price}</p>
+            <p className="mb-0 text product-price">$U{product.price}</p>
+            <p className="price-subtittle text">${product.price} /500ml</p>
             <div>
               <p className="mb-1">Cantidad</p>
 
@@ -102,12 +116,12 @@ const ProductPage = () => {
               Añadir al carrito
             </button>
             <div className="mt-5">
-              <h2 className="title">Descripción</h2>
+              <h2 className="title fw-normal">Descripción</h2>
               <p className="text">{product.description}</p>
             </div>
             <hr />
             <div>
-              <h3>Conservación</h3>
+              <h3 className="title">Conservación</h3>
               <p className="text">
                 Conservar entre 2°C - 7°C y consumir dentro de 7 dias de la
                 fecha de elaboración. Luego de abierto, consumir dentro de 24
@@ -115,8 +129,8 @@ const ProductPage = () => {
               </p>
             </div>
             <div>
-              <i className="bi bi-whatsapp mx-1 iconWpp"></i>
-              <i className="bi bi-facebook mx-1 iconFacebook"></i>
+              <i onClick={handleSocialClick} className="bi bi-whatsapp mx-1 iconWpp"></i>
+              <i onClick={handleSocialClick} className="bi bi-facebook mx-1 iconFacebook"></i>
             </div>
           </div>
         </div>
