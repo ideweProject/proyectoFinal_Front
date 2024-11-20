@@ -161,6 +161,7 @@ function Checkout() {
                       name="city"
                       onChange={(e) => handleChange(e)}
                       required
+                      className="oneSelec t opacity-50"
                     >
                       {cities.map((city, index) => (
                         <option key={index} value={city}>
@@ -177,7 +178,7 @@ function Checkout() {
                     <input
                       type="tel"
                       name="postalCode"
-                      className="w-100 unInput"
+                      className="w-100 unInput "
                       placeholder="80500"
                       onChange={(e) => handleChange(e)}
                       maxLength={5}
@@ -282,53 +283,58 @@ function Checkout() {
                     >
                       Fecha de expiración
                     </label>
+                    <div className="d-flex align-items-center justify-content-between flex-wrap mb-3">
+  <div className="d-flex flex-column me-2">
+    <label htmlFor="expireMM" className="mt-1 mb-1">Mes</label>
+    <select
+      className="border-0 p-1 rounded oneSelect opacity-50"
+      name="expireMM"
+      id="expireMM"
+      onChange={(e) => handleChange(e)}
+      required
+    >
+      <option value="01">Enero</option>
+      <option value="02">Febrero</option>
+      <option value="03">Marzo</option>
+      <option value="04">Abril</option>
+      <option value="05">Mayo</option>
+      <option value="06">Junio</option>
+      <option value="07">Julio</option>
+      <option value="08">Agosto</option>
+      <option value="09">Setiembre</option>
+      <option value="10">Octubre</option>
+      <option value="11">Noviembre</option>
+      <option value="12">Diciembre</option>
+    </select>
+  </div>
 
-                    <label htmlFor="expireMM">Mes</label>
-                    <select
-                      className="border-0 p-1"
-                      name="expireMM"
-                      id="expireMM"
-                      onChange={(e) => handleChange(e)}
-                      required
-                    >
-                      <option value="01">Enero</option>
-                      <option value="02">Febrero</option>
-                      <option value="03">Marzo</option>
-                      <option value="04">Abril</option>
-                      <option value="05">Mayo</option>
-                      <option value="06">Junio</option>
-                      <option value="07">Julio</option>
-                      <option value="08">Agosto</option>
-                      <option value="09">Setiembre</option>
-                      <option value="10">Octubre</option>
-                      <option value="11">Noviembre</option>
-                      <option value="12">Diciembre</option>
-                    </select>
-                    <label htmlFor="expireYY" className="">
-                      Año
-                    </label>
-                    <select
-                      className="border-0 p-1 ms-1"
-                      name="expireYY"
-                      id="expireYY"
-                      onChange={(e) => handleChange(e)}
-                    >
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
-                      <option value="2027">2027</option>
-                      <option value="2028">2028</option>
-                    </select>
+  <div className="d-flex flex-column ms-1 ">
+    <label htmlFor="expireYY" className="mt-1 mb-1">Año</label> 
+    <select
+      className="border-0 p-1 rounded oneSelect opacity-50"
+      name="expireYY"
+      id="expireYY"
+      onChange={(e) => handleChange(e)}
+    >
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+    </select>
+  </div>
+</div>
+
                     <input
-                      className="inputCard"
+                      className="inputCard "
                       type="hidden"
                       name="expiry"
                       id="expiry"
                       maxLength="4"
                     />
                   </div>
-                  <div className="col-12 col-md-3 mb-3">
-                    <label className="d-block" htmlFor="cvc">
+                  <div className="col-4 col-md-3 mt-4 align-items-center ">
+                    <label className="cvcLabel me-2 d-bloc " htmlFor="cvc">
                       CVC
                     </label>
                     <input
@@ -337,25 +343,26 @@ function Checkout() {
                       name="cvc"
                       inputMode="numeric"
                       pattern="[0-9]*"
-                      className="w-100 unInput"
-                      placeholder="CVC"
+                      className="w-100   unInputCVC rounded"
                       onChange={(e) => handleChange(e)}
                       required
+
                     />
+
                   </div>
                 </div>
               </form>
             </div>
 
             <div className="col-12 col-md-6 checkCol">
-              <h4 className="mt-4">Pedido </h4>
+              <h4 className="titleOrder">Pedido </h4>
               <div className="container">
                 {cart.items.map((item) => (
                   <div className="row" key={item.id}>
                     <div className="col-5 col-md-3">
                       <img
                         src={`./images/Products/Juices/${item.image}.jpg`}
-                        className="img-fluid"
+                        className="img-fluid ms-2  opacity-75 "
                         alt=""
                       />
                     </div>
@@ -367,8 +374,8 @@ function Checkout() {
                         </span>
                       </div>
                       <div className="d-flex justify-content-between align-items-center mb-3">
-                        <p className="mb-0 fw-bold">$ {item.price} </p>
-                        <span>{item.quantity}</span>
+                        <p className="mb-0 fw-bold">$ {item.price}  </p>
+                        <span> unidades {item.quantity}</span>
                       </div>
                     </div>
                     <hr />
@@ -406,7 +413,6 @@ function Checkout() {
               >
                 Confirmar pedido
               </button>
-              <hr />
             </div>
           </div>
         </div>

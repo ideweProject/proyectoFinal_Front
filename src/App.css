@@ -430,15 +430,23 @@ button.confirmOrder:hover {
 }
 
 .unInput {
-  border: 1px solid #ccc;
+  border: 1px solid #f8f8f8;
   font-size: 1.2rem;
   padding: 0.5rem;
   border-radius: 5px;
-  height: 40px;
+  height: 30px;
+  background-color: rgba(202, 193, 193, 0.678);
+  color: #ffffff;
 }
 .input-large {
   width: 100%;
   max-width: 600px;
+}
+.oneSelect{
+  background-color: #f0f0f0; 
+  color: #333;
+  margin-right: 95px;
+  
 }
 .font-weight-medium {
   font-weight: 500;
@@ -853,4 +861,21 @@ select.inputStyle {
   color: white;
  
 }
+.unInputCVC{
+  height: 30px;
+  background-color: rgba(202, 193, 193, 0.678);
+  color: #ffffff;
+  border: #181818;
+  margin-top: 11px;
+
+}
+.titleOrder{
+  margin-top: 20px;
+  margin-left: 18px;
+}
+.cvcLabel{
+  margin-top: 4px;
+  
+}
+
 
