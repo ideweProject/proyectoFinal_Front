@@ -376,7 +376,7 @@ function Checkout() {
                         </span>
                       </div>
                       <div className="d-flex justify-content-between align-items-center mb-3">
-                        <p className="mb-0 fw-bold">$ {item.price} </p>
+                        <p className="mb-0 fw-bold">$U {item.price} </p>
                         <span> unidades {item.quantity}</span>
                       </div>
                     </div>
@@ -388,15 +388,15 @@ function Checkout() {
                 <ul className="container">
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Subtotal</p>
-                    <span>$ {cart.totalPrice}</span>
+                    <span>$U {cart.totalPrice}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Envio</p>
-                    <span>$ {80}</span>
+                    <span>$U {80}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">
                     <p className="mb-0">Impuestos</p>
-                    <span>$ {Math.floor((cart.totalPrice + 80) * 0.1)}</span>
+                    <span>$U {Math.floor((cart.totalPrice + 80) * 0.1)}</span>
                   </li>
                 </ul>
               </div>
@@ -404,7 +404,7 @@ function Checkout() {
               <hr />
               <div className="container d-flex justify-content-between align-items-center ">
                 <p className="mb-0 fw-bold">Total</p>
-                <span>$ {total}</span>
+                <span className="fw-bold">$U {total}</span>
               </div>
               <hr />
               <button

@@ -2,8 +2,8 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 function AboutThisProject() {
-  return (
-    <div className="full-scree-about bodyAboutUs">
+  return ( 
+    <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
       <div className="container mainAboutAll pt-2">
         <div className="aboutImg mt-0">
           <div className="mainTextAbout">
@@ -19,9 +19,9 @@ function AboutThisProject() {
             </p>
           </div>
         </div>
-        <div className="container mt-1 infoAbout mb-1 ">
-          <div className="row d-flex ms-2 me-2">
-            <div className="col-12 col-md-4 descriptionAbout mt-1 mb-1">
+        <div className="container mt-4 infoAbout mb-3">
+          <div className="row d-flex">
+            <div className="col-12 col-md-4 descriptionAbout mt-1 ">
               <h3 className="titleDescription">Duración</h3>
               <p className="pDescriptionAbout">
                 El proyecto fue desarrollado en 3 semanas, durante noviembre
@@ -38,7 +38,7 @@ function AboutThisProject() {
                 Git/GitHub.
               </p>
             </div>
-            <div className="col-12 col-md-4 descriptionAbout mt-1">
+            <div className="col-12 col-md-4 descriptionAbout mt-1 ">
               <h3 className="titleDescription">División de tareas</h3>
               <p className="pDescriptionAbout">
                 Para la organización de tareas durante el proyecto se utilizó
@@ -50,26 +50,25 @@ function AboutThisProject() {
           </div>
         </div>
 
-        <div className="teamAbout">
-          <h3 className="text-center titleTeamAbout ">Equipo</h3>
-          <p className="text-center pTeamAbout ms-5 me-5">
-            El equipo que desarrolló este proyecto está compuesto por estudiantes
-            del Coding Bootcamp de Hack Academy. Cada miembro del equipo aportó
-            sus habilidades y conocimientos en diferentes áreas del desarrollo
-            de software. Los roles principales fueron los siguientes: Desarrollo
-            Front-End, Desarrollo Back-End y Desarrollador Full-Stack.
-          </p>
-        </div>
+        <div className="container">
+          <div className="teamAbout   ">
+            <h3 className="text-center titleTeamAbout pt-3">Equipo</h3>
+            <p className="text-center pTeamAbout">
+              El equipo que desarrolló este proyecto está compuesto por estudiantes
+              del Coding Bootcamp de Hack Academy. Cada miembro del equipo aportó
+              sus habilidades y conocimientos en diferentes áreas del desarrollo
+              de software. Los roles principales fueron los siguientes: Desarrollo
+              Front-End, Desarrollo Back-End y Desarrollador Full-Stack.
+            </p>
+          </div>
 
-        <div className="container me-3 ms-3">
-          <div className="row g-4 d-flex justify-content-center mt-3  p-0">
-            <div className="col-12 col-sm-6 col-md-3 mb-4">
-              <Card className="cardUs" style={{ height: "22rem", width: "14rem" }}>
+          <div className="row d-flex justify-content-center  mx-1">
+            <div className="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
+              <Card className="cardUs mt-3">
                 <Card.Img
                   className="img-fluid imgTest"
                   variant="top"
                   src="/images/img_pages/bars.jpg"
-                  style={{ objectFit: "cover", height: "80%" }}
                 />
                 <Card.Body className="cardBodyUs">
                   <Card.Title className="nameUsAbout">Agustín Motta</Card.Title>
@@ -78,15 +77,14 @@ function AboutThisProject() {
                   <i className="bi bi-linkedin text-white"></i>
                 </Card.Body>
               </Card>
-              
             </div>
-            <div className="col-12 col-sm-6 col-md-3 mb-4">
-              <Card className="cardUs" style={{ height: "22rem", width: "14rem" }}>
+            
+            <div className="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
+              <Card className="cardUs mt-3">
                 <Card.Img
                   className="img-fluid imgTest"
                   variant="top"
                   src="/images/img_pages/bars.jpg"
-                  style={{ objectFit: "cover", height: "80%" }}
                 />
                 <Card.Body className="cardBodyUs">
                   <Card.Title className="nameUsAbout">Bruno Lima</Card.Title>
@@ -95,15 +93,14 @@ function AboutThisProject() {
                   <i className="bi bi-linkedin text-white"></i>
                 </Card.Body>
               </Card>
-              
             </div>
-            <div className="col-12 col-sm-6 col-md-3 mb-4">
-              <Card className="cardUs" style={{ height: "22rem", width: "14rem" }}>
+
+            <div className="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
+              <Card className="cardUs mt-3">
                 <Card.Img
                   className="img-fluid imgTest"
                   variant="top"
                   src="/images/img_pages/bars.jpg"
-                  style={{ objectFit: "cover", height: "80%" }}
                 />
                 <Card.Body className="cardBodyUs">
                   <Card.Title className="nameUsAbout">Pablo Janavel</Card.Title>
@@ -112,15 +109,14 @@ function AboutThisProject() {
                   <i className="bi bi-linkedin text-white"></i>
                 </Card.Body>
               </Card>
-              
             </div>
-            <div className="col-12 col-sm-6 col-md-3 mb-4">
-              <Card className="cardUs" style={{ height: "22rem", width: "14rem" }}>
+
+            <div className="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
+              <Card className="cardUs mt-3">
                 <Card.Img
                   className="img-fluid imgTest"
                   variant="top"
                   src="/images/img_pages/bars.jpg"
-                  style={{ objectFit: "cover", height: "80%" }}
                 />
                 <Card.Body className="cardBodyUs">
                   <Card.Title className="nameUsAbout">Nicolás Hornos</Card.Title>
@@ -128,7 +124,7 @@ function AboutThisProject() {
                   <i className="bi bi-twitter-x me-2 text-white"></i>
                   <i className="bi bi-linkedin text-white"></i>
                 </Card.Body>
-              </Card>            
+              </Card>
             </div>
           </div>
         </div>
@@ -138,3 +134,4 @@ function AboutThisProject() {
 }
 
 export default AboutThisProject;
+

@@ -71,6 +71,11 @@
     rgb(233, 5, 165) 90%
   );
   filter: brightness(70%);
+  max-width: 900px; /* Ajusta este valor según el ancho que deseas */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .aboutImg {
   position: relative;
@@ -339,10 +344,11 @@ footer p {
 .cardUs {
   display: flex;
   flex-direction: column;
-  height: 30rem;
   overflow: hidden;
   position: relative;
+  width: 70%;
 }
+
 .cardUs:hover {
   transform: scale(1.1);
   background-image: linear-gradient(
@@ -384,11 +390,13 @@ footer p {
   );
   filter: brightness(100%);
 }
-
+.cardUs .img-fluid {
+  height: 200px;
+  object-fit: cover;
+}
 .imgTest {
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
-  z-index: 2;
   filter: brightness(95%);
 }
 .imgTest:hover {
@@ -429,7 +437,6 @@ button.confirmOrder:hover {
 .bodyAboutUs {
   height: 100%;
 }
-
 .unInput {
   border: 1px solid #f8f8f8;
   font-size: 1.2rem;
@@ -848,6 +855,13 @@ select.inputStyle {
 .order-main-container {
   max-width: 700px;
 }
+.titleOrder {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.cvcLabel {
+  margin-top: 23px;
+}
 
 .order-container {
   min-height: 65vh;
@@ -870,11 +884,4 @@ font-size: 17px;
   color: #ffffff;
   border: #181818;
   margin-top: 11px;
-}
-.titleOrder {
-  margin-top: 20px;
-  margin-left: 18px;
-}
-.cvcLabel {
-  margin-top: 23px;
 }
