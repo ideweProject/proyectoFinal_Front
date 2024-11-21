@@ -36,8 +36,8 @@ const Footer = () => {
           <p>2402 78 73</p>
           <p> 092 989 271</p>
           <div className="social-media">
-            <i onClick={handleSocialClick} className="bi bi-facebook mx-1 iconFacebook"></i>
-            <i onClick={handleSocialClick} className="bi bi-whatsapp mx-1 iconWpp"></i>
+            <i onClick={handleSocialClick} className="bi bi-facebook mx-1 iconFacebook text-white"></i>
+            <i onClick={handleSocialClick} className="bi bi-whatsapp mx-1 iconWpp text-white"></i>
             <i onClick={handleSocialClick} className="bi bi-twitter-x mx-1 iconTwitter"></i>
           </div>
         </div>
