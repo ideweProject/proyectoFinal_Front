@@ -24,12 +24,12 @@ function SignUp() {
 
   return (
     <>
-      <div className=" login-background d-flex justify-content-center">
-        <div className=" login-container d-flex flex-column justify-content-center  ">
+      <div className=" login-background d-flex justify-content-center align-items-center  ">
+        <div className=" login-container d-flex   align-items-center ">
           <div className="row g-0 shadow rounded  ">
             <div className="col-md-6  ">
-              <div className=" login-box text-center h-100 w-100">
-                <Link to={"/"}>
+              <div className=" login-box h-100 d-flex flex-column w-100 align-items-center  ">
+                <Link to={"/"} className="mt-5">
                   <img src="./images/img_pages/vibracowhite.png" alt="" />
                 </Link>
 

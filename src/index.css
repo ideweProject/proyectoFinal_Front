@@ -48,7 +48,6 @@
   font-weight: 200;
   font-style: italic;
   bottom: 30px;
-
   width: 300px;
 }
 
@@ -71,8 +70,11 @@ a.text-decoration-none {
   text-decoration: none;
   color: #06021f;
 }
-.img-carousel {
+/* .img-carousel {
   width: 300px;
+} */
+.carousel-img {
+  height: 220px;
 }
 
 .credentials-container {
@@ -280,9 +282,6 @@ a.text-decoration-none {
     rgba(240, 136, 10, 0.8) 20%,
     rgba(180, 19, 198, 0.8) 80%
   ) !important;
-}
-
-.juiceImage {
 }
 
 .naturales {
