@@ -146,10 +146,6 @@ a.text-decoration-none {
 /* .producto button:hover {
   background-color: #000000;
 } */
-.divisor {
-  height: 200px;
-  text-align: center;
-}
 
 .cart-btn {
   border: none;
@@ -283,16 +279,17 @@ a.text-decoration-none {
 }
 
 .juiceImage {
-  aspect-ratio: 1/1;
 }
 
 .naturales {
   background: linear-gradient(
-    240deg,
-    rgba(240, 136, 10, 0.8) 20%,
-    rgba(180, 19, 198, 0.8) 80%
+    200deg,
+    rgba(240, 136, 10, 0.75) 20%,
+    rgba(180, 19, 198, 0.75) 80%
   ) !important;
   color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .navbarGlobal {
@@ -316,12 +313,7 @@ a.text-decoration-none {
   border: none;
 }
 .imgJuices {
-  max-height:41.5vh;
-  object-fit: cover !important;
-  aspect-ratio: 1/1 !important;
-}
-.juicesImgCol{
-  max-height: 36vh;
+  max-height: 327px;
 }
 
 .freeze {
@@ -331,8 +323,19 @@ a.text-decoration-none {
     rgba(180, 19, 198, 0.8) 80%
   ) !important;
   color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
-.bannerCenterImg{
-  max-height: 36vh;
+.search {
+  position: relative;
+}
+
+.inputSearch {
+  position: absolute;
+  top: -125px;
+}
+
+.juicesImgCol {
+  overflow: hidden;
 }
