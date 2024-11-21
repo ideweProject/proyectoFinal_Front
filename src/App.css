@@ -73,8 +73,8 @@
   filter: brightness(80%);
   max-width: 900px; /* Ajusta este valor según el ancho que deseas */
   margin-left: auto;
-  margin-right: auto; 
-  padding-left: 15px; 
+  margin-right: auto;
+  padding-left: 15px;
   padding-right: 15px;
 }
 .aboutImg {
@@ -144,7 +144,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
- 
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
@@ -347,7 +346,7 @@ footer p {
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  width: 70%;  
+  width: 70%;
 }
 
 .cardUs:hover {
@@ -382,7 +381,6 @@ footer p {
   filter: brightness(100%);
   color: #ffffff;
   cursor: pointer;
-  
 }
 .cardBodyUs:hover {
   background-image: linear-gradient(
@@ -393,8 +391,8 @@ footer p {
   filter: brightness(100%);
 }
 .cardUs .img-fluid {
-  height: 200px; 
-  object-fit: cover; 
+  height: 200px;
+  object-fit: cover;
 }
 .imgTest {
   cursor: pointer;
@@ -438,7 +436,6 @@ button.confirmOrder:hover {
 }
 .bodyAboutUs {
   height: 100%;
-
 }
 .unInput {
   border: 1px solid #f8f8f8;
@@ -453,11 +450,10 @@ button.confirmOrder:hover {
   width: 100%;
   max-width: 600px;
 }
-.oneSelect{
-  background-color: #f0f0f0; 
+.oneSelect {
+  background-color: #f0f0f0;
   color: #333;
   margin-right: 95px;
-  
 }
 .font-weight-medium {
   font-weight: 500;
@@ -637,8 +633,9 @@ button.confirmOrder:hover {
 
 .carousel-img:hover {
   transition-duration: 400ms;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+
 @media (max-width: 576px) {
   .product-info h1 {
     font-size: 24px;
@@ -858,14 +855,13 @@ select.inputStyle {
 .order-main-container {
   max-width: 700px;
 }
-.titleOrder{
+.titleOrder {
   margin-top: 20px;
   margin-left: 10px;
 }
-.cvcLabel{
+.cvcLabel {
   margin-top: 23px;
 }
-
 
 .order-container {
   min-height: 65vh;
@@ -873,7 +869,7 @@ select.inputStyle {
 /* .product-price{
 font-size: 17px;
 } */
-.containerProfile{
+.containerProfile {
   background-image: linear-gradient(
     130deg,
     rgb(235, 156, 39) 5%,
@@ -881,14 +877,11 @@ font-size: 17px;
   );
   filter: brightness(90%);
   color: white;
- 
 }
-.unInputCVC{
+.unInputCVC {
   height: 30px;
   background-color: rgba(202, 193, 193, 0.678);
   color: #ffffff;
   border: #181818;
   margin-top: 11px;
-
 }
-

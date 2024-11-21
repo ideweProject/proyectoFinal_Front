@@ -14,7 +14,6 @@ function NavbarComp() {
   const navigate = useNavigate();
 
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  console.log(totalQuantity);
 
   useEffect(() => {}, [user.token]);
   async function handleLogout() {
@@ -36,14 +35,23 @@ function NavbarComp() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className=" d-flex justify-content-center w-100 links-navbar-container ">
-              <Link to={"/juices"} className=" text-decoration-none p-1">
+            <Nav className=" d-flex justify-content-center w-100 links-navbar-container align-items-center ">
+              <Link
+                to={"/juices"}
+                className=" NavbarLink text-decoration-none p-2"
+              >
                 Jugos
               </Link>
-              <Link to={"/bars"} className=" text-decoration-none p-1">
+              <Link
+                to={"/bars"}
+                className=" NavbarLink text-decoration-none p-2 me-3"
+              >
                 Barras
               </Link>
-              <Link to={"/about"} className=" text-decoration-none  p-1">
+              <Link
+                to={"/about"}
+                className=" NavbarLink2 text-decoration-none p-2 "
+              >
                 Acerca de este proyecto
               </Link>{" "}
               {user.token ? (
@@ -70,10 +78,16 @@ function NavbarComp() {
                 </Dropdown>
               ) : (
                 <>
-                  <Link to={"/login"} className="text-decoration-none  p-1">
+                  <Link
+                    to={"/login"}
+                    className="text-decoration-none  p-1  ms-3 NavbarLink"
+                  >
                     Login
                   </Link>
-                  <Link to={"/signin"} className=" text-decoration-none p-1">
+                  <Link
+                    to={"/signin"}
+                    className=" text-decoration-none p-1 ms-1 NavbarLink"
+                  >
                     Crear cuenta
                   </Link>
                 </>

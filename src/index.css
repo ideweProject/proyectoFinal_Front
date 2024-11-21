@@ -31,7 +31,6 @@
   object-fit: contain;
   background-position: center;
   border-radius: 7px 0 0 7px;
-  position: relative;
 }
 
 .text {
@@ -45,24 +44,20 @@
   font-style: italic;
 }
 .image-title {
-  position: absolute;
   font-family: "Roboto", serif;
   font-weight: 200;
   font-style: italic;
-  bottom: 10%;
+  bottom: 30px;
+  width: 300px;
+}
+
+.list-credentials {
+  list-style: none;
 }
 
 .form-column {
   border-radius: 0 7px 7px 0;
 }
-/* .main-container {
-  background: rgb(215, 228, 232);
-  background: linear-gradient(
-    180deg,
-    rgba(215, 228, 232, 1) 10%,
-    rgba(255, 255, 255, 1) 100%
-  );
-} */
 
 .form-check-container {
   display: flex;
@@ -75,14 +70,23 @@ a.text-decoration-none {
   text-decoration: none;
   color: #06021f;
 }
-.img-carousel {
+/* .img-carousel {
   width: 300px;
+} */
+.carousel-img {
+  height: 220px;
+}
+
+.credentials-container {
+  filter: opacity(0.9);
 }
 
 .send-info-container {
   padding-left: 12px;
   padding-right: 12px;
   background: rgb(25, 27, 26);
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 #video-vibraco {
@@ -93,11 +97,17 @@ a.text-decoration-none {
   object-position: center center;
 }
 
+.gif-container {
+  height: 370px;
+}
+
 #gif-vibraco {
   width: 100%;
   height: 370px;
   object-fit: cover;
   object-position: center center;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .producto-lista {
@@ -212,10 +222,6 @@ a.text-decoration-none {
   .pickup-col {
     border-top: 2px solid white;
   }
-
-  .send-info-container {
-    max-width: 400px;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -278,9 +284,6 @@ a.text-decoration-none {
   ) !important;
 }
 
-.juiceImage {
-}
-
 .naturales {
   background: linear-gradient(
     200deg,
@@ -329,6 +332,7 @@ a.text-decoration-none {
 
 .search {
   position: relative;
+
 }
 
 .inputSearch {
@@ -338,4 +342,35 @@ a.text-decoration-none {
 
 .juicesImgCol {
   overflow: hidden;
+}
+
+.NavbarLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(12, 1, 1) !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.NavbarLink2 {
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(21, 2, 2) !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  transition: color 0.3s ease;}
+
+.NavbarLink:hover {
+    transform: scale(1.2);
+    transition: 200ms;
+    color: rgb(249, 161, 19);
+}
+.NavbarLink2:hover {
+   
+  transform: scale(1.1);
+  transition: 200ms;
+
 }

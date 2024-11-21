@@ -51,12 +51,12 @@ function Login() {
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">
             <div className="col-md-6 ">
-              <div className="login-box text-center h-100 w-100  ">
+              <div className="login-box d-flex flex-column align-items-center justify-content-center h-100 w-100  ">
                 <Link to={"/"}>
                   <img src="./images/img_pages/vibracowhite.png" alt="" />
                 </Link>
 
-                <h1 className="image-title text-white d-md-flex  d-none">
+                <h1 className="image-title text-center text-white d-md-flex d-none">
                   Lo hacemos saludable
                 </h1>
               </div>
@@ -126,6 +126,26 @@ function Login() {
                   </form>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className=" w-100 mt-3 d-flex justify-content-center">
+            <div className="credentials-container w-50 bg-white p-4 rounded">
+              <span className="fw-bold">Usuarios de prueba</span>
+              <p>
+                Para simplificar el acceso a la aplicación, se proporcionan los
+                siguientes usuarios de prueba:{" "}
+              </p>
+              <p className="fw-bold m-0">Iniciar sesión como comprador</p>
+              <ul className="list-credentials">
+                <li>E-mail: customer@a.com.</li>
+                <li>Contraseña: 1234.</li>
+              </ul>
+
+              <p className="fw-bold m-0">Iniciar sesión como administrador</p>
+              <ul className="list-credentials">
+                <li>E-mail: admin@a.com.</li>
+                <li>Contraseña: 1234.</li>
+              </ul>
             </div>
           </div>
         </div>
