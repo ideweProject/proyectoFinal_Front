@@ -35,8 +35,8 @@ function Juices() {
         <Banner />
       </div>
 
-      <div className="container d-flex justify-content-center w-50 Search">
-        <InputGroup size="" className="mb-3 w-50 inputSearch">
+      <div className="container d-flex justify-content-center w-25 Search">
+        <InputGroup size="" className="mb-3 w-75 inputSearch">
           <Form.Control
             aria-label="Buscar"
             aria-describedby="inputGroup-sizing-lg"
