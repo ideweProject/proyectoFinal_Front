@@ -402,7 +402,7 @@ function Checkout() {
               <hr />
               <div className="container d-flex justify-content-between align-items-center ">
                 <p className="mb-0 fw-bold">Total</p>
-                <span>$U {total}</span>
+                <span className="fw-bold">$U {total}</span>
               </div>
               <hr />
               <button
