@@ -137,8 +137,9 @@
 }
 .pTeamAbout {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-style: normal;
+ 
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
@@ -174,6 +175,7 @@
   gap: 20px;
   border-radius: 5px;
   color: #ffffff;
+  margin-bottom: 80px;
 }
 
 .productos {
@@ -374,6 +376,7 @@ footer p {
   filter: brightness(100%);
   color: #ffffff;
   cursor: pointer;
+  
 }
 .cardBodyUs:hover {
   background-image: linear-gradient(
