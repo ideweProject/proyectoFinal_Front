@@ -1,4 +1,5 @@
 import React from "react";
+import { compareAsc, format } from "date-fns";
 
 function CardOrder(orderData) {
   return (
@@ -10,12 +11,14 @@ function CardOrder(orderData) {
         <div className="order-main-container border p-4 rounded ">
           <div className="d-flex w-100 border-bottom ">
             <div className="text-center">
-              <p className="text">Id de orden</p>
+              <p className="text">Id</p>
               <span className="text">{orderData.orderData.id}</span>
             </div>
             <div className="ms-3">
               <p className="text ">Fecha de compra</p>
-              <span className="text">{orderData.orderData.createdAt}</span>
+              <span className="text">
+                {format(new Date(orderData.orderData.createdAt), "dd-MM-yy")}
+              </span>
             </div>
             <div className="ms-3">
               <p className="text ">Dirección de envío</p>

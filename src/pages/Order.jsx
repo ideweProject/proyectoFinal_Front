@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CardOrder from "../components/CardOrder";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import { Card } from "react-bootstrap";
 
 function Order() {
   const userId = useSelector((state) => state.login);
@@ -11,7 +10,7 @@ function Order() {
   useEffect(() => {
     async function getUserOrders() {
       const response = await axios({
-        method: "POST",
+        method: "GET",
         url: `${import.meta.env.VITE_API_URL}/orders`,
         data: { userId: userId.userId },
       });

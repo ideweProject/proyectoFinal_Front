@@ -3,13 +3,13 @@ import React from "react";
 function SectionFeatures() {
   return (
     <>
-      <div className="container">
-        <div className="gif-container mt-4">
+      <div className="container  ">
+        <div className="gif-container mt-4 ">
           <video autoPlay loop muted id="gif-vibraco">
             <source src="../videos/GIF.mp4" />
           </video>
         </div>
-        <div className="bars-banner mt-2">
+        <div className="bars-banner">
           <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
         </div>
 
@@ -42,7 +42,7 @@ function SectionFeatures() {
         </div>
       </div>
 
-      <div className="info&cards mt-3">
+      <div className="info&cards ">
         <section className="cards-section container">
           <div className="row g-0">
             <div className="col-lg-4 d-flex overflow-hidden">

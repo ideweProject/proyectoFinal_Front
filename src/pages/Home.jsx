@@ -30,7 +30,6 @@ function Home() {
               />
               <p className="title-video">JUGO PRENSADO EN FRIO</p>
               <p className="text">Hechos con ingredientes de origen vegetal</p>
-              <span className="text">Saber mas</span>
             </div>
           </div>
         </section>
