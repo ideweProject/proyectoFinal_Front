@@ -283,8 +283,8 @@ function Checkout() {
                     >
                       Fecha de expiración
                     </label>
-                    <div className="d-flex align-items-center justify-content-between flex-wrap mb-3">
-  <div className="d-flex flex-column me-2">
+                    <div className="d-flex align-items-center justify-content-start align-items-start  mb-3">
+  <div className="d-flex flex-column  monthInput justify-content-start col-4 w-50">
     <label htmlFor="expireMM" className="mt-1 mb-1">Mes</label>
     <select
       className="border-0 p-1 rounded oneSelect opacity-50"
@@ -308,7 +308,7 @@ function Checkout() {
     </select>
   </div>
 
-  <div className="d-flex flex-column ms-1 ">
+  <div className="flex-column inputYear justify-content-start align-items-start col-4 ">
     <label htmlFor="expireYY" className="mt-1 mb-1">Año</label> 
     <select
       className="border-0 p-1 rounded oneSelect opacity-50"
@@ -333,8 +333,8 @@ function Checkout() {
                       maxLength="4"
                     />
                   </div>
-                  <div className="col-4 col-md-3 mt-4 align-items-center ">
-                    <label className="cvcLabel me-2 d-bloc " htmlFor="cvc">
+                  <div className="col-4 col-md-3  align-items-center ">
+                    <label className="cvcLabel d-bloc " htmlFor="cvc">
                       CVC
                     </label>
                     <input
