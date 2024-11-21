@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { logOut } from "../redux/loginSlice";
+import { setCartToZero } from "../redux/cartSlice";
 function NavbarComp() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.login);
@@ -20,6 +21,10 @@ function NavbarComp() {
     dispatch(logOut());
     navigate("/");
   }
+
+  useEffect(() => {
+    // valor de total quantity luego de checkout
+  }, []);
 
   return (
     <>

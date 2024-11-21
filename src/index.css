@@ -123,9 +123,9 @@ a.text-decoration-none {
   transition: border-color 0.3s ease;
 }
 .cardComp:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1);
   transition: 200ms;
-  border-top: rgb(244, 190, 247) !important;
+  border-top: rgb(244, 190, 247) !important; */
 }
 
 .cardBtn:hover {

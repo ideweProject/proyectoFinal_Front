@@ -94,13 +94,13 @@ const cartSlice = createSlice({
       }
     },
 
-    setCartToZero: (state, action) => {
+    setCartToZero: (state) => {
       state = {
         items: [],
         totalQuantity: 0,
         totalPrice: 0,
       };
-      console.log(state)
+      console.log(state);
     },
   },
 });
