@@ -850,6 +850,14 @@ select.inputStyle {
 .order-main-container {
   max-width: 700px;
 }
+.titleOrder{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.cvcLabel{
+  margin-top: 23px;
+}
+
 
 .order-container {
   min-height: 65vh;
@@ -874,12 +882,5 @@ font-size: 17px;
   border: #181818;
   margin-top: 11px;
 
-}
-.titleOrder{
-  margin-top: 20px;
-  margin-left: 18px;
-}
-.cvcLabel{
-  margin-top: 23px;
 }
 
