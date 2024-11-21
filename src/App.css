@@ -70,7 +70,7 @@
     rgb(255, 159, 15) 35%,
     rgb(233, 5, 165) 90%
   );
-  filter: brightness(70%);
+  filter: brightness(80%);
   max-width: 900px; /* Ajusta este valor según el ancho que deseas */
   margin-left: auto;
   margin-right: auto; 
