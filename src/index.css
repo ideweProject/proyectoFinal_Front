@@ -168,6 +168,7 @@ a.text-decoration-none {
 
 .home-logo {
   width: 80px;
+  margin-left: -12px;
 }
 
 .buyList {
@@ -314,9 +315,13 @@ a.text-decoration-none {
   background-color: rgba(254, 94, 13, 0.887) !important;
   border: none;
 }
-.img1 {
-  object-fit: cover;
-  aspect-ratio: 1/1;
+.imgJuices {
+  max-height:41.5vh;
+  object-fit: cover !important;
+  aspect-ratio: 1/1 !important;
+}
+.juicesImgCol{
+  max-height: 36vh;
 }
 
 .freeze {
@@ -326,4 +331,8 @@ a.text-decoration-none {
     rgba(180, 19, 198, 0.8) 80%
   ) !important;
   color: white;
+}
+
+.bannerCenterImg{
+  max-height: 36vh;
 }

@@ -29,7 +29,7 @@ function NavbarComp() {
           <Link to={"/"} className="p-0">
             <img
               src="./images/img_pages/logovibraco.webp"
-              className="home-logo p-0"
+              className="home-logo"
               alt=""
             />
           </Link>
