@@ -139,7 +139,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
- 
 }
 .nameUsAbout {
   font-family: "Roboto", sans-serif;
@@ -376,7 +375,6 @@ footer p {
   filter: brightness(100%);
   color: #ffffff;
   cursor: pointer;
-  
 }
 .cardBodyUs:hover {
   background-image: linear-gradient(
@@ -445,11 +443,10 @@ button.confirmOrder:hover {
   width: 100%;
   max-width: 600px;
 }
-.oneSelect{
-  background-color: #f0f0f0; 
+.oneSelect {
+  background-color: #f0f0f0;
   color: #333;
   margin-right: 95px;
-  
 }
 .font-weight-medium {
   font-weight: 500;
@@ -629,8 +626,9 @@ button.confirmOrder:hover {
 
 .carousel-img:hover {
   transition-duration: 400ms;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
+
 @media (max-width: 576px) {
   .product-info h1 {
     font-size: 24px;
@@ -857,7 +855,7 @@ select.inputStyle {
 /* .product-price{
 font-size: 17px;
 } */
-.containerProfile{
+.containerProfile {
   background-image: linear-gradient(
     130deg,
     rgb(235, 156, 39) 5%,
@@ -865,21 +863,18 @@ font-size: 17px;
   );
   filter: brightness(90%);
   color: white;
- 
 }
-.unInputCVC{
+.unInputCVC {
   height: 30px;
   background-color: rgba(202, 193, 193, 0.678);
   color: #ffffff;
   border: #181818;
   margin-top: 11px;
-
 }
-.titleOrder{
+.titleOrder {
   margin-top: 20px;
   margin-left: 18px;
 }
-.cvcLabel{
+.cvcLabel {
   margin-top: 23px;
 }
-

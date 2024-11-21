@@ -61,7 +61,7 @@ const ProductPage = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light"
+      theme: "light",
     });
   };
   return (
@@ -86,7 +86,9 @@ const ProductPage = () => {
 
           <div className="product-info">
             <h1 className="text-start">{product.name}</h1>
-            <p className="mb-0 text product-price">$U{product.price}</p>
+            <p className="mb-0 text product-price fs-3 fw-bold">
+              $U {product.price}
+            </p>
             <p className="price-subtittle text">${product.price} /500ml</p>
             <div>
               <p className="mb-1">Cantidad</p>
@@ -116,7 +118,7 @@ const ProductPage = () => {
               Añadir al carrito
             </button>
             <div className="mt-5">
-              <h2 className="title fw-normal">Descripción</h2>
+              <h3 className="title fw-normal">Descripción</h3>
               <p className="text">{product.description}</p>
             </div>
             <hr />
@@ -129,8 +131,14 @@ const ProductPage = () => {
               </p>
             </div>
             <div>
-              <i onClick={handleSocialClick} className="bi bi-whatsapp mx-1 iconWpp"></i>
-              <i onClick={handleSocialClick} className="bi bi-facebook mx-1 iconFacebook"></i>
+              <i
+                onClick={handleSocialClick}
+                className="bi bi-whatsapp mx-1 iconWpp"
+              ></i>
+              <i
+                onClick={handleSocialClick}
+                className="bi bi-facebook mx-1 iconFacebook"
+              ></i>
             </div>
           </div>
         </div>
