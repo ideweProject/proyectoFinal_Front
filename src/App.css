@@ -12,6 +12,10 @@
   justify-items: center;
   margin-top: 20px;
 }
+.monthInput{
+  width: 200px !important;
+  min-width: 100px !important;
+}
 
 .producto {
   text-align: center;
@@ -437,21 +441,26 @@ button.confirmOrder:hover {
 .bodyAboutUs {
   height: 100%;
 }
+.inputYear{
+  position: relative;
+  right: 80px;
+}
 .unInput {
   border: 1px solid #f8f8f8;
   font-size: 1.2rem;
   padding: 0.5rem;
   border-radius: 5px;
   height: 30px;
-  background-color: rgba(202, 193, 193, 0.678);
-  color: #ffffff;
+  background-color: rgba(233, 227, 227, 0.726)!important;
+
 }
 .input-large {
   width: 100%;
   max-width: 600px;
 }
 .oneSelect {
-  background-color: #f0f0f0;
+  background-color: rgba(233, 227, 227, 0.726)!important;
+  height: 37px;
   color: #333;
   margin-right: 95px;
 }
@@ -464,13 +473,16 @@ button.confirmOrder:hover {
   border-radius: 5px;
   padding: 20px;
   color: #c9c9c9;
-  background-color: rgba(10, 9, 9, 0.5);
+  background-color: rgba(10, 9, 9, 0.4);
+  width: 100%;
+  
 }
 
 .full-screen-background {
-  height: 100%;
-  width: 100%;
-
+  display: flex !important;
+  justify-content: center!important; 
+  align-items: center !important; 
+  min-height: 100vh !important;
   background-image: linear-gradient(
     130deg,
     rgb(240, 161, 42) 35%,
@@ -880,8 +892,8 @@ font-size: 17px;
 }
 .unInputCVC {
   height: 30px;
-  background-color: rgba(202, 193, 193, 0.678);
+  background-color: rgba(233, 227, 227, 0.726);
   color: #ffffff;
-  border: #181818;
+  border: #ffffff;
   margin-top: 11px;
 }
