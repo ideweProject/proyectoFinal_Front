@@ -95,7 +95,7 @@ function Checkout() {
     <div className="full-screen-background pt-2 pb-2 ">
       <Toast />
       <div className="container mainCheck">
-        <div className="checkout checkMain">
+        <div className="checkout checkMain mt-5 mb-5  ">
           <div className="row g-5">
             <div className="col-12 col-md-6 checkCol">
               <h4 className="mt-4 mb-4">Información de contacto</h4>
@@ -158,7 +158,7 @@ function Checkout() {
                       name="city"
                       onChange={(e) => handleChange(e)}
                       required
-                      className="oneSelec t opacity-50"
+                      className="oneSelect"
                     >
                       {cities.map((city, index) => (
                         <option key={index} value={city}>
@@ -281,12 +281,12 @@ function Checkout() {
                       Fecha de expiración
                     </label>
                     <div className="d-flex align-items-center justify-content-start align-items-start  mb-3">
-                      <div className="d-flex flex-column  monthInput justify-content-start col-4 w-50">
+                      <div className="d-flex flex-column  monthInput justify-content-start">
                         <label htmlFor="expireMM" className="mt-1 mb-1">
                           Mes
                         </label>
                         <select
-                          className="border-0 p-1 rounded oneSelect opacity-50"
+                          className="border-0 p-1 rounded oneSelect "
                           name="expireMM"
                           id="expireMM"
                           onChange={(e) => handleChange(e)}
@@ -312,7 +312,7 @@ function Checkout() {
                           Año
                         </label>
                         <select
-                          className="border-0 p-1 rounded oneSelect opacity-50"
+                          className="border-0 p-1 rounded oneSelect"
                           name="expireYY"
                           id="expireYY"
                           onChange={(e) => handleChange(e)}
