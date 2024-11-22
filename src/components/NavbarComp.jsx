@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { logOut } from "../redux/loginSlice";
+import { setCartToZero } from "../redux/cartSlice";
 function NavbarComp() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.login);
@@ -16,16 +17,22 @@ function NavbarComp() {
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   useEffect(() => {}, [user.token]);
+
   async function handleLogout() {
     dispatch(logOut());
     navigate("/");
   }
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  
+  useEffect(() => {}, [totalQuantity]);
 
   return (
     <>
       <Navbar expand="lg" className=" navbarGlobal sticky-top bg-white">
         <Container className="">
-          <Link to={"/"} className="p-0">
+          <Link to={"/"} onClick={handleScrollToTop} className="p-0">
             <img
               src="./images/img_pages/logovibraco.webp"
               className="home-logo"
@@ -35,22 +42,25 @@ function NavbarComp() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className=" d-flex justify-content-center w-100 links-navbar-container align-items-center ">
+            <Nav className=" d-flex justify-content-center w-100 links-navbar-container ">
               <Link
                 to={"/juices"}
-                className=" NavbarLink text-decoration-none p-2"
+                onClick={handleScrollToTop}
+                className=" text-decoration-none p-1"
               >
                 Jugos
               </Link>
               <Link
                 to={"/bars"}
-                className=" NavbarLink text-decoration-none p-2 me-3"
+                onClick={handleScrollToTop}
+                className=" text-decoration-none p-1"
               >
                 Barras
               </Link>
               <Link
                 to={"/about"}
-                className=" NavbarLink2 text-decoration-none p-2 "
+                onClick={handleScrollToTop}
+                className=" text-decoration-none  p-1"
               >
                 Acerca de este proyecto
               </Link>{" "}
@@ -80,13 +90,15 @@ function NavbarComp() {
                 <>
                   <Link
                     to={"/login"}
-                    className="text-decoration-none  p-1  ms-3 NavbarLink"
+                    onClick={handleScrollToTop}
+                    className="text-decoration-none  p-1"
                   >
                     Login
                   </Link>
                   <Link
                     to={"/signin"}
-                    className=" text-decoration-none p-1 ms-1 NavbarLink"
+                    onClick={handleScrollToTop}
+                    className=" text-decoration-none p-1"
                   >
                     Crear cuenta
                   </Link>

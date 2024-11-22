@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CarouselProducts from "../components/CarrouselProducts";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -9,30 +8,26 @@ import { toggleOffcanvas } from "../redux/pagesSlice";
 import { toast } from "react-toastify";
 
 const ProductPage = () => {
-  const { slug } = useParams("");
+  const { slug } = useParams();
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
-  const [quantity, setquantity] = useState(1);
-  console.log(product);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     async function getProduct() {
-      const response = await axios({
-        method: "GET",
-        url: `${import.meta.env.VITE_API_URL}/products/show/${slug}`,
-      });
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/products/show/${slug}`);
       setProduct(response.data);
     }
     getProduct();
   }, [slug]);
 
   const increment = () => {
-    setquantity((prevQuantity) => prevQuantity + 1);
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const decrement = () => {
     if (quantity > 1) {
-      setquantity((prevQuantity) => prevQuantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
 
@@ -40,7 +35,7 @@ const ProductPage = () => {
     dispatch(toggleOffcanvas());
   };
 
-  const handleAddItem = (clickedItem) => {
+  const handleAddItem = () => {
     dispatch(
       addToCartFromProduct({
         id: product.id,
@@ -51,6 +46,7 @@ const ProductPage = () => {
       })
     );
   };
+
   const handleSocialClick = () => {
     toast.warn("Función fuera del alcance de este proyecto", {
       position: "top-right",
@@ -63,17 +59,19 @@ const ProductPage = () => {
       theme: "light",
     });
   };
+
   return (
     <div>
-      <div className="product-page">
-        <div className="product-details">
-          <div className="product-image">
+      <div className="product-page container">
+        <div className="row">
+          <div className="col-md-6 col-12 product-image">
             <img
               src={`../../images/Products/Juices/${product.image}.jpg`}
-              alt="Pure Green Juice"
+              alt={product.name}
+              className="img-fluid"
             />
             <h5 className="mt-5 title">Ingredientes</h5>
-            <ul className="list-group d-flex flex-column list-unstyled">
+            <ul className="list-group list-unstyled">
               {product.ingredients &&
                 product.ingredients.map((ingredient, index) => (
                   <li className="text" key={index}>
@@ -83,7 +81,7 @@ const ProductPage = () => {
             </ul>
           </div>
 
-          <div className="product-info">
+          <div className="col-md-6 col-12 product-info">
             <h1 className="text-start">{product.name}</h1>
             <p className="mb-0 text product-price fs-3 fw-bold">
               $U {product.price}
@@ -91,14 +89,13 @@ const ProductPage = () => {
             <p className="price-subtittle text">${product.price} /500ml</p>
             <div>
               <p className="mb-1">Cantidad</p>
-
-              <div className="d-flex ">
+              <div className="d-flex">
                 <button className="btnPlusMin" onClick={decrement}>
                   -{" "}
                 </button>
                 <input
                   type="number"
-                  className="product-quantity-input  h-25 mb-4 "
+                  className="product-quantity-input h-25 mb-4"
                   value={quantity}
                 />
                 <button className="btnPlusMin" onClick={increment}>
@@ -108,27 +105,31 @@ const ProductPage = () => {
             </div>
 
             <button
-              className="add-to-cart btn-pill w-500 text btnBuyCart"
+              className="add-to-cart btn-pill w-100 text btnBuyCart"
               onClick={() => {
                 handleShowCart();
-                handleAddItem({ product });
+                handleAddItem();
               }}
             >
               Añadir al carrito
             </button>
+
             <div className="mt-5">
               <h3 className="title fw-normal">Descripción</h3>
               <p className="text">{product.description}</p>
             </div>
+
             <hr />
+
             <div>
               <h3 className="title">Conservación</h3>
               <p className="text">
-                Conservar entre 2°C - 7°C y consumir dentro de 7 dias de la
+                Conservar entre 2°C - 7°C y consumir dentro de 7 días de la
                 fecha de elaboración. Luego de abierto, consumir dentro de 24
-                horas preferentemente.{" "}
+                horas preferentemente.
               </p>
             </div>
+
             <div>
               <i
                 onClick={handleSocialClick}
@@ -142,7 +143,8 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+
+      <div className="container mt-5">
         <CarouselProducts />
       </div>
     </div>

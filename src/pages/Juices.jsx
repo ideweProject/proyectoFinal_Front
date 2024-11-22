@@ -49,10 +49,10 @@ function Juices() {
         </InputGroup>
       </div>
 
-      <div className="container w-75">
-        <div className="row g-3 mb-5">
+      <div className="juicesConatainer  d-flex justify-content-center container w-75">
+        <div className="row g-3  mb-5">
           {filteredJuices.map((juice) => (
-            <div className="col-xl-3 col-lg-6 col-sm-12" key={juice.id}>
+            <div className="col-xl-3   col-lg-4  col-md-6 col-sm-12" key={juice.id}>
               <ProductCard productData={juice} />
             </div>
           ))}

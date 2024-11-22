@@ -38,6 +38,8 @@ function Cart({ name, ...props }) {
   const showCart = useSelector((state) => state.pages.showCart);
   const handleToggle = () => dispatch(toggleOffcanvas());
 
+  
+
   return (
     <>
       <Button variant="" onClick={handleToggle} className=" border px-2">
