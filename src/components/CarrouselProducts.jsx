@@ -33,12 +33,12 @@ function CarouselProducts() {
       },
     ],
     prevArrow: (
-      <button className="slick-previous">
+      <button className="slick-prev">
         <span className="previus-arrow">&#10094;</span>
       </button>
     ),
     nextArrow: (
-      <button className="slick-nextt">
+      <button className="slick-next">
         <span className="nextt-arrow">&#10095;</span>
       </button>
     ),
