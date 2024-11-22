@@ -17,25 +17,22 @@ function NavbarComp() {
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   useEffect(() => {}, [user.token]);
+
   async function handleLogout() {
     dispatch(logOut());
     navigate("/");
   }
-  const handleScrollToTop=()=>{
+  const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-  
   };
-
-
-  useEffect(() => {
-    // valor de total quantity luego de checkout
-  }, []);
+  
+  useEffect(() => {}, [totalQuantity]);
 
   return (
     <>
       <Navbar expand="lg" className=" navbarGlobal sticky-top bg-white">
         <Container className="">
-          <Link to={"/"}onClick={handleScrollToTop}  className="p-0">
+          <Link to={"/"} onClick={handleScrollToTop} className="p-0">
             <img
               src="./images/img_pages/logovibraco.webp"
               className="home-logo"
@@ -46,13 +43,25 @@ function NavbarComp() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className=" d-flex justify-content-center w-100 links-navbar-container ">
-              <Link to={"/juices"} onClick={handleScrollToTop} className=" text-decoration-none p-1">
+              <Link
+                to={"/juices"}
+                onClick={handleScrollToTop}
+                className=" text-decoration-none p-1"
+              >
                 Jugos
               </Link>
-              <Link to={"/bars"} onClick={handleScrollToTop} className=" text-decoration-none p-1">
+              <Link
+                to={"/bars"}
+                onClick={handleScrollToTop}
+                className=" text-decoration-none p-1"
+              >
                 Barras
               </Link>
-              <Link to={"/about"} onClick={handleScrollToTop} className=" text-decoration-none  p-1">
+              <Link
+                to={"/about"}
+                onClick={handleScrollToTop}
+                className=" text-decoration-none  p-1"
+              >
                 Acerca de este proyecto
               </Link>{" "}
               {user.token ? (
@@ -79,10 +88,18 @@ function NavbarComp() {
                 </Dropdown>
               ) : (
                 <>
-                  <Link to={"/login"} onClick={handleScrollToTop}  className="text-decoration-none  p-1">
+                  <Link
+                    to={"/login"}
+                    onClick={handleScrollToTop}
+                    className="text-decoration-none  p-1"
+                  >
                     Login
                   </Link>
-                  <Link to={"/signin"} onClick={handleScrollToTop}  className=" text-decoration-none p-1">
+                  <Link
+                    to={"/signin"}
+                    onClick={handleScrollToTop}
+                    className=" text-decoration-none p-1"
+                  >
                     Crear cuenta
                   </Link>
                 </>
