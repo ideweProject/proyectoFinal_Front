@@ -12,6 +12,10 @@
   justify-items: center;
   margin-top: 20px;
 }
+.monthInput{
+  width: 200px !important;
+  min-width: 100px !important;
+}
 
 .producto {
   text-align: center;
@@ -236,8 +240,8 @@
 .naturales {
   background-color: rgb(250, 250, 250);
 }
+
 footer {
-  background-color: #000000;
   background-color: #000000;
   color: rgb(255, 255, 255);
   padding: 20px 0;
@@ -251,12 +255,20 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   align-items: flex-start;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 
 .footer-left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-left img {
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-left h4 {
@@ -269,14 +281,17 @@ footer {
   margin-bottom: 15px;
 }
 
-.social-media a {
-  margin-right: 10px;
+
+.social-media {
+  display: flex;
+  gap: 15px;
 }
 
-.social-media img {
-  width: 24px;
-  height: 24px;
+.social-media i {
+  font-size: 25px;
+  cursor: pointer;
 }
+
 
 .footer-links {
   flex: 1;
@@ -302,6 +317,7 @@ footer {
   color: #ff6a00;
 }
 
+
 .footer-right {
   flex: 1;
   text-align: right;
@@ -311,6 +327,7 @@ footer {
 footer p {
   margin: 0;
 }
+
 
 @media (max-width: 768px) {
   .footer-container {
@@ -322,23 +339,35 @@ footer p {
   .footer-links,
   .footer-right {
     margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .footer-left {
+    align-items: center;
   }
 
   .footer-right {
     text-align: center;
   }
+
+  .social-media {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
 }
+
+
 .iconFacebook {
   color: #316ff6;
-  font-size: 25px;
 }
 
 .iconWpp {
   color: #25d366;
-  font-size: 25px;
 }
+
 .iconTwitter {
-  font-size: 25px;
+  color: #1da1f2;
 }
 
 .cardUs {
@@ -437,21 +466,26 @@ button.confirmOrder:hover {
 .bodyAboutUs {
   height: 100%;
 }
+.inputYear{
+  position: relative;
+  right: 80px;
+}
 .unInput {
   border: 1px solid #f8f8f8;
   font-size: 1.2rem;
   padding: 0.5rem;
   border-radius: 5px;
   height: 30px;
-  background-color: rgba(202, 193, 193, 0.678);
-  color: #ffffff;
+  background-color: rgba(233, 227, 227, 0.726)!important;
+
 }
 .input-large {
   width: 100%;
   max-width: 600px;
 }
 .oneSelect {
-  background-color: #f0f0f0;
+  background-color: rgba(233, 227, 227, 0.726)!important;
+  height: 37px;
   color: #333;
   margin-right: 95px;
 }
@@ -464,13 +498,14 @@ button.confirmOrder:hover {
   border-radius: 5px;
   padding: 20px;
   color: #c9c9c9;
-  background-color: rgba(10, 9, 9, 0.5);
-}
-
-.full-screen-background {
-  height: 100%;
+  background-color: rgba(10, 9, 9, 0.4);
   width: 100%;
-
+}
+.full-screen-background {
+  display: flex !important;
+  justify-content: center!important; 
+  align-items: center !important; 
+  min-height: 100vh !important;
   background-image: linear-gradient(
     130deg,
     rgb(240, 161, 42) 35%,
@@ -487,12 +522,6 @@ button.confirmOrder:hover {
   background: rgba(0, 0, 0, 0.781);
   z-index: -1;
 } */
-.product-page {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-  flex-wrap: wrap;
-}
 
 .product-details {
   display: flex;
@@ -502,18 +531,6 @@ button.confirmOrder:hover {
   flex-wrap: wrap;
 }
 
-.product-image {
-  width: 100%;
-  max-width: 450px;
-  margin-right: 30px;
-}
-
-.product-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
 
 .product-info {
   max-width: 500px;
@@ -682,9 +699,7 @@ button.confirmOrder:hover {
   cursor: pointer;
 }
 
-.slick-prev {
-  left: 10px;
-}
+
 
 .slick-next {
   right: 10px;
@@ -880,8 +895,8 @@ font-size: 17px;
 }
 .unInputCVC {
   height: 30px;
-  background-color: rgba(202, 193, 193, 0.678);
+  background-color: rgba(233, 227, 227, 0.726);
   color: #ffffff;
-  border: #181818;
+  border: #ffffff;
   margin-top: 11px;
 }
