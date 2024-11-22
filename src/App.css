@@ -500,9 +500,7 @@ button.confirmOrder:hover {
   color: #c9c9c9;
   background-color: rgba(10, 9, 9, 0.4);
   width: 100%;
-  
 }
-
 .full-screen-background {
   display: flex !important;
   justify-content: center!important; 
