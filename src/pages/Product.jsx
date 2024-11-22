@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import { addToCartFromProduct } from "../redux/cartSlice";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { toast } from "react-toastify";
-import Toast from "../components/Toast";
 
 const ProductPage = () => {
   const { slug } = useParams("");

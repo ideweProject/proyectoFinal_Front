@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { removeFromCart } from "../redux/cartSlice";
-import Toast from "../components/Toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import formValidation from "../../utils/formValidation";
@@ -23,7 +22,6 @@ function Checkout() {
     expireMM: "01",
     expireYY: "2024",
   });
-  let validDate = "";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -106,7 +104,7 @@ function Checkout() {
                 <div className="mb-4">
                   <label htmlFor="email"></label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     className="w-100 unInput input-large"
                     placeholder="ejemplo@gmail.com"
@@ -258,7 +256,7 @@ function Checkout() {
                     className="w-100 unInput"
                     maxLength={19}
                     inputMode="numeric"
-                    // pattern="[0-9]*"
+                    pattern="[0-9]"
                     placeholder="XXXX XXXX XXXX XXXX"
                     required
                     onChange={(e) => handleChange(e)}
@@ -364,7 +362,7 @@ function Checkout() {
                     <div className="col-5 col-md-3">
                       <img
                         src={`./images/Products/Juices/${item.image}.png`}
-                        className="img-fluid ms-2  opacity-75 w-100"
+                        className="img-fluid ms-2  opacity-75 w-50"
                         alt=""
                       />
                     </div>

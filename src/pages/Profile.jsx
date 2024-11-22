@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveUserInfo } from "../redux/userSlice";
+import { toast } from "react-toastify";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -11,6 +12,7 @@ const Profile = () => {
     firstname: "",
     lastname: "",
     email: "",
+    password: "",
     adress: "",
     city: "",
     postalCode: "",
@@ -30,6 +32,7 @@ const Profile = () => {
           firstname: response.data.firstname,
           lastname: response.data.lastname,
           email: response.data.email,
+          password: response.data.password,
           adress: userInfo.adress,
           city: userInfo.city,
           postalCode: userInfo.postalCode,
@@ -45,6 +48,7 @@ const Profile = () => {
       firstname: userInfo.firstname,
       lastname: userInfo.lastname,
       email: userInfo.email,
+      password: userInfo.password,
     });
   }, [userInfo]);
 
@@ -58,12 +62,12 @@ const Profile = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { firstname, lastname, email } = profile;
+    const { firstname, lastname, email, password } = profile;
 
-    await axios({
+    const response = await axios({
       method: "POST",
       url: `${import.meta.env.VITE_API_URL}/users/edit/${userData.userId}`,
-      data: { firstname, lastname, email },
+      data: { firstname, lastname, email, password },
       headers: { Authorization: `Bearer ${userData.token}` },
     });
 
@@ -74,6 +78,7 @@ const Profile = () => {
         postalCode: profile.postalCode,
       })
     );
+    toast.success(response.data);
   };
 
   return (
@@ -81,7 +86,7 @@ const Profile = () => {
       <h1 className="d-flex justify-content-start">Perfil</h1>
       <hr />
 
-      <form onSubmit={handleSubmit} className="profile-form">
+      <form onSubmit={handleSubmit} className="">
         <div className="form-group">
           <label htmlFor="firstname">Nombre</label>
           <input
@@ -90,7 +95,6 @@ const Profile = () => {
             name="firstname"
             value={profile.firstname}
             onChange={handleChange}
-            required
             className="inputStyle"
           />
         </div>
@@ -104,14 +108,13 @@ const Profile = () => {
             name="lastname"
             value={profile.lastname}
             onChange={handleChange}
-            required
             className="inputStyle"
           />
         </div>
         <hr />
 
         <div className="form-group">
-          <label htmlFor="email">E-mail</label>
+          <label htmlFor="email">Correo</label>
           <input
             type="email"
             id="email"
@@ -125,6 +128,19 @@ const Profile = () => {
         <hr />
 
         <div className="form-group">
+          <label htmlFor="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={profile.password}
+            onChange={handleChange}
+            className="inputStyle"
+          />
+        </div>
+        <hr />
+
+        <div className="form-group">
           <label htmlFor="adress">Dirección</label>
           <input
             type="text"
@@ -132,7 +148,6 @@ const Profile = () => {
             name="adress"
             value={profile.adress}
             onChange={handleChange}
-            required
             className="inputStyle"
           />
         </div>
@@ -146,7 +161,6 @@ const Profile = () => {
             name="city"
             value={profile.city}
             onChange={handleChange}
-            required
             className="inputStyle"
           />
         </div>
@@ -160,16 +174,13 @@ const Profile = () => {
             name="postalCode"
             value={profile.postalCode}
             onChange={handleChange}
-            required
             className="inputStyle"
           />
         </div>
         <hr />
 
         <div className="d-flex justify-content-end">
-          <button type="submit" className="btnSubmit shadow">
-            Guardar Cambios
-          </button>
+          <button className="btnSubmit shadow">Guardar Cambios</button>
         </div>
       </form>
     </div>

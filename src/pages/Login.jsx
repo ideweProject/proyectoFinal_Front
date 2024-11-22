@@ -45,6 +45,15 @@ function Login() {
     previousPage ? toast.error(location.state.msg) : null;
   }, []);
 
+  async function handleRestartBd() {
+    const response = await axios({
+      method: "GET",
+      url: `${import.meta.env.VITE_API_URL}/users/restart`,
+    });
+
+    toast.success("Base de datos reiniciada correctamente");
+  }
+
   return (
     <>
       <div className=" login-background d-flex justify-content-center">
@@ -132,8 +141,8 @@ function Login() {
             <div className="credentials-container w-50 bg-white p-4 rounded">
               <span className="fw-bold">Usuarios de prueba</span>
               <p>
-                Para simplificar el acceso a la aplicación, se proporcionan los
-                siguientes usuarios de prueba:{" "}
+                Para simplificar el acceso a la aplicación, se proporciona el
+                siguiente usuario de prueba:{" "}
               </p>
               <p className="fw-bold m-0">Iniciar sesión como comprador</p>
               <ul className="list-credentials">
@@ -141,11 +150,11 @@ function Login() {
                 <li>Contraseña: 1234.</li>
               </ul>
 
-              <p className="fw-bold m-0">Iniciar sesión como administrador</p>
-              <ul className="list-credentials">
-                <li>E-mail: admin@a.com.</li>
-                <li>Contraseña: 1234.</li>
-              </ul>
+              <p className="fw-bold">Reiniciar base de datos</p>
+
+              <button className="btn btn-primary" onClick={handleRestartBd}>
+                Reiniciar
+              </button>
             </div>
           </div>
         </div>

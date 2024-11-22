@@ -63,8 +63,8 @@ function Cart({ name, ...props }) {
                 <div className="row">
                   <div className="col-4">
                     <img
-                      className="w-75"
-                      src={`/images/Products/Juices/${cartItem.image}.jpg`}
+                      className="w-75 ratio ratio-1x1 "
+                      src={`/images/Products/Juices/${cartItem.image}.png`}
                       alt=""
                     />
                   </div>
@@ -72,7 +72,7 @@ function Cart({ name, ...props }) {
                     <div>
                       {" "}
                       <h5>{cartItem.name}</h5>
-                      <span className="d-block mb-3">$U{cartItem.price}</span>
+                      <span className="d-block mb-3">$U {cartItem.price}</span>
                       <div className="d-flex">
                         <button
                           className="d-inline btnPlusMin"
