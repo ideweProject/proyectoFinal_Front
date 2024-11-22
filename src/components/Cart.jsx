@@ -6,10 +6,17 @@ import { removeFromCart, plusOneItem, minusOneItem } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { toggleOffcanvas } from "../redux/pagesSlice";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
 function Cart({ name, ...props }) {
   const cartList = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  //modal
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const handleRemoveItem = (removedItem) => {
     dispatch(
@@ -37,8 +44,6 @@ function Cart({ name, ...props }) {
 
   const showCart = useSelector((state) => state.pages.showCart);
   const handleToggle = () => dispatch(toggleOffcanvas());
-
-  
 
   return (
     <>
@@ -95,9 +100,32 @@ function Cart({ name, ...props }) {
                           <i class="bi bi-plus"></i>
                         </button>
                       </div>
+                      <Modal
+                        show={show}
+                        onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                      >
+                        <Modal.Header className="closeModalDel">
+                        <button className="btnRegresar text-white rounded-pill ms-auto px-3 py-1" onClick={handleClose}> <i class="bi bi-box-arrow-right ">  Regresar al carrito </i></button></Modal.Header>
+                        <Modal.Body >
+                          ¿Estás seguro que quieres quitar de la lista <span className="text-danger">{cartItem.name}</span> ?
+                        </Modal.Body>
+                        <Modal.Footer>
+                          <Button
+                        className="modalDelItemBtn shadow" 
+                            onClick={() => {
+                              handleRemoveItem(cartItem.id);
+                              handleClose();
+                            }}
+                          >
+                            Quitar
+                          </Button>
+                        </Modal.Footer>
+                      </Modal>
                       <button
                         className="rounded border bg-white ms-auto d-block"
-                        onClick={() => handleRemoveItem(cartItem.id)}
+                        onClick={handleShow}
                       >
                         <i class="bi bi-trash3 text-danger"></i>
                       </button>

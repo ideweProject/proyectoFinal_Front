@@ -414,7 +414,7 @@ a.text-decoration-none {
     width: 200px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1220px) {
   .freezeTitle {
     padding-top: 35%;
   }
@@ -424,4 +424,23 @@ a.text-decoration-none {
     padding-top: 34%;
   }
 }
+.modalDelItemBtn{
+  background-color: rgba(182, 180, 179, 0.887) !important;
+  border: none !important;
+  height: 35px;
+  margin-top: 20px !important;
+}
 
+.closeModalDel{
+color: rgba(254, 94, 13, 0.887) !important;
+font-weight: 600;
+  height: 80px;
+
+}
+.btnRegresar{
+  border:none;
+  background-color: rgba(254, 94, 13, 0.887) !important;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
