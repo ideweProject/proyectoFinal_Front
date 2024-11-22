@@ -321,18 +321,24 @@ a.text-decoration-none {
 
 .freeze {
   background: linear-gradient(
-    120deg,
+    160deg,
     rgba(240, 136, 10, 0.8) 20%,
     rgba(180, 19, 198, 0.8) 80%
   ) !important;
   color: white;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+
+}
+
+
+
+.freezeTitle {
+  padding-top: 27%;
 }
 
 .search {
   position: relative;
-
 }
 
 .inputSearch {
@@ -361,16 +367,61 @@ a.text-decoration-none {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: italic;
-  transition: color 0.3s ease;}
+  transition: color 0.3s ease;
+}
 
 .NavbarLink:hover {
-    transform: scale(1.2);
-    transition: 200ms;
-    color: rgb(249, 161, 19);
+  transform: scale(1.2);
+  transition: 200ms;
+  color: rgb(249, 161, 19);
 }
 .NavbarLink2:hover {
-   
   transform: scale(1.1);
   transition: 200ms;
-
 }
+
+.bannerText {
+  font-size: 15px;
+}
+.bannerText2 {
+  font-size: 15px;
+}
+
+@media (max-width: 990px) {
+  .bannerText {
+    font-size: 11px;
+  }
+  .bannerText2 {
+    font-size: 11px;
+  }
+  .inputSearch {
+    position: absolute;
+    top: 20px;
+  }
+  .juicesConatainer {
+    margin-top: 20px;
+  }
+  .juicesImgCol {
+    width: 0px;
+  }
+  .freezeTitle {
+    padding-top: 40%;
+  }
+}
+
+@media (max-width: 770px) {
+  .inputSearch {
+    width: 200px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .freezeTitle {
+    padding-top: 35%;
+  }
+}
+@media (min-width: 1220px) and (max-width: 1400px) {
+  .freezeTitle {
+    padding-top: 34%;
+  }
+}
+
