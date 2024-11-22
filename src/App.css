@@ -236,8 +236,8 @@
 .naturales {
   background-color: rgb(250, 250, 250);
 }
+
 footer {
-  background-color: #000000;
   background-color: #000000;
   color: rgb(255, 255, 255);
   padding: 20px 0;
@@ -251,12 +251,20 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   align-items: flex-start;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 
 .footer-left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-left img {
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-left h4 {
@@ -269,14 +277,17 @@ footer {
   margin-bottom: 15px;
 }
 
-.social-media a {
-  margin-right: 10px;
+
+.social-media {
+  display: flex;
+  gap: 15px;
 }
 
-.social-media img {
-  width: 24px;
-  height: 24px;
+.social-media i {
+  font-size: 25px;
+  cursor: pointer;
 }
+
 
 .footer-links {
   flex: 1;
@@ -302,6 +313,7 @@ footer {
   color: #ff6a00;
 }
 
+
 .footer-right {
   flex: 1;
   text-align: right;
@@ -311,6 +323,7 @@ footer {
 footer p {
   margin: 0;
 }
+
 
 @media (max-width: 768px) {
   .footer-container {
@@ -322,23 +335,35 @@ footer p {
   .footer-links,
   .footer-right {
     margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .footer-left {
+    align-items: center;
   }
 
   .footer-right {
     text-align: center;
   }
+
+  .social-media {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
 }
+
+
 .iconFacebook {
   color: #316ff6;
-  font-size: 25px;
 }
 
 .iconWpp {
   color: #25d366;
-  font-size: 25px;
 }
+
 .iconTwitter {
-  font-size: 25px;
+  color: #1da1f2;
 }
 
 .cardUs {
