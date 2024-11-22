@@ -44,7 +44,7 @@ function CardOrder(orderData) {
                 <div className="col-lg-10">
                   <div>
                     <p>{item.name}</p>
-                    <p>$ {item.price}</p>
+                    <p>$U {item.price}</p>
                   </div>
                   <div>
                     <div className="d-flex">
