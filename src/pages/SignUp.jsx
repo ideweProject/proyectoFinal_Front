@@ -27,9 +27,9 @@ function SignUp() {
       <div
         className=" login-background d-flex justify-content-center align-items-center  "
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${
+          backgroundImage: `url({${
             import.meta.env.VITE_SUPABASE_URL
-          }/vibraco-card02.jpg});`,
+          }/vibraco-card02.jpg})`,
           backgroundPosition: "unset",
         }}
       >
