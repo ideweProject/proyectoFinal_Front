@@ -71,7 +71,9 @@ function Cart({ name, ...props }) {
                   <div className="col-4">
                     <img
                       className="w-75 ratio ratio-1x1 "
-                      src={`/images/Products/Juices/${cartItem.image}.png`}
+                      src={`${import.meta.env.VITE_SUPABASE_URL}/${
+                        cartItem.image
+                      }.png`}
                       alt=""
                     />
                   </div>
@@ -107,13 +109,24 @@ function Cart({ name, ...props }) {
                         keyboard={false}
                       >
                         <Modal.Header className="closeModalDel">
-                        <button className="btnRegresar text-white rounded-pill ms-auto px-3 py-1" onClick={handleClose}> <i class="bi bi-box-arrow-right ">  Regresar al carrito </i></button></Modal.Header>
-                        <Modal.Body >
-                          ¿Estás seguro que quieres quitar de la lista <span className="text-danger">{cartItem.name}</span> ?
+                          <button
+                            className="btnRegresar text-white rounded-pill ms-auto px-3 py-1"
+                            onClick={handleClose}
+                          >
+                            {" "}
+                            <i class="bi bi-box-arrow-right ">
+                              {" "}
+                              Regresar al carrito{" "}
+                            </i>
+                          </button>
+                        </Modal.Header>
+                        <Modal.Body>
+                          ¿Estás seguro que quieres quitar de la lista{" "}
+                          <span className="text-danger">{cartItem.name}</span> ?
                         </Modal.Body>
                         <Modal.Footer>
                           <Button
-                        className="modalDelItemBtn shadow" 
+                            className="modalDelItemBtn shadow"
                             onClick={() => {
                               handleRemoveItem(cartItem.id);
                               handleClose();

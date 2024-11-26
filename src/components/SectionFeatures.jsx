@@ -6,11 +6,15 @@ function SectionFeatures() {
       <div className="container  ">
         <div className="gif-container mt-4 ">
           <video autoPlay loop muted id="gif-vibraco">
-            <source src="../videos/GIF.mp4" />
+            <source src={`${import.meta.env.VITE_SUPABASE_URL}/GIF.mp4`} />
           </video>
         </div>
         <div className="bars-banner">
-          <img src="../../images/img_pages/bars.jpg" alt="" className="w-100" />
+          <img
+            src={`${import.meta.env.VITE_SUPABASE_URL}/bars.jpg`}
+            alt=""
+            className="w-100"
+          />
         </div>
 
         <div className="worker-section ">
@@ -19,7 +23,9 @@ function SectionFeatures() {
               <div className="col-lg-4 p-0 m-0">
                 <div className=" ws-back w-100 h-100  d-flex flex-column align-items-center justify-content-center">
                   <img
-                    src="./images/img_pages/vibracologowhite.webp"
+                    src={`${
+                      import.meta.env.VITE_SUPABASE_URL
+                    }/vibracologowhite.webp`}
                     className="w-25"
                     alt=""
                   />
@@ -31,7 +37,7 @@ function SectionFeatures() {
               <div className="col-lg-8">
                 <div className="">
                   <img
-                    src="./images/img_pages/worker.webp"
+                    src={`${import.meta.env.VITE_SUPABASE_URL}/worker.webp`}
                     alt=""
                     className="img-fluid"
                   />
@@ -47,7 +53,9 @@ function SectionFeatures() {
           <div className="row g-0">
             <div className="col-lg-4 d-flex overflow-hidden">
               <img
-                src="../../images/img_pages/vibra-gingershot.jpg"
+                src={`${
+                  import.meta.env.VITE_SUPABASE_URL
+                }/vibra-gingershot.jpg`}
                 alt=""
                 className="img-fluid card-img ratio ratio-1x1"
               />
@@ -55,7 +63,9 @@ function SectionFeatures() {
             <div className="col-lg-4">
               <div className="w-100 h-100 d-flex">
                 <img
-                  src="../../images/img_pages/vibraco-card01.jpg"
+                  src={`${
+                    import.meta.env.VITE_SUPABASE_URL
+                  }/vibraco-card01.jpg`}
                   alt=""
                   className="img-fluid card-img ratio ratio-1x1"
                 />
@@ -64,7 +74,9 @@ function SectionFeatures() {
             <div className="col-lg-4">
               <div className="w-100 h-100 ratio ratio-1x1 d-flex">
                 <img
-                  src="../../images/img_pages/vibraco-card06.jpg"
+                  src={`${
+                    import.meta.env.VITE_SUPABASE_URL
+                  }/vibraco-card06.jpg`}
                   alt=""
                   className="img-fluid card-img ratio ratio-1x1"
                 />

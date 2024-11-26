@@ -16,9 +16,8 @@ function ProductCard({ productData }) {
   const handleCardClick = () => {
     navigate(`/product/${productData.slug}`);
   };
-  const handleScrollToTop=()=>{
+  const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-  
   };
 
   const handleAddItem = (clickedItem) => {
@@ -33,16 +32,19 @@ function ProductCard({ productData }) {
   };
 
   return (
-    <Card className="cardComp" style={{border:"transparent"}} onClick={useNavigate("/product")}>
+    <Card
+      className="cardComp"
+      style={{ border: "transparent" }}
+      onClick={useNavigate("/product")}
+    >
       <Card.Img
         onClick={() => {
           handleCardClick();
           handleScrollToTop();
         }}
-        
         className="juiceImage img-fluid object-fit-contain"
         variant="top"
-        src={`./images/Products/Juices/${productData.image}.jpg`}
+        src={`${import.meta.env.VITE_SUPABASE_URL}/${productData.image}.jpg`}
       />
       <Card.Body>
         <Card.Title className=" cardProdName text-center fs-6 ">

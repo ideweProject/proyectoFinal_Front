@@ -52,70 +52,70 @@ function CarouselBrands() {
           <Slider {...settings}>
             <div>
               <img
-                src="../../images/img_brands/trafigura.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/trafigura.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/brote.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/brote.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/devoto.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/devoto.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/disco.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/disco.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/geant.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/geant.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/labici.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/labici.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/lamolienda.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/lamolienda.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/madretierra.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/madretierra.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/olopoke.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/olopoke.webp`}
                 alt=""
                 className="w-100"
               />
             </div>
             <div>
               <img
-                src="../../images/img_brands/ramm.webp"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/ramm.webp`}
                 alt=""
                 className="w-100"
               />

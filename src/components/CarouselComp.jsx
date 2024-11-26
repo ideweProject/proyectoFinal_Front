@@ -64,7 +64,7 @@ function CarouselComp() {
           <div key={juice.id} className="">
             <Link className="" to={`/product/${juice.slug}`}>
               <img
-                src={`./images/Products/Juices/${juice.image}.jpg`}
+                src={`${import.meta.env.VITE_SUPABASE_URL}/${juice.image}.jpg`}
                 className="carousel-img"
                 alt=""
               />

@@ -4,7 +4,9 @@ const pagesSlice = createSlice({
   name: "pages",
   initialState: {
     showCart: false,
+    credentials: false,
   },
+
   reducers: {
     toggleOffcanvas: (state) => {
       state.showCart = !state.showCart;

@@ -35,7 +35,9 @@ function CardOrder(orderData) {
               <div className="row mt-3" key={item.id}>
                 <div className="col-lg-2">
                   <img
-                    src={`./images/Products/Juices/${item.image}.jpg`}
+                    src={`${import.meta.env.VITE_SUPABASE_URL}/${
+                      item.image
+                    }.jpg`}
                     className="img-fluid"
                     alt=""
                   />

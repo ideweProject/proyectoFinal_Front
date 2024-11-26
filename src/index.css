@@ -1,25 +1,9 @@
-/* body {
-  background-color: #e5e8e8 !important;
-} */
-/* .container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e5e8e8;
-} */
 .login-container {
   max-width: 900px;
   height: 100vh;
 }
 .logo {
   width: 300px;
-}
-
-.login-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./images/img_pages/vibraco-card02.jpg");
-  background-position: unset;
 }
 
 .login-box {
@@ -70,9 +54,7 @@ a.text-decoration-none {
   text-decoration: none;
   color: #06021f;
 }
-/* .img-carousel {
-  width: 300px;
-} */
+
 .carousel-img {
   height: 220px;
 }
@@ -122,40 +104,10 @@ a.text-decoration-none {
   width: 15rem;
   transition: border-color 0.3s ease;
 }
-.cardComp:hover {
-  /* transform: scale(1.1);
-  transition: 200ms;
-  border-top: rgb(244, 190, 247) !important; */
-}
 
 .cardBtn:hover {
   background: rgba(254, 94, 13, 0.887) !important;
 }
-
-/* .producto img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.producto p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.producto button {
-  background-color: #000000;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-} */
-
-/* .producto button:hover {
-  background-color: #000000;
-} */
 
 .cart-btn {
   border: none;
@@ -328,10 +280,7 @@ a.text-decoration-none {
   color: white;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-
 }
-
-
 
 .freezeTitle {
   padding-top: 27%;
@@ -424,23 +373,21 @@ a.text-decoration-none {
     padding-top: 34%;
   }
 }
-.modalDelItemBtn{
+.modalDelItemBtn {
   background-color: rgba(182, 180, 179, 0.887) !important;
   border: none !important;
   height: 35px;
   margin-top: 20px !important;
 }
 
-.closeModalDel{
-color: rgba(254, 94, 13, 0.887) !important;
-font-weight: 600;
+.closeModalDel {
+  color: rgba(254, 94, 13, 0.887) !important;
+  font-weight: 600;
   height: 80px;
-
 }
-.btnRegresar{
-  border:none;
+.btnRegresar {
+  border: none;
   background-color: rgba(254, 94, 13, 0.887) !important;
   margin-left: auto;
   margin-right: auto;
-  
 }

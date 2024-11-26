@@ -25,7 +25,7 @@ function NavbarComp() {
   const handleScrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  
+
   useEffect(() => {}, [totalQuantity]);
 
   return (
@@ -34,7 +34,7 @@ function NavbarComp() {
         <Container className="">
           <Link to={"/"} onClick={handleScrollToTop} className="p-0">
             <img
-              src="./images/img_pages/logovibraco.webp"
+              src={`${import.meta.env.VITE_SUPABASE_URL}/logovibraco.webp`}
               className="home-logo"
               alt=""
             />

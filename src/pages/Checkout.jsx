@@ -91,7 +91,6 @@ function Checkout() {
     </div>
   ) : (
     <div className="full-screen-background pt-2 pb-2 ">
-      <Toast />
       <div className="container mainCheck">
         <div className="checkout checkMain mt-5 mb-5  ">
           <div className="row g-5">
@@ -253,7 +252,6 @@ function Checkout() {
                     className="w-100 unInput"
                     maxLength={19}
                     inputMode="numeric"
-                    pattern="[0-9]"
                     placeholder="XXXX XXXX XXXX XXXX"
                     required
                     onChange={(e) => handleChange(e)}
@@ -358,7 +356,9 @@ function Checkout() {
                   <div className="row" key={item.id}>
                     <div className="col-5 col-md-3">
                       <img
-                        src={`./images/Products/Juices/${item.image}.png`}
+                        src={`${import.meta.env.VITE_SUPABASE_URL}/${
+                          item.image
+                        }.png`}
                         className="img-fluid ms-2  opacity-75 w-50"
                         alt=""
                       />

@@ -24,13 +24,26 @@ function SignUp() {
 
   return (
     <>
-      <div className=" login-background d-flex justify-content-center align-items-center  ">
+      <div
+        className=" login-background d-flex justify-content-center align-items-center  "
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${
+            import.meta.env.VITE_SUPABASE_URL
+          }/vibraco-card02.jpg});`,
+          backgroundPosition: "unset",
+        }}
+      >
         <div className=" login-container d-flex   align-items-center ">
           <div className="row g-0 shadow rounded  ">
             <div className="col-md-6  ">
               <div className=" login-box h-100 d-flex flex-column w-100 align-items-center  ">
                 <Link to={"/"} className="mt-5">
-                  <img src="./images/img_pages/vibracowhite.png" alt="" />
+                  <img
+                    src={`${
+                      import.meta.env.VITE_SUPABASE_URL
+                    }/vibracowhite.png`}
+                    alt=""
+                  />
                 </Link>
 
                 <h1 className="image-title text-white d-md-flex d-none ">

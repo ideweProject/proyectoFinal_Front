@@ -15,7 +15,9 @@ const ProductPage = () => {
 
   useEffect(() => {
     async function getProduct() {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/products/show/${slug}`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/products/show/${slug}`
+      );
       setProduct(response.data);
     }
     getProduct();
@@ -66,7 +68,7 @@ const ProductPage = () => {
         <div className="row">
           <div className="col-md-6 col-12 product-image">
             <img
-              src={`../../images/Products/Juices/${product.image}.jpg`}
+              src={`${import.meta.env.VITE_SUPABASE_URL}/${product.image}.jpg`}
               alt={product.name}
               className="img-fluid"
             />

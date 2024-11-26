@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { saveUserData, logOut } from "../redux/loginSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import { showCredentials } from "../redux/modalSlice";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,6 +18,12 @@ function Login() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const show = useSelector((state) => state.modal);
+
+  function closeModal() {
+    dispatch(showCredentials());
+  }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -53,16 +62,30 @@ function Login() {
 
     toast.success("Base de datos reiniciada correctamente");
   }
-
+  {
+  }
   return (
     <>
-      <div className=" login-background d-flex justify-content-center">
+      <div
+        className=" login-background d-flex justify-content-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${
+            import.meta.env.VITE_SUPABASE_URL
+          }/vibraco-card02.jpg});`,
+          backgroundPosition: "unset",
+        }}
+      >
         <div className="login-container d-flex flex-column justify-content-center ">
           <div className="row g-0   ">
             <div className="col-md-6 ">
               <div className="login-box d-flex flex-column align-items-center justify-content-center h-100 w-100  ">
                 <Link to={"/"}>
-                  <img src="./images/img_pages/vibracowhite.png" alt="" />
+                  <img
+                    src={`${
+                      import.meta.env.VITE_SUPABASE_URL
+                    }/vibracowhite.png`}
+                    alt=""
+                  />
                 </Link>
 
                 <h1 className="image-title text-center text-white d-md-flex d-none">
@@ -138,24 +161,29 @@ function Login() {
             </div>
           </div>
           <div className=" w-100 mt-3 d-flex justify-content-center">
-            <div className="credentials-container w-50 bg-white p-4 rounded">
-              <span className="fw-bold">Usuarios de prueba</span>
-              <p>
-                Para simplificar el acceso a la aplicación, se proporciona el
-                siguiente usuario de prueba:{" "}
-              </p>
-              <p className="fw-bold m-0">Iniciar sesión como comprador</p>
-              <ul className="list-credentials">
-                <li>E-mail: customer@a.com.</li>
-                <li>Contraseña: 1234.</li>
-              </ul>
+            <Modal show={show} onHide={closeModal}>
+              <Modal.Header closeButton>
+                <Modal.Title className="fw-bold">
+                  Usuarios de prueba
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <p>
+                  Para simplificar el acceso a la aplicación, se proporciona el
+                  siguiente usuario de prueba:{" "}
+                </p>
+                <p className="fw-bold m-0">Iniciar sesión como comprador</p>
+                <ul className="list-credentials">
+                  <li>E-mail: customer@a.com.</li>
+                  <li>Contraseña: 1234.</li>
+                </ul>
+                <p className="fw-bold">Reiniciar base de datos</p>
 
-              <p className="fw-bold">Reiniciar base de datos</p>
-
-              <button className="btn btn-primary" onClick={handleRestartBd}>
-                Reiniciar
-              </button>
-            </div>
+                <button className="btn btn-primary" onClick={handleRestartBd}>
+                  Reiniciar
+                </button>
+              </Modal.Body>
+            </Modal>
           </div>
         </div>
       </div>

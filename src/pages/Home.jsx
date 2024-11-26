@@ -19,12 +19,12 @@ function Home() {
               muted
               id="video-vibraco"
               className="video-vibraco"
-              src="./videos/file.mp4"
+              src={`${import.meta.env.VITE_SUPABASE_URL}/file.mp4`}
               type="video/mp4"
             ></video>
             <div className="text-video">
               <img
-                src="./images/img_pages/vibracowhite.png"
+                src={`${import.meta.env.VITE_SUPABASE_URL}/vibracowhite.png`}
                 className="logo-video"
                 alt=""
               />
