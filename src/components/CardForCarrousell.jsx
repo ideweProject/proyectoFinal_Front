@@ -3,9 +3,8 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 function CarCard({ juice }) {
-  const handleScrollToTop=()=>{
+  const handleScrollToTop = () => {
     window.scrollTo(0, 0);
-  
   };
   return (
     <Card
@@ -13,12 +12,10 @@ function CarCard({ juice }) {
       className="cardComp"
       style={{ width: "10rem", border: "none" }}
     >
-      <Link to={`/product/${juice.slug}`}
-      onClick={handleScrollToTop}>
-      
+      <Link to={`/product/${juice.slug}`} onClick={handleScrollToTop}>
         <Card.Img
           variant="top"
-          src={`../../images/Products/Juices/${juice.image}.jpg`}
+          src={`${import.meta.env.VITE_SUPABASE_URL}/${juice.image}.jpg`}
           className="juiceImage"
         />
       </Link>

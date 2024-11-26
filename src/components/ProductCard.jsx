@@ -42,7 +42,7 @@ function ProductCard({ productData }) {
           handleCardClick();
           handleScrollToTop();
         }}
-        className="juiceImage img-fluid object-fit-contain"
+        className="juiceImage img-fluid object-fit-contain "
         variant="top"
         src={`${import.meta.env.VITE_SUPABASE_URL}/${productData.image}.jpg`}
       />

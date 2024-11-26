@@ -26,6 +26,9 @@
   background-color: #fff;
   transition: transform 0.3s ease;
 }
+.juiceImage {
+  aspect-ratio: 1/1;
+}
 
 .producto:hover {
   transform: scale(1.05);

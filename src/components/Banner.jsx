@@ -21,7 +21,7 @@ function Cartel() {
         <div className="bannerCenterImg w-100 d-inline-block  ">
           <img
             className=" imgJuices"
-            src="../../images/img_pages/vibraco-card04.jpg"
+            src={`${import.meta.env.VITE_SUPABASE_URL}/vibraco-card04.jpg`}
             alt=""
           />
         </div>
