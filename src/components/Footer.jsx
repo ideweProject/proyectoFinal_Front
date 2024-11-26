@@ -46,7 +46,7 @@ const Footer = () => {
             ></i>
             <i
               onClick={handleSocialClick}
-              className="bi bi-twitter-x mx-1 iconTwitter"
+              className="bi bi-twitter-x mx-1 iconTwitter text-white"
             ></i>
           </div>
         </div>
