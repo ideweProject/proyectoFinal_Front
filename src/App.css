@@ -865,7 +865,7 @@ select.inputStyle {
   width: 580px;
   background-image: linear-gradient(
     130deg,
-    rgba(230, 153, 39, 0.596) 5%,
+    rgba(230, 153, 39, 0.596) 15%,
     rgba(189, 6, 134, 0.555) 50%
   );
 }
