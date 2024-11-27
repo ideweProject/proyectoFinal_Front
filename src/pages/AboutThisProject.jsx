@@ -8,7 +8,7 @@ function AboutThisProject() {
         <div
           className="aboutImg mt-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${
+            backgroundImage: ` url(${
               import.meta.env.VITE_SUPABASE_URL
             }/worker.webp)`,
           }}
