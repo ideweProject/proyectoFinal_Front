@@ -884,7 +884,7 @@ select.inputStyle {
 .containerProfile {
   background-image: linear-gradient(
     130deg,
-    rgba(235, 157, 39, 0.671) 5%,
+    rgba(235, 157, 39, 0.774) 5%,
     rgba(189, 6, 134, 0.548) 90%
   );
   filter: brightness(90%);
