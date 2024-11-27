@@ -770,7 +770,7 @@ h1 {
 }
 
 .inputStyle {
-  max-width: 400px;
+  width: 400px;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
