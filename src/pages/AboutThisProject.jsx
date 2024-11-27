@@ -9,7 +9,7 @@ function AboutThisProject() {
           className="aboutImg mt-0"
           style={{
             backgroundImage: url(
-              `${import.meta.env.VITE_SUPABASE_URL}/worker.webp`
+              `${import.meta.env.VITE_SUPABASE_URL}worker.webp`
             ),
           }}
         >
