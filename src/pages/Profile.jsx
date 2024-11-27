@@ -95,7 +95,7 @@ const Profile = () => {
               name="firstname"
               value={profile.firstname}
               onChange={handleChange}
-              className="inputStyle w-75"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -108,7 +108,7 @@ const Profile = () => {
               name="lastname"
               value={profile.lastname}
               onChange={handleChange}
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -122,7 +122,7 @@ const Profile = () => {
               value={profile.email}
               onChange={handleChange}
               required
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -135,7 +135,7 @@ const Profile = () => {
               name="password"
               value={profile.password}
               onChange={handleChange}
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -148,7 +148,7 @@ const Profile = () => {
               name="adress"
               value={profile.adress}
               onChange={handleChange}
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -161,7 +161,7 @@ const Profile = () => {
               name="city"
               value={profile.city}
               onChange={handleChange}
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
@@ -174,7 +174,7 @@ const Profile = () => {
               name="postalCode"
               value={profile.postalCode}
               onChange={handleChange}
-              className="inputStyle"
+              className="inputStyle w-100"
             />
           </div>
           <hr />
