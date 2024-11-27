@@ -85,7 +85,7 @@ const Profile = () => {
     <div className="profile-container container containerProfile w-50">
       <h1 className="text-center">Perfil</h1>
       <hr />
-      <div className="d-flex justify-content-around">
+      <div className="d-flex ">
         <form onSubmit={handleSubmit} className="">
           <div className="form-group">
             <label htmlFor="firstname">Nombre</label>
