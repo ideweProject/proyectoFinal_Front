@@ -83,7 +83,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container container containerProfile w-50">
-      <h1 className="d-flex justify-content-start">Perfil</h1>
+      <h1 className="text-center">Perfil</h1>
       <hr />
 
       <form onSubmit={handleSubmit} className="">
