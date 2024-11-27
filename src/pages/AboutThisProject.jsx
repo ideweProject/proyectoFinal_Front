@@ -5,7 +5,14 @@ function AboutThisProject() {
   return (
     <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
       <div className="container mainAboutAll pt-2">
-        <div className="aboutImg mt-0">
+        <div
+          className="aboutImg mt-0"
+          style={{
+            backgroundImage: url(
+              `${import.meta.env.VITE_SUPABASE_URL}/worker.webp`
+            ),
+          }}
+        >
           <div className="mainTextAbout">
             <h2 className="text-center fs-2 fs-md-3 fs-lg-2">
               Sobre este proyecto

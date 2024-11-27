@@ -86,7 +86,6 @@
 }
 .aboutImg {
   position: relative;
-  background-image: url(`${import.meta.env.VITE_SUPABASE_URL}/worker.webp`);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
