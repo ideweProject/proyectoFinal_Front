@@ -11,21 +11,21 @@ function CardOrder(orderData) {
         <div className=" border p-4 rounded order-main-container shadow mt-2">
           <div className="d-flex border-bottom w-100 ">
             <div className="text-center  ">
-              <p className="text">Id</p>
+              <p className="text fw-bold">Id</p>
               <span className="text">{orderData.orderData.id}</span>
             </div>
             <div className="ms-3">
-              <p className="text ">Fecha de compra</p>
+              <p className="text fw-bold">Fecha de compra</p>
               <span className="text">
                 {format(new Date(orderData.orderData.createdAt), "dd-MM-yy")}
               </span>
             </div>
             <div className="ms-3">
-              <p className="text ">Dirección de envío</p>
+              <p className="text fw-bold">Dirección de envío</p>
               <span className="text">{orderData.orderData.address}</span>
             </div>
             <div className="ms-3">
-              <p className="text ">Número de contacto</p>
+              <p className="text fw-bold">Número de contacto</p>
               <span className="text">{orderData.orderData.phone}</span>
             </div>
             <div className="ms-3"></div>
