@@ -8,8 +8,8 @@ function CardOrder(orderData) {
         key={orderData.key}
         className="container d-flex justify-content-center mt-1"
       >
-        <div className=" border p-4 rounded order-main-container shadow">
-          <div className="d-flex border-bottom w-100 mt-3">
+        <div className=" border p-4 rounded order-main-container shadow mt-2">
+          <div className="d-flex border-bottom w-100 ">
             <div className="text-center  ">
               <p className="text">Id</p>
               <span className="text">{orderData.orderData.id}</span>
