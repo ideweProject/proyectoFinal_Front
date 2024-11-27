@@ -8,9 +8,9 @@ function AboutThisProject() {
         <div
           className="aboutImg mt-0"
           style={{
-            backgroundImage: url(
-              `https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/worker.webp`
-            ),
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${
+              import.meta.env.VITE_SUPABASE_URL
+            }/worker.webp)`,
           }}
         >
           <div className="mainTextAbout">
