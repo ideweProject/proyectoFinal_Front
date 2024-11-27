@@ -8,7 +8,7 @@ function CardOrder(orderData) {
         key={orderData.key}
         className="container d-flex justify-content-center mt-1"
       >
-        <div className=" border p-4 rounded w-50">
+        <div className=" border p-4 rounded order-main-container shadow">
           <div className="d-flex border-bottom w-100 ">
             <div className="text-center  ">
               <p className="text">Id</p>
@@ -37,7 +37,7 @@ function CardOrder(orderData) {
                   <img
                     src={`${import.meta.env.VITE_SUPABASE_URL}/${
                       item.image
-                    }.jpg`}
+                    }.png`}
                     className="img-fluid"
                     alt=""
                   />
