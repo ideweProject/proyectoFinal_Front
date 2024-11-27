@@ -10,7 +10,7 @@ function CardOrder(orderData) {
       >
         <div className="order-main-container border p-4 rounded ">
           <div className="d-flex w-100 border-bottom ">
-            <div className="text-center">
+            <div className="text-center ">
               <p className="text">Id</p>
               <span className="text">{orderData.orderData.id}</span>
             </div>

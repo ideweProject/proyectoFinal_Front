@@ -862,7 +862,7 @@ select.inputStyle {
 }
 
 .order-main-container {
-  max-width: 700px;
+  width: 600px;
 }
 .titleOrder {
   margin-top: 20px;
