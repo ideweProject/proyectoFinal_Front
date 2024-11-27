@@ -9,7 +9,7 @@ function CardOrder(orderData) {
         className="container d-flex justify-content-center mt-1"
       >
         <div className=" border p-4 rounded ">
-          <div className="d-flex w-100 border-bottom  ">
+          <div className="d-flex  border-bottom  ">
             <div className="text-center order-main-container ">
               <p className="text">Id</p>
               <span className="text">{orderData.orderData.id}</span>
