@@ -95,7 +95,7 @@ const Profile = () => {
               name="firstname"
               value={profile.firstname}
               onChange={handleChange}
-              className="inputStyle "
+              className="inputStyle w-75"
             />
           </div>
           <hr />
