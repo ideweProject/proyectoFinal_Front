@@ -85,104 +85,105 @@ const Profile = () => {
     <div className="profile-container container containerProfile w-50">
       <h1 className="text-center">Perfil</h1>
       <hr />
+      <div className="d-flex justify-content-around">
+        <form onSubmit={handleSubmit} className="">
+          <div className="form-group">
+            <label htmlFor="firstname">Nombre</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              value={profile.firstname}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-      <form onSubmit={handleSubmit} className="">
-        <div className="form-group">
-          <label htmlFor="firstname">Nombre</label>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            value={profile.firstname}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="lastname">Apellido</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              value={profile.lastname}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="lastname">Apellido</label>
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            value={profile.lastname}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="email">Correo</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={profile.email}
+              onChange={handleChange}
+              required
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="email">Correo</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={profile.email}
-            onChange={handleChange}
-            required
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={profile.password}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="password">Contraseña</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={profile.password}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="adress">Dirección</label>
+            <input
+              type="text"
+              id="adress"
+              name="adress"
+              value={profile.adress}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="adress">Dirección</label>
-          <input
-            type="text"
-            id="adress"
-            name="adress"
-            value={profile.adress}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="city">Ciudad</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value={profile.city}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="city">Ciudad</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={profile.city}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
+          <div className="form-group">
+            <label htmlFor="postalCode">Código Postal</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              value={profile.postalCode}
+              onChange={handleChange}
+              className="inputStyle"
+            />
+          </div>
+          <hr />
 
-        <div className="form-group">
-          <label htmlFor="postalCode">Código Postal</label>
-          <input
-            type="text"
-            id="postalCode"
-            name="postalCode"
-            value={profile.postalCode}
-            onChange={handleChange}
-            className="inputStyle"
-          />
-        </div>
-        <hr />
-
-        <div className="d-flex justify-content-end">
-          <button className="btnSubmit shadow">Guardar Cambios</button>
-        </div>
-      </form>
+          <div className="d-flex justify-content-end">
+            <button className="btnSubmit shadow">Guardar Cambios</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
