@@ -492,6 +492,14 @@ button.confirmOrder:hover {
   margin-right: 95px;
   width: 100px;
 }
+
+.secondSelect {
+  background-color: rgba(233, 227, 227, 0.726) !important;
+  height: 37px;
+  color: #333;
+  margin-right: 95px;
+}
+
 .font-weight-medium {
   font-weight: 500;
 }
