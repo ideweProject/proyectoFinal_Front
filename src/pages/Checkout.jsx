@@ -262,7 +262,7 @@ function Checkout() {
                   <input
                     type="text"
                     name="owner"
-                    className="w-100 unInput"
+                    className="w-100 unInput mt-1"
                     placeholder="Jorge Rodríguez"
                     onChange={(e) => handleChange(e)}
                     required
@@ -282,7 +282,7 @@ function Checkout() {
                           Mes
                         </label>
                         <select
-                          className="border-0  rounded oneSelect "
+                          className="border-0 p-1 rounded oneSelect "
                           name="expireMM"
                           id="expireMM"
                           onChange={(e) => handleChange(e)}
@@ -308,7 +308,7 @@ function Checkout() {
                           Año
                         </label>
                         <select
-                          className="border-0 p-2 rounded secondSelect"
+                          className="border-0 p-1 rounded secondSelect"
                           name="expireYY"
                           id="expireYY"
                           onChange={(e) => handleChange(e)}
