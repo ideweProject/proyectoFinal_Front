@@ -257,8 +257,9 @@ function Checkout() {
                     onChange={(e) => handleChange(e)}
                   />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="owner mt-2">Titular</label>
+
+                <div className=" mt-2">
+                  <label htmlFor="owner ">Titular</label>
                   <input
                     type="text"
                     name="owner"
@@ -268,7 +269,7 @@ function Checkout() {
                     required
                   />
                 </div>
-                <div className="row">
+                <div className="row mt-2">
                   <div className="col-12 col-md-9 mb-3">
                     <label
                       className="d-block font-weight-medium"
