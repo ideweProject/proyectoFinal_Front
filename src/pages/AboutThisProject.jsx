@@ -15,6 +15,13 @@ function AboutThisProject() {
 
   return (
     <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
+      <div>
+        <img
+          src="https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/about-us-image.png"
+          alt=""
+        />
+      </div>
+
       <div className="container mainAboutAll pt-2">
         <div
           className="aboutImg mt-0"
@@ -51,9 +58,8 @@ function AboutThisProject() {
               <h3 className="titleDescription">Tecnologías</h3>
               <p className="pDescriptionAbout">
                 Para el Front-End del sitio se desarrolló una aplicación en
-                React (usando VITE) mientras que para el Back-End se
-                desarrolló una REST API hecha con Node.js, Express, SQL y
-                Git/GitHub.
+                React (usando VITE) mientras que para el Back-End se desarrolló
+                una REST API hecha con Node.js, Express, SQL y Git/GitHub.
               </p>
             </div>
             <div className="col-12 col-md-4 descriptionAbout mt-1 ">

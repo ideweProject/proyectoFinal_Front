@@ -88,7 +88,7 @@ const ProductPage = () => {
             <p className="mb-0 text product-price fs-3 fw-bold">
               $U {product.price}
             </p>
-            <p className="price-subtittle text">${product.price} /500ml</p>
+            <p className="price-subtittle text">${product.price}</p>
             <div>
               <p className="mb-1">Cantidad</p>
               <div className="d-flex">
