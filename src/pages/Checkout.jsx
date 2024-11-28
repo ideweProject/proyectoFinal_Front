@@ -263,7 +263,7 @@ function Checkout() {
                   <input
                     type="text"
                     name="owner"
-                    className="w-100 unInput mt-1"
+                    className="w-100 unInput"
                     placeholder="Jorge Rodríguez"
                     onChange={(e) => handleChange(e)}
                     required
