@@ -211,17 +211,15 @@ a.text-decoration-none {
   background: rgb(25, 27, 26);
 }
 
+.about-us-image {
+  width: 100%;
+}
 .ws-back {
   background: rgb(25, 27, 26);
 }
 .btnPlusMin {
   height: 26px;
   width: 30px;
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid grey;
 }
 
 .btnBuyCart {

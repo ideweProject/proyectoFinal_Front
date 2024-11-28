@@ -19,13 +19,13 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-left">
           <div className="d-flex flex-column align-items-start">
-            <div className="d-flex align-items-center flex-column">
+            <div className="d-flex align-items-center flex-column justify-content-center">
               <img
-                className="w-75 ms-4"
+                className="w-75 "
                 src={`${import.meta.env.VITE_SUPABASE_URL}/vibracowhite.png`}
                 alt=""
               />
-              <p className="ms-3"> &copy; Vibraco </p>
+              <p className=""> &copy; Vibraco </p>
             </div>
           </div>
         </div>

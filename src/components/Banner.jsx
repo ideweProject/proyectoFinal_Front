@@ -13,7 +13,7 @@ function Cartel() {
           </div>
           <div className="bannerText">
             Hacemos envíos dentro de Montevideo, Ciudad de la Costa y Maldonado.
-            Además, también podes pasar a buscar el pedido por el local.
+            Además, también podés pasar a buscar el pedido por el local.
           </div>
         </div>
       </div>

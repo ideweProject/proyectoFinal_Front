@@ -88,20 +88,26 @@ const ProductPage = () => {
             <p className="mb-0 text product-price fs-3 fw-bold">
               $U {product.price}
             </p>
-            <p className="price-subtittle text">${product.price} /500ml</p>
+            <p className="price-subtittle text">${product.price}</p>
             <div>
               <p className="mb-1">Cantidad</p>
               <div className="d-flex">
-                <button className="btnPlusMin" onClick={decrement}>
-                  -{" "}
+                <button
+                  className="btnPlusMin d-flex btn align-items-center justify-content-center"
+                  onClick={decrement}
+                >
+                  <i class="bi bi-dash-circle fs-4 "></i>
                 </button>
                 <input
                   type="number"
                   className="product-quantity-input h-25 mb-4"
                   value={quantity}
                 />
-                <button className="btnPlusMin" onClick={increment}>
-                  +
+                <button
+                  className="btnPlusMin d-flex btn align-items-center justify-content-center"
+                  onClick={increment}
+                >
+                  <i class="bi bi-plus-circle fs-4"></i>
                 </button>
               </div>
             </div>

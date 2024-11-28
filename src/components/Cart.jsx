@@ -84,10 +84,10 @@ function Cart({ name, ...props }) {
                       <span className="d-block mb-3">$U {cartItem.price}</span>
                       <div className="d-flex">
                         <button
-                          className="d-inline btnPlusMin"
+                          className="d-flex btnPlusMin btn align-items-center justify-content-center"
                           onClick={() => handleMinus(cartItem.id)}
                         >
-                          -
+                          <i class="bi bi-dash-circle fs-4 "></i>
                         </button>
                         <input
                           className="product-quantity-input w-25 h-25"
@@ -96,10 +96,10 @@ function Cart({ name, ...props }) {
                         />
 
                         <button
-                          className="btnPlusMin d-inline"
+                          className="btnPlusMin d-flex btn align-items-center justify-content-center"
                           onClick={() => handlePlus(cartItem)}
                         >
-                          <i class="bi bi-plus"></i>
+                          <i class="bi bi-plus-circle fs-4"></i>
                         </button>
                       </div>
                       <Modal
