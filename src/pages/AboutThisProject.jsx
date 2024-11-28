@@ -15,7 +15,7 @@ function AboutThisProject() {
 
   return (
     <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
-      <div className="w-100">
+      <div className="w-90 ">
         <img
           className="about-us-image"
           src="https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/about-us-image.png"
