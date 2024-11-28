@@ -29,11 +29,11 @@ function AboutThisProject() {
               Sobre este proyecto
             </h2>
             <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4">
-              El presente sitio de e-commerce es un proyecto desarrollado por
-              estudiantes del Coding Bootcamp de Hack Academy. El Bootcamp es un
-              programa educativo extremadamente práctico, full-time, donde los
-              estudiantes invierten más de 600 horas a aprender sobre Node.js,
-              Express, React.js, SQL, MongoDB , Git entre otros.
+            El presente sitio de e-commerce es un proyecto desarrollado por
+             estudiantes del curso intesnsivo de Hack Academy.Este es un
+                <span className="fw-bold"> programa educativo extremadamente práctico, full-time, </span>
+              donde los estudiantes invierten <span className="fw-bold"> más de 600 horas en aprender sobre
+              Node.js, Express, React.js, SQL, MongoDB , Git entre otras herramientas.</span>
             </p>
           </div>
         </div>
