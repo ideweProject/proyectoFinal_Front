@@ -386,7 +386,7 @@ function Checkout() {
                     <span>$U {cart.totalPrice}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">
-                    <p className="mb-0">Envio</p>
+                    <p className="mb-0">Envío</p>
                     <span>$U {80}</span>
                   </li>
                   <li className="d-flex justify-content-between mb-2">

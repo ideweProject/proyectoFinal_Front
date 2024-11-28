@@ -51,7 +51,7 @@ function CardOrder(orderData) {
                   <div>
                     <div className="d-flex">
                       <p>Estado:</p>
-                      <span>{orderData.orderData.state}</span>
+                      <span className="ms-1">{orderData.orderData.state}</span>
                     </div>
                   </div>
                 </div>

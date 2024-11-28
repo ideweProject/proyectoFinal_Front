@@ -8,7 +8,7 @@ function ShippingHeader() {
           <div>
             <p className="shippingNav d-inline">
               {" "}
-              Envios gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
+              Envíos gratis dentro de Montevideo, Ciudad de la Costa y Maldonado
             </p>
 
             <i className="bi bi-truck ms-2"></i>

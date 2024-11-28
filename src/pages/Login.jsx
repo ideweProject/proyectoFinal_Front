@@ -163,23 +163,28 @@ function Login() {
           <div className=" w-100 mt-3 d-flex justify-content-center">
             <Modal show={show} onHide={closeModal}>
               <Modal.Header closeButton>
-                <Modal.Title className="fw-bold">
-                  Usuarios de prueba
+                <Modal.Title className="fw-bold title">
+                  Usuario de prueba
                 </Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <p>
+                <p className="text">
                   Para simplificar el acceso a la aplicación, se proporciona el
                   siguiente usuario de prueba:{" "}
                 </p>
-                <p className="fw-bold m-0">Iniciar sesión como comprador</p>
+                <p className="fw-bold m-0 text">
+                  Iniciar sesión como comprador
+                </p>
                 <ul className="list-credentials">
-                  <li>E-mail: customer@a.com.</li>
-                  <li>Contraseña: 1234.</li>
+                  <li className="text">E-mail: customer@a.com.</li>
+                  <li className="text">Contraseña: 1234.</li>
                 </ul>
-                <p className="fw-bold">Reiniciar base de datos</p>
+                <p className="fw-bold text">Reiniciar base de datos</p>
 
-                <button className="btn btn-primary" onClick={handleRestartBd}>
+                <button
+                  className="btn db-restart text fw-bold"
+                  onClick={handleRestartBd}
+                >
                   Reiniciar
                 </button>
               </Modal.Body>

@@ -99,6 +99,9 @@
   overflow: hidden;
   filter: brightness(80%);
 }
+.db-restart {
+  background-color: rgb(230, 126, 28);
+}
 
 .aboutImg::before {
   content: "";
