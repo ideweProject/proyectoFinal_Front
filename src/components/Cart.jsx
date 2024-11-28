@@ -87,7 +87,7 @@ function Cart({ name, ...props }) {
                           className="d-flex btnPlusMin btn align-items-center justify-content-center"
                           onClick={() => handleMinus(cartItem.id)}
                         >
-                          <i class="bi bi-dash-circle fs-4"></i>
+                          <i class="bi bi-dash-circle fs-4 "></i>
                         </button>
                         <input
                           className="product-quantity-input w-25 h-25"
