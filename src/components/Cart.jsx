@@ -87,7 +87,7 @@ function Cart({ name, ...props }) {
                           className="d-inline btnPlusMin"
                           onClick={() => handleMinus(cartItem.id)}
                         >
-                          -
+                          <i class="bi bi-dash-circle"></i>
                         </button>
                         <input
                           className="product-quantity-input w-25 h-25"
@@ -99,7 +99,7 @@ function Cart({ name, ...props }) {
                           className="btnPlusMin d-inline"
                           onClick={() => handlePlus(cartItem)}
                         >
-                          <i class="bi bi-plus"></i>
+                          <i class="bi bi-plus-circle"></i>
                         </button>
                       </div>
                       <Modal
