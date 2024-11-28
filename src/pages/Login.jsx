@@ -182,7 +182,7 @@ function Login() {
                 <p className="fw-bold text">Reiniciar base de datos</p>
 
                 <button
-                  className="restartDb text text-white"
+                  className="restartDb text text-white px-3"
                   onClick={handleRestartBd}
                 >
                   Reiniciar

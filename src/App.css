@@ -101,9 +101,9 @@
 }
 
 .restartDb {
-  background-color: rgb(243, 145, 34);
+  background-color: rgb(243, 138, 19);
   border-radius: 8px;
-  padding: 5px;
+  border: none;
 }
 
 .aboutImg::before {
