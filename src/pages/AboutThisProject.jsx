@@ -2,6 +2,15 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 function AboutThisProject() {
+  async function handleRestartBd() {
+    const response = await axios({
+      method: "GET",
+      url: `${import.meta.env.VITE_API_URL}/users/restart`,
+    });
+
+    toast.success("Base de datos reiniciada correctamente");
+  }
+
   return (
     <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
       <div className="container mainAboutAll pt-2">

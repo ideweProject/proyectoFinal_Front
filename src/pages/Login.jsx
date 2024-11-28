@@ -54,16 +54,6 @@ function Login() {
     previousPage ? toast.error(location.state.msg) : null;
   }, []);
 
-  async function handleRestartBd() {
-    const response = await axios({
-      method: "GET",
-      url: `${import.meta.env.VITE_API_URL}/users/restart`,
-    });
-
-    toast.success("Base de datos reiniciada correctamente");
-  }
-  {
-  }
   return (
     <>
       <div

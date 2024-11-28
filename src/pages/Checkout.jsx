@@ -341,7 +341,7 @@ function Checkout() {
                       name="cvc"
                       inputMode="numeric"
                       pattern="[0-9]*"
-                      className="w-100   unInputCVC rounded"
+                      className="w-100 unInputCVC rounded"
                       onChange={(e) => handleChange(e)}
                       required
                     />
