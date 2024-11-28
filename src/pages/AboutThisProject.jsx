@@ -49,7 +49,7 @@ function AboutThisProject() {
               <h3 className="titleDescription">Tecnologías</h3>
               <p className="pDescriptionAbout">
                 Para el Front-End del sitio se desarrolló una aplicación en
-                React (usando Create-React-App) mientras que para el Back-End se
+                React (usando VITE) mientras que para el Back-End se
                 desarrolló una REST API hecha con Node.js, Express, SQL y
                 Git/GitHub.
               </p>
