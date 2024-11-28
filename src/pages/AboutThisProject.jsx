@@ -12,42 +12,29 @@ function AboutThisProject() {
 
     toast.success("Base de datos reiniciada correctamente");
   }
-
+  // adasdas
   return (
-    <div className="full-scree-about bodyAboutUs mt-3 mb-3 ">
-      <div className="w-90 ">
-        <img
-          className="about-us-image"
-          src="https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/about-us-image.png"
-          alt=""
-        />
+    <div className="full-scree-about bodyAboutUs   ">
+      <div className="container-about-us">
+        <div className="about-us-text">
+          <p className="about-us-title">Acerca de este proyecto</p>
+          <p className="text fs-4 w-50 ">
+            El presente sitio de e-commerce es un proyecto desarrollado por
+            estudiantes del curso intensivo de Hack Academy. Este es un programa
+            educativo extremadamente práctico, full-time, donde los estudiantes
+            invierten más de 600 horas en aprender sobre{" "}
+            <strong>Node.js</strong>, <strong> Express</strong>,{" "}
+            <strong>React</strong>, <strong>SQL</strong>,{" "}
+            <strong>MongoDB</strong>,<strong> Git</strong> entre otras
+            herramientas.
+          </p>
+        </div>
       </div>
 
-      <div className="container mainAboutAll pt-2">
-        <div
-          className="aboutImg mt-0"
-          style={{
-            backgroundImage: ` url(${
-              import.meta.env.VITE_SUPABASE_URL
-            }/worker.webp)`,
-          }}
-        >
-          <div className="mainTextAbout">
-            <h2 className="text-center fs-2 fs-md-3 fs-lg-2">
-              Sobre este proyecto
-            </h2>
-            <p className="text-center pMainAbout fs-6 fs-md-5 fs-lg-4">
-            El presente sitio de e-commerce es un proyecto desarrollado por
-             estudiantes del curso intesnsivo de Hack Academy.Este es un
-                <span className="fw-bold"> programa educativo extremadamente práctico, full-time, </span>
-              donde los estudiantes invierten <span className="fw-bold"> más de 600 horas en aprender sobre
-              Node.js, Express, React.js, SQL, MongoDB , Git entre otras herramientas.</span>
-            </p>
-          </div>
-        </div>
-        <div className="container mt-4 infoAbout mb-3">
-          <div className="row d-flex">
-            <div className="col-12 col-md-4 descriptionAbout mt-1 ">
+      <div className=" mainAboutAll pt-5">
+        <div className=" infoAbout ">
+          <div className="row d-flex justify-content-around">
+            <div className="col-12 col-md-4 descriptionAbout mt-1 text-black w-25  ">
               <h3 className="titleDescription">Duración</h3>
               <p className="pDescriptionAbout">
                 El proyecto fue desarrollado en 3 semanas, durante noviembre de
@@ -55,7 +42,7 @@ function AboutThisProject() {
                 duración.
               </p>
             </div>
-            <div className="col-12 col-md-4 descriptionAbout mt-1">
+            <div className="col-12 col-md-4 descriptionAbout mt-1 text-black w-25">
               <h3 className="titleDescription">Tecnologías</h3>
               <p className="pDescriptionAbout">
                 Para el Front-End del sitio se desarrolló una aplicación en
@@ -63,7 +50,7 @@ function AboutThisProject() {
                 una REST API hecha con Node.js, Express, SQL y Git/GitHub.
               </p>
             </div>
-            <div className="col-12 col-md-4 descriptionAbout mt-1 ">
+            <div className="col-12 col-md-4 descriptionAbout mt-1 text-black w-25">
               <h3 className="titleDescription">División de tareas</h3>
               <p className="pDescriptionAbout">
                 Para la organización de tareas durante el proyecto se utilizó
