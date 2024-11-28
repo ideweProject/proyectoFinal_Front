@@ -12,7 +12,7 @@ function AboutThisProject() {
 
     toast.success("Base de datos reiniciada correctamente");
   }
-
+  // adasdas
   return (
     <div className="full-scree-about bodyAboutUs   ">
       <div className="container-about-us">
