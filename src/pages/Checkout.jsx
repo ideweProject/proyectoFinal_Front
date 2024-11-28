@@ -308,7 +308,7 @@ function Checkout() {
                           Año
                         </label>
                         <select
-                          className="border-0 p-2 rounded oneSelect"
+                          className="border-0 p-2 rounded "
                           name="expireYY"
                           id="expireYY"
                           onChange={(e) => handleChange(e)}
