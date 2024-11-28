@@ -99,8 +99,10 @@
   overflow: hidden;
   filter: brightness(80%);
 }
-.db-restart {
-  background-color: rgb(230, 126, 28);
+
+.restartDb {
+  border: 1px solid black;
+  background-color: red;
 }
 
 .aboutImg::before {
