@@ -258,7 +258,7 @@ function Checkout() {
                   />
                 </div>
 
-                <div className=" mt-2">
+                <div className="mt-2">
                   <label htmlFor="owner ">Titular</label>
                   <input
                     type="text"
