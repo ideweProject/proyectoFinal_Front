@@ -179,14 +179,6 @@ function Login() {
                   <li className="text">E-mail: customer@a.com.</li>
                   <li className="text">Contraseña: 1234.</li>
                 </ul>
-                <p className="fw-bold text">Reiniciar base de datos</p>
-
-                <button
-                  className="restartDb text text-white px-3"
-                  onClick={handleRestartBd}
-                >
-                  Reiniciar
-                </button>
               </Modal.Body>
             </Modal>
           </div>

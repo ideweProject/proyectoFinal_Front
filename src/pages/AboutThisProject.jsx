@@ -69,7 +69,6 @@ function AboutThisProject() {
               Desarrollador Full-Stack.
             </p>
           </div>
-
           <div className="row d-flex justify-content-center  mx-1">
             <div className="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
               <Card className="cardUs mt-3">
@@ -136,7 +135,14 @@ function AboutThisProject() {
                 </Card.Body>
               </Card>
             </div>
-          </div>
+          </div>{" "}
+          <p className="fw-bold text">Reiniciar base de datos</p>
+          <button
+            className="restartDb text text-white px-3 py-1"
+            onClick={handleRestartBd}
+          >
+            Reiniciar
+          </button>
         </div>
       </div>
     </div>

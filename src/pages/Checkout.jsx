@@ -258,7 +258,7 @@ function Checkout() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="owner">Titular</label>
+                  <label htmlFor="owner mt-2">Titular</label>
                   <input
                     type="text"
                     name="owner"
@@ -282,7 +282,7 @@ function Checkout() {
                           Mes
                         </label>
                         <select
-                          className="border-0 p-1 rounded oneSelect "
+                          className="border-0 p-2 rounded oneSelect "
                           name="expireMM"
                           id="expireMM"
                           onChange={(e) => handleChange(e)}
@@ -308,7 +308,7 @@ function Checkout() {
                           Año
                         </label>
                         <select
-                          className="border-0 p-1 rounded oneSelect"
+                          className="border-0 p-2 rounded oneSelect"
                           name="expireYY"
                           id="expireYY"
                           onChange={(e) => handleChange(e)}
