@@ -279,7 +279,7 @@ function Checkout() {
                     </label>
                     <div className="d-flex align-items-center justify-content-start align-items-start  mb-3">
                       <div className="d-flex flex-column  monthInput justify-content-start">
-                        <label htmlFor="expireMM" className="mt-1 mb-1">
+                        <label htmlFor="expireMM" className="mt-1 ">
                           Mes
                         </label>
                         <select
@@ -305,7 +305,7 @@ function Checkout() {
                       </div>
 
                       <div className="flex-column inputYear justify-content-start align-items-start col-4 ">
-                        <label htmlFor="expireYY" className="mt-1 mb-1">
+                        <label htmlFor="expireYY" className="mt-1">
                           Año
                         </label>
                         <select
