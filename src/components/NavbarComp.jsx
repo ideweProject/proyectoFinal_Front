@@ -53,7 +53,7 @@ function NavbarComp() {
             <Link
               to={"/bars"}
               onClick={handleScrollToTop}
-              className=" text-decoration-none me-4 p-1"
+              className=" text-decoration-none me-4 ms-4 p-1"
             >
               Barras
             </Link>
@@ -93,7 +93,7 @@ function NavbarComp() {
                 <Link
                   to={"/login"}
                   onClick={handleScrollToTop}
-                  className="text-decoration-none  ms-4 me-1 p-1"
+                  className="text-decoration-none  ms-4 me-4 p-1"
                 >
                   Login
                 </Link>
