@@ -220,8 +220,7 @@ a.text-decoration-none {
 .container-about-us {
   width: 100%;
   height: 70vh;
-  position: relative;
-  background-image: url(https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/about-us-image.jpg);
+  background-image: url(https://tfistefyeywtnpgklclp.supabase.co/storage/v1/object/public/images/about-white.jpg);
 }
 
 .about-us-text {
