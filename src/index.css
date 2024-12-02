@@ -465,5 +465,6 @@ a.text-decoration-none {
 }
 
 .section-about-container {
+  width: 93%;
   max-height: 300px;
 }
