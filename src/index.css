@@ -463,3 +463,8 @@ a.text-decoration-none {
   border-right: 3px solid #e30808f4;
   -webkit-transform-origin: 100% 0%;
 }
+
+.section-about-container {
+  width: 85%;
+  max-height: 300px;
+}
