@@ -89,7 +89,7 @@ function AboutThisProject() {
                     </Card.Title>
                     <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                     <Link to={"https://github.com/agustinmota"}>
-                      <i class="bi bi-github text-white me-1 fs-4"></i>
+                      <i className="bi bi-github text-white me-1 fs-4"></i>
                     </Link>
                     <Link to={""}>
                       <i className="bi bi-linkedin text-white fs-4"></i>
@@ -109,7 +109,7 @@ function AboutThisProject() {
                     <Card.Title className="nameUsAbout">Bruno Lima</Card.Title>
                     <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                     <Link to={"https://github.com/bruno-lima135"}>
-                      <i class="bi bi-github text-white me-1 fs-4"></i>
+                      <i className="bi bi-github text-white me-1 fs-4"></i>
                     </Link>
                     <Link
                       to={"https://www.linkedin.com/in/bruno-lima-63044a1b9/"}
@@ -133,7 +133,7 @@ function AboutThisProject() {
                     </Card.Title>
                     <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                     <Link to={"https://github.com/epigono"}>
-                      <i class="bi bi-github text-white me-1 fs-4"></i>
+                      <i className="bi bi-github text-white me-1 fs-4"></i>
                     </Link>
                     <Link to={""}>
                       <i className="bi bi-linkedin text-white fs-4"></i>
@@ -155,7 +155,7 @@ function AboutThisProject() {
                     </Card.Title>
                     <h6 className="nameUsAbout">Junior Full Stack Developer</h6>
                     <Link to={"https://github.com/nicohornos"}>
-                      <i class="bi bi-github text-white me-1 fs-4"></i>
+                      <i className="bi bi-github text-white me-1 fs-4"></i>
                     </Link>
                     <Link to={""}>
                       <i className="bi bi-linkedin text-white fs-4"></i>
@@ -170,7 +170,7 @@ function AboutThisProject() {
                 Reiniciar BD
               </p>
               <button className="restartDb " onClick={handleRestartBd}>
-                <i class="bi bi-arrow-counterclockwise fs-4 text-white"></i>
+                <i className="bi bi-arrow-counterclockwise fs-4 text-white"></i>
               </button>
             </div>
           </div>

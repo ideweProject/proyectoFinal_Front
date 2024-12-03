@@ -8,8 +8,41 @@ import { toast } from "react-toastify";
 import formValidation from "../../utils/formValidation";
 import "react-toastify/dist/ReactToastify.css";
 import { setCartToZero } from "../redux/cartSlice";
+import { useForm } from "react-hook-form";
 
 function Checkout() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = async (formData) => {
+    const validDate = await formValidation(formData);
+
+    if (validDate.msg) return toast.error(validDate.msg);
+
+    const response = await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/orders/store`,
+      data: {
+        orderInfo: {
+          buyer: userData.userId,
+          itemsList: cart.items,
+          formData,
+          totalPrice: cart.totalPrice,
+        },
+      },
+    });
+
+    if (response.data.statusCode === 1) {
+      navigate("/orders");
+      toast.success(response.data.msg);
+    } else {
+      toast.error(response.data.msg);
+    }
+    dispatch(setCartToZero());
+  };
   const navigate = useNavigate();
   const [isVisible] = useState(true);
   const dispatch = useDispatch();
@@ -17,16 +50,6 @@ function Checkout() {
   const userData = useSelector((state) => state.login);
   const taxes = Math.floor((cart.totalPrice + 80) * 0.1);
   const total = Math.floor(cart.totalPrice + 80 + taxes);
-  const [formData, setFormData] = useState({
-    payment: "creditCard",
-    expireMM: "01",
-    expireYY: "2024",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleDelete = (removedItem) => {
     dispatch(
@@ -57,34 +80,6 @@ function Checkout() {
     "Treinta y Tres",
   ];
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const validDate = await formValidation(formData);
-
-    if (validDate.msg) return toast.error(validDate.msg);
-
-    const response = await axios({
-      method: "POST",
-      url: `${import.meta.env.VITE_API_URL}/orders/store`,
-      data: {
-        orderInfo: {
-          buyer: userData.userId,
-          itemsList: cart.items,
-          formData,
-          totalPrice: cart.totalPrice,
-        },
-      },
-    });
-
-    if (response.data.statusCode === 1) {
-      navigate("/orders");
-      toast.success(response.data.msg);
-    } else {
-      toast.error(response.data.msg);
-    }
-    dispatch(setCartToZero());
-  }
-
   return !cart.items[0] ? (
     <div className="h-100 check-container">
       <h1 className="title">Carrito vacio</h1>
@@ -96,7 +91,7 @@ function Checkout() {
           <div className="row g-5">
             <div className="col-12 col-md-6 checkCol">
               <h4 className="mt-4 mb-4">Información de contacto</h4>
-              <form id="sendOrder" onSubmit={(event) => handleSubmit(event)}>
+              <form id="sendOrder" onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-4">
                   <label htmlFor="email"></label>
                   <input
@@ -104,8 +99,11 @@ function Checkout() {
                     name="email"
                     className="w-100 unInput input-large"
                     placeholder="ejemplo@gmail.com"
-                    onChange={(e) => handleChange(e)}
+                    {...register("email", { required: true })}
                   />
+                  {errors.email && (
+                    <p className="text-danger">Campo requerido</p>
+                  )}
                 </div>
                 <hr />
 
@@ -118,9 +116,12 @@ function Checkout() {
                       name="firstName"
                       className="w-100 unInput"
                       placeholder="Jorge"
-                      onChange={(e) => handleChange(e)}
-                      required
+                      {...register("firstname", { required: true })}
                     />
+
+                    {errors.firstname && (
+                      <p className="text-danger">Campo requerido</p>
+                    )}
                   </div>
                   <div className="col-12 col-sm-6 mb-3">
                     <label htmlFor="lastname">Apellido</label>
@@ -129,9 +130,12 @@ function Checkout() {
                       name="lastName"
                       className="w-100 unInput"
                       placeholder="Rodríguez"
-                      onChange={(e) => handleChange(e)}
-                      required
+                      {...register("lastname", { required: true })}
                     />
+
+                    {errors.lastname && (
+                      <p className="text-danger">Campo requerido</p>
+                    )}
                   </div>
                 </div>
 
@@ -142,9 +146,13 @@ function Checkout() {
                     name="address"
                     className="w-100 unInput"
                     placeholder="ej: Bulevar Artigas 1234 esq Av. Italia"
-                    onChange={(e) => handleChange(e)}
+                    {...register("address", { required: true })}
                     required
                   />
+
+                  {errors.address && (
+                    <p className="text-danger">Campo requerido</p>
+                  )}
                 </div>
 
                 <div className="row">
@@ -153,8 +161,7 @@ function Checkout() {
                     <Form.Select
                       size="sl"
                       name="city"
-                      onChange={(e) => handleChange(e)}
-                      required
+                      {...register("city", { required: true })}
                       className="oneSelect"
                     >
                       {cities.map((city, index) => (
@@ -164,6 +171,10 @@ function Checkout() {
                       ))}
                     </Form.Select>
                   </div>
+
+                  {errors.city && (
+                    <p className="text-danger">Campo requerido</p>
+                  )}
                 </div>
 
                 <div className="row">
@@ -174,10 +185,11 @@ function Checkout() {
                       name="postalCode"
                       className="w-100 unInput "
                       placeholder="80500"
-                      onChange={(e) => handleChange(e)}
-                      maxLength={5}
                       pattern="[0-9]*"
+                      maxLength={5}
+                      {...register("postalCode", {})}
                     />
+                    {errors.postalCode && <p> Campo requerido</p>}
                   </div>
                 </div>
 
@@ -186,14 +198,18 @@ function Checkout() {
                   <input
                     type="tel"
                     name="phone"
-                    className="w-100 unInput"
-                    placeholder=" 095 123 456"
-                    onChange={(e) => handleChange(e)}
-                    required
                     minLength={9}
                     maxLength={9}
                     pattern="[0-9]*"
+                    className="w-100 unInput"
+                    placeholder=" 095 123 456"
+                    {...register("phone", {
+                      required: true,
+                    })}
                   />
+                  {errors.postalCode && (
+                    <p className="text-danger"> Campo requerido</p>
+                  )}
                 </div>
                 <hr />
 
@@ -206,8 +222,7 @@ function Checkout() {
                       name="payment"
                       value="creditCard"
                       id="creditCard"
-                      checked={formData.payment === "creditCard"}
-                      onChange={(e) => handleChange(e)}
+                      {...register("payment")}
                     />
                     <label htmlFor="cc" className="form-check-label">
                       Tarjeta de crédito
@@ -221,8 +236,7 @@ function Checkout() {
                       name="payment"
                       value="paypal"
                       id="paypal"
-                      checked={formData.payment === "paypal"}
-                      onChange={(e) => handleChange(e)}
+                      {...register("payment")}
                     />
                     <label htmlFor="cc" className="form-check-label">
                       Paypal
@@ -235,8 +249,7 @@ function Checkout() {
                       name="payment"
                       value="eTransfer"
                       id="eTransfer"
-                      checked={formData.payment === "eTransfer"}
-                      onChange={(e) => handleChange(e)}
+                      {...register("payment")}
                     />
                     <label htmlFor="cc" className="form-check-label ">
                       Transferencia bancaria
@@ -250,12 +263,16 @@ function Checkout() {
                     type="tel"
                     name="cardNumber"
                     className="w-100 unInput"
-                    maxLength={19}
-                    inputMode="numeric"
+                    pattern="[0-9]*"
                     placeholder="XXXX XXXX XXXX XXXX"
-                    required
-                    onChange={(e) => handleChange(e)}
+                    maxLength={19}
+                    {...register("cardNumber", {
+                      required: true,
+                    })}
                   />
+                  {errors.cardNumber && (
+                    <p className="text-danger">Campo requerido</p>
+                  )}
                 </div>
 
                 <div className="mt-2">
@@ -265,9 +282,12 @@ function Checkout() {
                     name="owner"
                     className="w-100 unInput"
                     placeholder="Jorge Rodríguez"
-                    onChange={(e) => handleChange(e)}
-                    required
+                    {...register("owner", { required: true })}
                   />
+
+                  {errors.owner && (
+                    <p className="text-danger">Campo requerido</p>
+                  )}
                 </div>
                 <div className="row mt-2">
                   <div className="col-12 col-md-9 mb-3">
@@ -286,8 +306,7 @@ function Checkout() {
                           className="border-0 p-1 rounded oneSelect "
                           name="expireMM"
                           id="expireMM"
-                          onChange={(e) => handleChange(e)}
-                          required
+                          {...register("expireMM", { required: true })}
                         >
                           <option value="01">Enero</option>
                           <option value="02">Febrero</option>
@@ -302,6 +321,10 @@ function Checkout() {
                           <option value="11">Noviembre</option>
                           <option value="12">Diciembre</option>
                         </select>
+
+                        {errors.expireMM && (
+                          <p className="text-danger">Campo requerido</p>
+                        )}
                       </div>
 
                       <div className="flex-column inputYear justify-content-start align-items-start col-4 ">
@@ -312,7 +335,7 @@ function Checkout() {
                           className="border-0 p-1 rounded secondSelect"
                           name="expireYY"
                           id="expireYY"
-                          onChange={(e) => handleChange(e)}
+                          {...register("expireYY", { required: true })}
                         >
                           <option value="2024">2024</option>
                           <option value="2025">2025</option>
@@ -320,6 +343,10 @@ function Checkout() {
                           <option value="2027">2027</option>
                           <option value="2028">2028</option>
                         </select>
+
+                        {errors.expireYY && (
+                          <p className="text-danger">Campo requerido</p>
+                        )}
                       </div>
                     </div>
 
@@ -337,14 +364,19 @@ function Checkout() {
                     </label>
                     <input
                       type="tel"
-                      maxLength={3}
                       name="cvc"
-                      inputMode="numeric"
+                      maxLength={3}
                       pattern="[0-9]*"
+                      inputMode="numeric"
                       className="w-100 unInputCVC rounded"
-                      onChange={(e) => handleChange(e)}
-                      required
+                      {...register("cvc", {
+                        required: true,
+                      })}
                     />
+
+                    {errors.cvc && (
+                      <p className="text-danger">Campo requerido</p>
+                    )}
                   </div>
                 </div>
               </form>

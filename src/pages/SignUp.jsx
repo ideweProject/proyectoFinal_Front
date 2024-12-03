@@ -2,25 +2,32 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 function SignUp() {
   const navigate = useNavigate();
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState("");
 
-  async function handleCreateUser(event) {
-    event.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
+  const onSubmit = async (data) => {
     const response = await axios({
       method: "POST",
       url: `${import.meta.env.VITE_API_URL}/users/store`,
-      data: { firstname, lastname, email, password },
+      data: {
+        firstname: data.firstname,
+        lastname: data.lastname,
+        email: data.email,
+        password: data.password,
+      },
     });
 
     return navigate("/login");
-  }
+  };
 
   return (
     <>
@@ -60,7 +67,7 @@ function SignUp() {
                     className="w-100 mt-4"
                     style={{ maxWidth: "400px" }}
                     method="post"
-                    onSubmit={(event) => handleCreateUser(event)}
+                    onSubmit={handleSubmit(onSubmit)}
                   >
                     <div className="form-group mb-4">
                       <label className="text">Email</label>
@@ -68,8 +75,7 @@ function SignUp() {
                       <input
                         type="email"
                         className="form-control text"
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
+                        {...register("email")}
                       />
                     </div>
 
@@ -78,8 +84,7 @@ function SignUp() {
                       <input
                         type="name"
                         className="form-control text"
-                        value={firstname}
-                        onChange={(event) => setFirstname(event.target.value)}
+                        {...register("firstname")}
                       />
                     </div>
                     <div className="form-group mb-4">
@@ -87,8 +92,7 @@ function SignUp() {
                       <input
                         type="text"
                         className="form-control"
-                        value={lastname}
-                        onChange={(event) => setLastname(event.target.value)}
+                        {...register("lastname")}
                       />
                     </div>
                     <div className="form-group mb-4">
@@ -96,8 +100,7 @@ function SignUp() {
                       <input
                         type="password"
                         className="form-control"
-                        value={password}
-                        onChange={(event) => setPassword(event.target.value)}
+                        {...register("password")}
                       />
                     </div>
                     <button

@@ -99,7 +99,7 @@ function Cart({ name, ...props }) {
                           className="btnPlusMin d-flex btn align-items-center justify-content-center"
                           onClick={() => handlePlus(cartItem)}
                         >
-                          <i class="bi bi-plus-circle fs-4"></i>
+                          <i className="bi bi-plus-circle fs-4"></i>
                         </button>
                       </div>
                       <Modal
@@ -140,7 +140,7 @@ function Cart({ name, ...props }) {
                         className="rounded border bg-white ms-auto d-block"
                         onClick={handleShow}
                       >
-                        <i class="bi bi-trash3 text-danger"></i>
+                        <i className="bi bi-trash3 text-danger"></i>
                       </button>
                     </div>
                   </div>

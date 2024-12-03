@@ -6,12 +6,32 @@ import { saveUserData, logOut } from "../redux/loginSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import { showCredentials } from "../redux/modalSlice";
+import { useForm } from "react-hook-form";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const response = await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/tokens/user`,
+      data: { email: data.email, password: data.password },
+    });
+    if (!response.data.token) return setMsg(response.data);
+
+    dispatch(
+      saveUserData({ token: response.data.token, userId: response.data.userId })
+    );
+
+    navigate(previousPage ? previousPage : "/");
+  };
+
   const [msg, setMsg] = useState("");
   const location = useLocation();
   const previousPage = location.state;
@@ -24,31 +44,6 @@ function Login() {
   function closeModal() {
     dispatch(showCredentials());
   }
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await axios({
-      method: "POST",
-      url: `${import.meta.env.VITE_API_URL}/tokens/user`,
-      data: { email, password },
-    });
-
-    if (!response.data.token) return setMsg(response.data);
-
-    dispatch(
-      saveUserData({ token: response.data.token, userId: response.data.userId })
-    );
-
-    navigate(previousPage ? previousPage : "/");
-  };
 
   useEffect(() => {
     previousPage ? toast.error(location.state.msg) : null;
@@ -91,25 +86,32 @@ function Login() {
                   <form
                     className=" mt-4"
                     style={{ maxWidth: "400px" }}
-                    onSubmit={handleSubmit}
+                    onSubmit={handleSubmit(onSubmit)}
                   >
                     <div className="text form-group mb-4">
                       <label className="text">Correo</label>
                       <input
                         type="email"
                         className="form-control"
-                        value={email}
-                        onChange={handleEmailChange}
+                        id="email"
+                        {...register("email", { required: true })}
                       />
+
+                      {errors.email && (
+                        <p className="text-danger">Campo requerido</p>
+                      )}
                     </div>
                     <div className="form-group mb-4">
                       <label className="text">Contraseña</label>
                       <input
                         type="password"
                         className="form-control text text"
-                        value={password}
-                        onChange={handlePasswordChange}
+                        {...register("password", { required: true })}
                       />
+
+                      {errors.password && (
+                        <p className="text-danger">Campo requerido</p>
+                      )}
                     </div>
 
                     <div className="form-check-container mb-4">

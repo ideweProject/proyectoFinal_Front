@@ -3,6 +3,7 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { saveUserInfo } from "../redux/userSlice";
 import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,36 @@ const Profile = () => {
     city: "",
     postalCode: "",
   });
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const response = await axios({
+      method: "POST",
+      url: `${import.meta.env.VITE_API_URL}/users/edit/${userData.userId}`,
+      data: {
+        firstname: data.firstname,
+        lastname: data.lastname,
+        email: data.email,
+        password: data.password,
+      },
+      headers: { Authorization: `Bearer ${userData.token}` },
+    });
+
+    dispatch(
+      saveUserInfo({
+        adress: data.address,
+        city: data.city,
+        postalCode: data.postalCode,
+      })
+    );
+    toast.success(response.data);
+  };
 
   useEffect(() => {
     async function getUserData() {
@@ -52,50 +83,21 @@ const Profile = () => {
     });
   }, [userInfo]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProfile({
-      ...profile,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const { firstname, lastname, email, password } = profile;
-
-    const response = await axios({
-      method: "POST",
-      url: `${import.meta.env.VITE_API_URL}/users/edit/${userData.userId}`,
-      data: { firstname, lastname, email, password },
-      headers: { Authorization: `Bearer ${userData.token}` },
-    });
-
-    dispatch(
-      saveUserInfo({
-        adress: profile.adress,
-        city: profile.city,
-        postalCode: profile.postalCode,
-      })
-    );
-    toast.success(response.data);
-  };
-
   return (
     <div className="profile-container container containerProfile w-50">
       <h1 className="text-center">Perfil</h1>
       <hr />
       <div className="d-flex justify-content-center">
-        <form onSubmit={handleSubmit} className="w-75">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-75">
           <div className="form-group">
             <label htmlFor="firstname">Nombre</label>
             <input
               type="text"
               id="firstname"
               name="firstname"
-              value={profile.firstname}
-              onChange={handleChange}
+              defaultValue={profile.firstname}
               className="inputStyle w-100"
+              {...register("firstname")}
             />
           </div>
           <hr />
@@ -106,9 +108,9 @@ const Profile = () => {
               type="text"
               id="lastname"
               name="lastname"
-              value={profile.lastname}
-              onChange={handleChange}
+              defaultValue={profile.lastname}
               className="inputStyle w-100"
+              {...register("lastname")}
             />
           </div>
           <hr />
@@ -119,9 +121,7 @@ const Profile = () => {
               type="email"
               id="email"
               name="email"
-              value={profile.email}
-              onChange={handleChange}
-              required
+              {...register("email")}
               className="inputStyle w-100"
             />
           </div>
@@ -133,9 +133,8 @@ const Profile = () => {
               type="password"
               id="password"
               name="password"
-              value={profile.password}
-              onChange={handleChange}
               className="inputStyle w-100"
+              {...register("password")}
             />
           </div>
           <hr />
@@ -144,11 +143,11 @@ const Profile = () => {
             <label htmlFor="adress">Dirección</label>
             <input
               type="text"
-              id="adress"
-              name="adress"
-              value={profile.adress}
-              onChange={handleChange}
+              id="address"
+              name="address"
+              defaultValue={profile.adress}
               className="inputStyle w-100"
+              {...register("address")}
             />
           </div>
           <hr />
@@ -159,8 +158,8 @@ const Profile = () => {
               type="text"
               id="city"
               name="city"
-              value={profile.city}
-              onChange={handleChange}
+              defaultValue={profile.city}
+              {...register("city")}
               className="inputStyle w-100"
             />
           </div>
@@ -173,7 +172,7 @@ const Profile = () => {
               id="postalCode"
               name="postalCode"
               value={profile.postalCode}
-              onChange={handleChange}
+              {...register("postalCode")}
               className="inputStyle w-100"
             />
           </div>
