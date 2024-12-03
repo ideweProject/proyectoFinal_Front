@@ -224,6 +224,7 @@ a.text-decoration-none {
 }
 
 .about-us-text {
+  font-size: 1.6rem;
   animation: fade-up 2.5s;
   position: absolute;
   top: 20%;
@@ -393,7 +394,27 @@ a.text-decoration-none {
   .inputSearch {
     width: 200px;
   }
+  .about-us-text {
+    font-size: 1.5rem;
+  }
+
+  .about-us-title {
+    height: 100%;
+    font-size: 2rem;
+  }
 }
+
+@media (max-width: 400px) {
+  .about-us-text {
+    font-size: 1rem;
+  }
+
+  .about-us-title {
+    height: 100%;
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 1000px) and (max-width: 1220px) {
   .freezeTitle {
     padding-top: 35%;
@@ -462,8 +483,4 @@ a.text-decoration-none {
   border-top: 3px solid #e80e0e;
   border-right: 3px solid #e30808f4;
   -webkit-transform-origin: 100% 0%;
-}
-
-.section-about-container {
-  max-height: 300px;
 }
